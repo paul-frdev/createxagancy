@@ -6,6 +6,11 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-body: #ffffff;
+  --btn-gradient: #fc4a2e;
+  --gray-300: #e5e8ed;
+  --gray-800: #424551;
+  --gray-400: #d7dadd;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,16 +23,41 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background-body);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'LatoBlack';
+    src: url('../fonts/Lato-Black.ttf') format('ttf');
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'LatoBold';
+    src: url('../fonts/Lato-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'LatoRegular';
+    src: url('../fonts/Lato-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
   }
 }
