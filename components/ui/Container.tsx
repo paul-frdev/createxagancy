@@ -7,6 +7,6 @@ type ContainerProps = {
 }
 export const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
-    <SimpleContainer className='w-full max-w-[1230px] px-3'>{children}</SimpleContainer>
+    <SimpleContainer className='w-full max-w-[1260px] px-3'>{children}</SimpleContainer>
   )
 }
