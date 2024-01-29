@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "src": "/carousel-team/team1.jpg",
+    "links": ["/insta", "/facebook", "/twitter"],
+    "author": "Dianne Russell",
+    "position": "Founder and CEO"
+  },
+  {
+    "id": 2,
+    "src": "/carousel-team/team2.jpg",
+    "links": ["/insta", "/facebook", "/twitter"],
+    "author": "Jerome Bell",
+    "position": "Founder and Program Director"
+  },
+  {
+    "id": 3,
+    "src": "/carousel-team/team3.jpg",
+    "links": ["/insta", "/facebook", "/twitter"],
+    "author": "Kristin Watson",
+    "position": "Marketer, Curator of Marketing Course"
+  },
+  {
+    "id": 4,
+    "src": "/carousel-team/team4.jpg",
+    "links": ["/insta", "/facebook", "/twitter"],
+    "author": "Marvin McKinney",
+    "position": "PM, Curator of Management Course"
+  },
+  {
+    "id": 5,
+    "src": "/carousel-team/team1.jpg",
+    "links": ["/insta", "/facebook", "/twitter"],
+    "author": "Dianne Russell",
+    "position": "Founder and CEO"
+  },
+  {
+    "id": 6,
+    "src": "/carousel-team/team2.jpg",
+    "links": ["/insta", "/facebook", "/twitter"],
+    "author": "Jerome Bell",
+    "position": "Founder and Program Director"
+  },
+  {
+    "id": 7,
+    "src": "/carousel-team/team3.jpg",
+    "links": ["/insta", "/facebook", "/twitter"],
+    "author": "Kristin Watson",
+    "position": "Marketer, Curator of Marketing Course"
+  },
+  {
+    "id": 8,
+    "src": "/carousel-team/team4.jpg",
+    "links": ["/insta", "/facebook", "/twitter"],
+    "author": "Marvin McKinney",
+    "position": "PM, Curator of Management Course"
+  }
+]

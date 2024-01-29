@@ -27,6 +27,11 @@ const config: Config = {
         gray: 'var(--gray-300, #E5E8ED);',
         redLight: '#feddd1',
         red: '#FF3F3A',
+        gray200: 'var(--gray-200)',
+        gray800: 'var(--gray-800)',
+        secondary: 'var(--secondary)',
+        yellow:
+          'linear-gradient(180deg, rgba(30, 33, 44, 0.00) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.77) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%)',
       },
       borderColor: {
         orange: '#fc4b26',
@@ -44,6 +49,8 @@ const config: Config = {
         gray: 'var(--gray-700)',
         primary: 'var(--primary)',
         gray600: 'var(--gray-600)',
+        gray700: 'var(--gray-700)',
+        gray800: 'var(--gray-800)',
         gray900: 'var(--gray-900)',
       },
       boxShadow: {

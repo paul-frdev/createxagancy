@@ -21,7 +21,7 @@ const sizeCss = {
 
 
 type ButtonProps = {
-  children: string;
+  children?: string;
   icon?: React.ReactElement;
   className?: string;
   variantCss?: keyof typeof variantCss;
@@ -34,7 +34,7 @@ export const Button = forwardRef(
     const appliedVariantCss = propVariantCss ? variantCss[propVariantCss] : variantCss.default;
     const appliedSizeCss = propSizeCss ? sizeCss[propSizeCss] : sizeCss.default;
     const commonProps = {
-      className: cn(`inline-flex text-white items-center tracking-[0.031em] font-latoBold justify-center rounded-[4px] font-bold  `, appliedVariantCss, appliedSizeCss, className),
+      className: cn(`inline-flex normal-case	 text-white items-center tracking-[0.031em] font-latoBold justify-center rounded-[4px] font-bold  `, appliedVariantCss, appliedSizeCss, className),
       onClick,
       ref,
       ...props
@@ -42,8 +42,8 @@ export const Button = forwardRef(
 
     return (
       <BaseButton {...commonProps}>
-        {children && children}
-        {Icon && Icon}
+        {Icon && <span className="mr-2">{Icon}</span>}
+        {children}
       </BaseButton>
     );
   }

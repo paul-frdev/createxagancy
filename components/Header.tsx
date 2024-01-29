@@ -37,7 +37,7 @@ export const Header = () => {
             </nav>
           </div>
           <div className='flex justify-end items-center gap-x-[2.25em]'>
-            <Button sizeCss='lg' className=' hover:bg-redLight capitalize py-0 h-[52px] text-base leading-[52px] tracking-[0.5px]'>Get consultation</Button>
+            <Button sizeCss='lg' className=' hover:bg-redLight transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px]'>Get consultation</Button>
             <div className='flex justify-start items-center gap-x-2'>
               <Image src={person} alt='person' />
               <div className='flex justify-start items-center'>

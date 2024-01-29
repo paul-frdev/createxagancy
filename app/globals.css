@@ -11,13 +11,17 @@
   --btn-gradient-start: #ff3f3a; /* Start color of the button gradient */
   --btn-gradient-end: #f75e05;
   --gray-300: #e5e8ed;
+  --gray-200: #f4f5f6;
   --gray-800: #424551;
   --gray-400: #d7dadd;
   --gray-700: #787a80;
   --gray-600: #9a9ca5;
+  --gray-800: #424551;
+  --gray-700: #787a80;
   --gray-900: #1e212c;
   --danger: #ff4242;
   --primary: #ff3f3a;
+  --secondary: #ffcf2d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +42,30 @@ body {
   border: 1px solid var(--primary) !important;
   transition: all 0.3s ease;
 }
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0px !important;
+}
+
+.swiper-pagination {
+  z-index: 99 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 30px !important;
+  height: 3px !important;
+  background-color: var(--gray-800) !important;
+  margin-right: 0.8rem !important;
+  border-radius: 25px !important;
+}
+
+.swiper-pagination-bullet:last-child {
+  margin-right: 0 !important;
+}
+
 
 @layer utilities {
   .text-balance {

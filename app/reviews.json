@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.",
+    "src": "/svg/reviewer.svg",
+    "author": "Eleanor Pena",
+    "course": "Position, Course"
+  },
+  {
+    "id": 2,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.",
+    "src": "/reviews/review.jpg",
+    "author": "Eleanor Pena",
+    "course": "Position, Course"
+  },
+  {
+    "id": 3,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.",
+    "src": "/reviews/review.jpg",
+    "author": "Eleanor Pena",
+    "course": "Position, Course"
+  },
+  {
+    "id": 4,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.",
+    "src": "/reviews/review.jpg",
+    "author": "Eleanor Pena",
+    "course": "Position, Course"
+  },
+  {
+    "id": 5,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.",
+    "src": "/reviews/review.jpg",
+    "author": "Eleanor Pena",
+    "course": "Position, Course"
+  }
+]

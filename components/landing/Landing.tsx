@@ -6,11 +6,20 @@ import { Courses } from './Courses'
 import { Benefits } from './Benefits'
 import { Workshops } from './Workshops'
 import { WorkshopPreview } from '@/types/workshop'
+import { Certificate } from './Certificate'
+import { Team } from './Team'
+import { Team as TeamType } from '@/types/team'
+import { Reviews } from './Reviews'
+import { PostsType, ReviewsType } from '@/types'
+import { Posts } from './Posts'
 
 type LandingProps = {
-  workshops: WorkshopPreview[]
+  workshops: WorkshopPreview[];
+  team: TeamType[];
+  reviews: ReviewsType[];
+  posts: PostsType[]
 }
-export const Landing = ({ workshops }: LandingProps) => {
+export const Landing = ({ workshops, team, reviews, posts }: LandingProps) => {
   return (
     <>
       <Info />
@@ -19,6 +28,10 @@ export const Landing = ({ workshops }: LandingProps) => {
       <Courses />
       <Benefits />
       <Workshops workshops={workshops} />
+      <Certificate />
+      <Team items={team} />
+      <Reviews items={reviews} />
+      <Posts items={posts} />
     </>
   )
 }
