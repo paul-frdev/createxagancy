@@ -17,15 +17,17 @@ export default function Home() {
     type: workshop.type
   }))
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pt-[1.563em] relative">
+    <>
       <Header />
-      <Landing
-        reviews={reviews}
-        team={team}
-        workshops={workshopsPreview}
-        posts={posts}
-      />
+      <main className="flex min-h-screen flex-col items-center justify-between pt-[1.563em] relative">
+        <Landing
+          reviews={reviews}
+          team={team}
+          workshops={workshopsPreview}
+          posts={posts}
+        />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

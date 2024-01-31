@@ -21,6 +21,29 @@ export const navbar = [
   },
 ];
 
+export const footerLinks = [
+  {
+    id: 1,
+    title: 'Marketing',
+  },
+  {
+    id: 2,
+    title: 'Management',
+  },
+  {
+    id: 3,
+    title: 'HR & Recruting',
+  },
+  {
+    id: 4,
+    title: 'Design',
+  },
+  {
+    id: 5,
+    title: 'Development',
+  },
+];
+
 export const statisticsList = [
   {
     id: 1,

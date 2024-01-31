@@ -21,7 +21,7 @@ const sizeCss = {
 
 
 type ButtonProps = {
-  children?: string;
+  children?: React.ReactNode;
   icon?: React.ReactElement;
   className?: string;
   variantCss?: keyof typeof variantCss;

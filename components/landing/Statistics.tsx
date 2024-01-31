@@ -23,8 +23,8 @@ export const Statistics = () => {
               with Createx Online Courses
             </Heading>
             <div className='flex justify-start items-center gap-x-[1.5em]'>
-              <Button variantCss='outline' className='bg-redLight'>About us</Button>
-              <Button sizeCss='lg' className='hover:bg-redLight'>Explore courses</Button>
+              <Button variantCss='outline' className='bg-[#ffdad5]'>About us</Button>
+              <Button sizeCss='lg' className='hover:bg-[#ffdad5] border-transparent hover:border-orange'>Explore courses</Button>
             </div>
           </div>
         </div>

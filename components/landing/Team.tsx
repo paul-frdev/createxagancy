@@ -96,9 +96,10 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
     <CarouselItem key={item.id} {...item} />
   ))
   return (
-    <section className='w-full bg-gray200'>
+    <section className='w-full bg-gray200 py-[10rem] relative'>
       <Container>
-        <div className='pt-20 mb-8 flex justify-between items-center'>
+        <span className=' bg-vector absolute top-[70px] left-0 w-[41px] h-[41px]' />
+        <div className='flex justify-between items-center'>
           <div>
             <Typography>Best tutors are all here</Typography>
             <Heading variant='h4' className='text-[2.875rem] mb-10'>Meet our team</Heading>
@@ -118,9 +119,10 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
             />
           </div>
         </div>
-        <div className='mb-20 min-h-[420px]'>
+        <div className='min-h-[420px]'>
           <Carousel items={carouselItems} options={carouselOptions} />
         </div>
+        <span className=' bg-shapes absolute bottom-[70px] right-0 w-[96px] h-[96px] bg-no-repeat bg-center bg-cover' />
       </Container>
     </section>
   )

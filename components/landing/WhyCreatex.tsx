@@ -10,7 +10,7 @@ import { Container } from '../ui/Container';
 export const WhyCreatex = () => {
   return (
     <section className='my-[8rem] relative w-full '>
-        <span className=' bg-leftStars absolute top-1/2 left-0 w-[181px] h-[132px] -rotate-45' />
+        <span className=' bg-leftStars absolute top-1/2 left-0 w-[181px] h-[132px] -rotate-[275deg] bg-no-repeat bg-cover' />
       <Container>
         <div className='flex justify-between items-start gap-x-[3.438em]'>
           <div>
@@ -40,7 +40,7 @@ export const WhyCreatex = () => {
           </div>
         </div>
       </Container>
-      <span className=' bg-rightCircle absolute bottom-0 right-0 w-[181px] h-[132px]' />
+      <span className=' bg-rightCircle absolute bottom-0 right-0 w-[181px] h-[132px] bg-no-repeat bg-cover' />
     </section>
   )
 }

@@ -84,13 +84,15 @@ export const Reviews: React.FC<ReviewsProps> = ({ items }) => {
   })
 
   return (
-    <section className='w-full bg-gray200'>
+    <section className='w-full bg-gray200 relative'>
+      <span className=' bg-circles absolute top-0 left-0 w-[145px] h-[145px]' />
       <Container>
-        <div className='mb-12'>
+        <div className='mb-12 relative'>
           <Typography className='text-center mb-0'>TESTIMONIALS</Typography>
           <Heading variant='h4' className='text-center text-[2.875rem]'>What our students say</Heading>
+          <span className=' bg-shapes2 bg-no-repeat text-sm absolute top-[29px] right-[25%] w-[87px] h-[47px]' />
         </div>
-        <div className='flex gap-x-[3rem] justify-between items-center pb-20 h-[450px] bg-transparent'>
+        <div className='flex gap-x-[3rem] justify-between items-center pb-20 h-[450px] bg-transparent relative'>
           <CustomPrevArrow
             ref={navPrevButton}
             icon={<ArrowBackIcon className='w-[24px] h-[24px]' />}
@@ -104,8 +106,10 @@ export const Reviews: React.FC<ReviewsProps> = ({ items }) => {
             className='w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0'
             variant='outline'
           />
+          <span className=' bg-dots absolute bottom-[50px] left-0 w-[143px] h-[105px]' />
         </div>
       </Container>
+      <span className='bg-circles absolute bottom-0 right-0 bg-no-repeat w-[145px] h-[145px]' />
     </section>
   )
 }

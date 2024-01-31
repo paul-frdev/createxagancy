@@ -9,6 +9,7 @@ export type ReviewsType = {
 export type LabelPost = {
   id: number;
   icon?: string;
+  src?: string;
   date?: string;
   time?: string;
   text?: string;

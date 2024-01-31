@@ -22,6 +22,7 @@
   --danger: #ff4242;
   --primary: #ff3f3a;
   --secondary: #ffcf2d;
+  --bg-icon: #a5a6aa;
 }
 
 @media (prefers-color-scheme: dark) {

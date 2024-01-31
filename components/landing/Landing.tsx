@@ -12,6 +12,7 @@ import { Team as TeamType } from '@/types/team'
 import { Reviews } from './Reviews'
 import { PostsType, ReviewsType } from '@/types'
 import { Posts } from './Posts'
+import { Subscribe } from './Subscribe'
 
 type LandingProps = {
   workshops: WorkshopPreview[];
@@ -32,6 +33,7 @@ export const Landing = ({ workshops, team, reviews, posts }: LandingProps) => {
       <Team items={team} />
       <Reviews items={reviews} />
       <Posts items={posts} />
+      <Subscribe />
     </>
   )
 }

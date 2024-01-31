@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export const Card = ({ children, classname, width }: { children: ReactNode, classname?: string, width?: string }) => {
   return (
-    <BaseCard sx={{ minWidth: 275 }} className={cn(`max-w-[${width}]`)}>
+    <BaseCard sx={{ minWidth: 275 }} className={cn(`w-full max-w-[${width}]`)}>
       <CardContent className={cn(``, classname)}>{children}</CardContent>
     </BaseCard>
   )

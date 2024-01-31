@@ -12,7 +12,7 @@ import { Container } from './ui/Container';
 
 export const Header = () => {
   return (
-    <header className='w-full'>
+    <header className='w-full bg-orange02 pt-[1.25rem]'>
       <Container>
         <div className='flex justify-between items-center'>
           <div className='flex justify-start items-center gap-x-[3.75em]'>
@@ -28,7 +28,7 @@ export const Header = () => {
               <ul className='flex justify-start items-center gap-x-[2.5em]'>
                 {navbar.map(item => (
                   <li key={item.id}>
-                    <Link href="/" className='text-[1em] text-black font-latoBold font-extrabold'>
+                    <Link href="/" className='text-[1em] text-black hover:text-orange transition-colors duration-300 font-latoBold font-extrabold'>
                       {item.title}
                     </Link>
                   </li>
@@ -37,12 +37,12 @@ export const Header = () => {
             </nav>
           </div>
           <div className='flex justify-end items-center gap-x-[2.25em]'>
-            <Button sizeCss='lg' className=' hover:bg-redLight transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px]'>Get consultation</Button>
+            <Button sizeCss='lg' className=' hover:bg-orange02 border-transparent hover:border-orange transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px]'>Get consultation</Button>
             <div className='flex justify-start items-center gap-x-2'>
               <Image src={person} alt='person' />
               <div className='flex justify-start items-center'>
-                <Link className='text-base text-black mr-[5px] font-latoBold font-[700]' href='/'>Log in</Link>/
-                <Link className='text-base text-black ml-[5px] font-latoBold font-[700]' href='/'>Register</Link>
+                <Link className='text-base text-black mr-[5px] font-latoBold font-[700]  hover:text-orange transition-colors duration-300' href='/'>Log in</Link>/
+                <Link className='text-base text-black ml-[5px] font-latoBold font-[700]  hover:text-orange transition-colors duration-300' href='/'>Register</Link>
               </div>
             </div>
           </div>

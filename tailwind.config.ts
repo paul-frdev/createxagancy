@@ -15,6 +15,13 @@ const config: Config = {
         leftStars: "url('/svg/left-stars.svg')",
         rightCircle: "url('/svg/right-circle.svg')",
         orange: '#feddd1',
+        vector: "url('/svg/vector.svg')",
+        shapes: "url('/svg/shapes.svg')",
+        shapes2: "url('/svg/shapes2.svg')",
+        circles: "url('/svg/circles.svg')",
+        dots: "url('/svg/dots.svg')",
+        illustration1: "url('/assets/illustration1.png')",
+        illustration2: "url('/assets/illustration2.png')",
       },
       fontFamily: {
         latoBlack: 'LatoBlack',
@@ -29,14 +36,17 @@ const config: Config = {
         red: '#FF3F3A',
         gray200: 'var(--gray-200)',
         gray800: 'var(--gray-800)',
+        gray900: 'var(--gray-900)',
         secondary: 'var(--secondary)',
         yellow:
           'linear-gradient(180deg, rgba(30, 33, 44, 0.00) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.77) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%)',
+        bgFooter: '#2a2c37'
       },
       borderColor: {
         orange: '#fc4b26',
         gray: 'var(--gray-300)',
         gray600: 'var(--gray-600)',
+        gray700: 'var(--gray-700)',
       },
       colors: {
         orange: '#fc4b26',
@@ -52,6 +62,7 @@ const config: Config = {
         gray700: 'var(--gray-700)',
         gray800: 'var(--gray-800)',
         gray900: 'var(--gray-900)',
+        bgIcon: 'var(--bg-icon)',
       },
       boxShadow: {
         card: '0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);',
