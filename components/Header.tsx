@@ -5,17 +5,17 @@ import Link from 'next/link'
 import Image from 'next/image';
 import logo from '../public/svg/logo.svg'
 import { navbar } from '@/constants';
-import { Button } from './ui/Button';
-import person from '../public/svg/person.svg'
 import { Container } from './ui/Container';
+import { MobileMenu } from './MobileMenu';
+import { UserBlock } from './UserBlock';
 
 
 export const Header = () => {
   return (
     <header className='w-full bg-orange02 pt-[1.25rem]'>
-      <Container>
+      <Container className='pb-2 lg:pb-0'>
         <div className='flex justify-between items-center'>
-          <div className='flex justify-start items-center gap-x-[3.75em]'>
+          <div className='flex justify-start items-center gap-x-[2.75em] lg:gap-x-[3.75em]'>
             <Link href='/' className='flex justify-center items-center'>
               <Image
                 src={logo}
@@ -24,11 +24,11 @@ export const Header = () => {
                 alt='logo'
               />
             </Link>
-            <nav>
-              <ul className='flex justify-start items-center gap-x-[2.5em]'>
+            <nav className='hidden md:block'>
+              <ul className='flex justify-start items-center gap-x-[1.5em] lg:gap-x-[2.5em]'>
                 {navbar.map(item => (
                   <li key={item.id}>
-                    <Link href="/" className='text-[1em] text-black hover:text-orange transition-colors duration-300 font-latoBold font-extrabold'>
+                    <Link href="/" className='text-[1em] text-nowrap text-black hover:text-orange transition-colors duration-300 font-latoBold font-extrabold'>
                       {item.title}
                     </Link>
                   </li>
@@ -36,16 +36,8 @@ export const Header = () => {
               </ul>
             </nav>
           </div>
-          <div className='flex justify-end items-center gap-x-[2.25em]'>
-            <Button sizeCss='lg' className=' hover:bg-orange02 border-transparent hover:border-orange transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px]'>Get consultation</Button>
-            <div className='flex justify-start items-center gap-x-2'>
-              <Image src={person} alt='person' />
-              <div className='flex justify-start items-center'>
-                <Link className='text-base text-black mr-[5px] font-latoBold font-[700]  hover:text-orange transition-colors duration-300' href='/'>Log in</Link>/
-                <Link className='text-base text-black ml-[5px] font-latoBold font-[700]  hover:text-orange transition-colors duration-300' href='/'>Register</Link>
-              </div>
-            </div>
-          </div>
+          <UserBlock className='md:flex flex-col lg:flex-row lg:gap-x-[2.25rem]'/>
+          <MobileMenu />
         </div>
       </Container>
     </header>

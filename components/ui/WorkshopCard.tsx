@@ -1,7 +1,6 @@
 import { WorkshopPreview } from '@/types/workshop'
 import React from 'react'
 import { Heading } from './Heading'
-import { Typography } from './Typography'
 import { Button } from './Button'
 
 type WorkshopCardProps = {

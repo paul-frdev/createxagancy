@@ -17,7 +17,9 @@ interface TextInputProps {
   maxRows?: number;
   fullWidth?: boolean;
   className?: string;
-  type?: string
+  type?: string;
+  inputStyles?: React.CSSProperties;
+  labelStyles?: React.CSSProperties;
 }
 
 export const Input: React.FC<TextInputProps> = ({
@@ -27,6 +29,8 @@ export const Input: React.FC<TextInputProps> = ({
   className,
   type = "text",
   fullWidth = false,
+  inputStyles,
+  labelStyles,
   ...rest
 }) => {
 
@@ -37,6 +41,8 @@ export const Input: React.FC<TextInputProps> = ({
       control={control}
       render={({ field: { onChange, value }, fieldState: { error } }) => (
         <TextField
+          inputProps={{ style: inputStyles }}
+          InputLabelProps={{ style: labelStyles }}
           type={type}
           className={className}
           helperText={error ? error.message : null}
@@ -44,16 +50,10 @@ export const Input: React.FC<TextInputProps> = ({
           error={!!error}
           sx={{
             input: {
-              background: theme.palette.common.white
-            },
-            '& .MuiFilledInput-root': {
               background: theme.palette.common.white,
-              borderRadius: 4,
-              height: 51,
-              border: `1px solid bg-gray`,
-              '&:hover': {
-                background: theme.palette.common.white
-              }
+              height: 26,
+              borderRadius: '4px',
+              border: `1px solid bg-gray`
             }
           }}
           onChange={onChange}

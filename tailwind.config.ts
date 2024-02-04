@@ -7,6 +7,12 @@ const config: Config = {
   important: '#__next',
   content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1031px',
+      'xl': '1280px',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -40,7 +46,8 @@ const config: Config = {
         secondary: 'var(--secondary)',
         yellow:
           'linear-gradient(180deg, rgba(30, 33, 44, 0.00) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.77) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%)',
-        bgFooter: '#2a2c37'
+        bgFooter: '#2a2c37',
+        bgInput: 'rgba(255, 255, 255, 0.12)',
       },
       borderColor: {
         orange: '#fc4b26',

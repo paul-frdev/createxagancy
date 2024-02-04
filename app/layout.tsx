@@ -3,6 +3,10 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import CssBaseline from '@mui/material/CssBaseline';
 import { Lato } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from '@mui/material';
+import { theme } from '@/lib/theme';
+import { MyContextProvider } from '@/context/useContextMenu';
+
 
 const lato = Lato({ weight: "400", subsets: ["latin-ext"] });
 
@@ -20,8 +24,12 @@ export default function RootLayout({
     <html lang="en">
       <body id='__next' className={lato.className}>
         <AppRouterCacheProvider>
-          <CssBaseline />
-          {children}
+          <MyContextProvider>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              {children}
+            </ThemeProvider>
+          </MyContextProvider>
         </AppRouterCacheProvider>
       </body>
     </html>

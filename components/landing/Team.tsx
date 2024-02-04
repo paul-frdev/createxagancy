@@ -8,6 +8,7 @@ import { Image } from '../ui/Image';
 import { Team as TeamType } from '@/types/team';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Swiper as SwiperCore } from 'swiper/types';
 
 
 type TeamProps = {
@@ -47,8 +48,8 @@ const carouselOptions = {
 const CarouselItem: React.FC<CarouselItemProps> = ({ src, author, position, links }) => {
   return (
     <div className='w-full max-w-[285px] h-[416px]'>
-      <div className='w-full bg-secondary flex justify-center items-center mb-4'>
-        <Image src={src} alt="person" className='w-[245px] h-[320px] bg-cover bg-center' />
+      <div className='w-full flex justify-center items-center mb-4'>
+        <Image src={src} alt="person" className='w-full h-[320px] bg-cover bg-center' />
       </div>
       <div className='flex flex-col justify-center items-center'>
         <Heading variant='h6' className='text-[1.25rem]'>{author}</Heading>
@@ -62,8 +63,10 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
 
   const navPrevButton = React.useRef<HTMLButtonElement>(null);
   const navNextButton = React.useRef<HTMLButtonElement>(null);
+  const [swipe, setSwipe] = useState<SwiperCore>();
 
-  useEffect(() => { }, [navNextButton, navPrevButton])
+  useEffect(() => {
+  }, [navNextButton, navPrevButton, swipe])
 
   const carouselOptions = {
     breakpoints: {
@@ -82,7 +85,7 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
     grabCursor: true,
     loop: true,
     pagination: false,
-    speed: 1000,
+    speed: 700,
     slidesPerView: 3,
     navigation: {
       clickable: true,
@@ -120,7 +123,7 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
           </div>
         </div>
         <div className='min-h-[420px]'>
-          <Carousel items={carouselItems} options={carouselOptions} />
+          <Carousel onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
         </div>
         <span className=' bg-shapes absolute bottom-[70px] right-0 w-[96px] h-[96px] bg-no-repeat bg-center bg-cover' />
       </Container>

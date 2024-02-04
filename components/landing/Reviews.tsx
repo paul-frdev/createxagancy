@@ -19,9 +19,9 @@ type ReviewsProps = {
   items: ReviewsType[]
 }
 
-const CarouselItem: React.FC<CarouselItemProps> = ({ src, author, text, course }) => {
+const ReviewItem: React.FC<CarouselItemProps> = ({ src, author, text, course }) => {
   return (
-    <div className='max-w-[1080px] bg-white rounded py-[4rem] px-[6.5rem] shadow-xl'>
+    <div className='bg-white rounded shadow-xl py-14 px-10'>
       <div className='flex justify-start items-start gap-x-[1.875rem] mb-6'>
         <span>
           <Image src='/svg/braces.svg' alt='braces' className='w-[28px] h-[20px]' />
@@ -41,13 +41,10 @@ const CarouselItem: React.FC<CarouselItemProps> = ({ src, author, text, course }
   );
 };
 
-//custom-prev-arrow
-//custom-next-arrow
-
 export const Reviews: React.FC<ReviewsProps> = ({ items }) => {
 
-  const navPrevButton = React.useRef<HTMLButtonElement>(null);
-  const navNextButton = React.useRef<HTMLButtonElement>(null);
+  const navPrevButton = useRef<HTMLButtonElement>(null);
+  const navNextButton = useRef<HTMLButtonElement>(null);
   const [swipe, setSwipe] = useState<SwiperCore>();
 
 
@@ -59,12 +56,12 @@ export const Reviews: React.FC<ReviewsProps> = ({ items }) => {
     breakpoints: {
       1400: {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 50,
         slidesOffsetBefore: 0,
       },
     },
-    spaceBetween: 20,
-    speed: 1000,
+    spaceBetween: 50,
+    speed: 700,
     grabCursor: true,
     loop: true,
     pagination: true,
@@ -79,7 +76,7 @@ export const Reviews: React.FC<ReviewsProps> = ({ items }) => {
 
   const carouselItems = items.map(item => {
     return (
-      <CarouselItem key={item.id} {...item} />
+      <ReviewItem key={item.id} {...item} />
     )
   })
 
@@ -92,14 +89,14 @@ export const Reviews: React.FC<ReviewsProps> = ({ items }) => {
           <Heading variant='h4' className='text-center text-[2.875rem]'>What our students say</Heading>
           <span className=' bg-shapes2 bg-no-repeat text-sm absolute top-[29px] right-[25%] w-[87px] h-[47px]' />
         </div>
-        <div className='flex gap-x-[3rem] justify-between items-center pb-20 h-[450px] bg-transparent relative'>
+        <div className='flex gap-x-[3rem] m-auto justify-between items-center pb-20 bg-transparent max-w-[1020px] w-full'>
           <CustomPrevArrow
             ref={navPrevButton}
             icon={<ArrowBackIcon className='w-[24px] h-[24px]' />}
             className='w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0'
             variant='outline'
           />
-          <Carousel onBeforeInit={setSwipe} height={344} options={carouselOptions} items={carouselItems} />
+          <Carousel className='reviews px-8' onBeforeInit={setSwipe} height={344} options={carouselOptions} items={carouselItems} />
           <CustomNextArrow
             ref={navNextButton}
             icon={<ArrowForwardIcon className='w-[24px] h-[24px]' />}

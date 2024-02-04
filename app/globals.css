@@ -67,6 +67,16 @@ body {
   margin-right: 0 !important;
 }
 
+.MuiFormControl-root {
+  background: transparent !important;
+}
+
+.reviews .swiper-wrapper,
+.preview .swiper-wrapper,
+.breakpoint .swiper-wrapper,
+.coverflow .swiper-wrapper {
+  padding-bottom: 3rem;
+}
 
 @layer utilities {
   .text-balance {

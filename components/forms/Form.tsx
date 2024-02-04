@@ -5,23 +5,24 @@ import { SubmitHandler, UseFormHandleSubmit, useForm } from 'react-hook-form';
 
 
 export interface IFormProps {
-  defaultValues?: Record<string, any>; // Use a more specific type than 'any'
+  defaultValues?: Record<string, any>;
   children?: React.ReactNode;
   buttonLabel?: string;
-  onSubmit: SubmitHandler<any>; // Define the type for onSubmit
-  handleSubmit?: UseFormHandleSubmit<any>; // Define the type for handleSubmit
-  register?: any; // Consider using a more specific type if possible
+  onSubmit: SubmitHandler<any>;
   className?: string;
+  buttonClasses?: string;
+  icon?: React.ReactElement;
 }
 
-export const Form: React.FC<IFormProps> = ({ onSubmit, defaultValues, children, buttonLabel, handleSubmit, className, ...rest }) => {
+export const Form: React.FC<IFormProps> = ({ onSubmit, defaultValues, children, buttonLabel, className, buttonClasses, icon, ...rest }) => {
 
-  const { register: formRegister, handleSubmit: handleFormSubmit } = useForm({ defaultValues });
+  const { handleSubmit: handleFormSubmit } = useForm({ defaultValues });
+
 
   return (
     <form onSubmit={handleFormSubmit(onSubmit)} {...rest} className={cn(`flex justify-start items-start gap-x-3`, className)}>
       {children}
-      <Button sizeCss='lg' className='border-transparent hover:bg-orange02 hover:border-orange'>{buttonLabel}</Button>
+      <Button icon={icon} sizeCss='lg' className={cn(`border-transparent hover:bg-orange02 hover:border-orange`, buttonClasses)} type='submit'>{buttonLabel}</Button>
     </form>
   )
 }

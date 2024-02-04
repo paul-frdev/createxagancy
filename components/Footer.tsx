@@ -14,6 +14,9 @@ import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { Heading } from './ui/Heading'
 import { footerLinks, navbar } from '@/constants'
+import { EmailForm } from './forms/EmailForm'
+import heardIcon from '../public/svg/heard.svg'
+import { Button } from './ui/Button'
 
 const socials = [
   {
@@ -64,7 +67,7 @@ export const Footer = () => {
           <ul className='flex flex-col justify-start items-start gap-y-2'>
             {navbar.map(item => (
               <li key={item.id}>
-                <Link href='/' className='text-base text-white opacity-[0.6] leading-[160%] tracking-[1px] font-latoRegular font-[400]'>{item.title}</Link>
+                <Link href='/' className='text-base hover:opacity-[1] transition-all duration-300 text-white opacity-[0.6] leading-[160%] tracking-[1px] font-latoRegular font-[400]'>{item.title}</Link>
               </li>
             ))}
           </ul>
@@ -76,7 +79,7 @@ export const Footer = () => {
           <ul className='flex flex-col justify-start items-start gap-y-2'>
             {footerLinks.map(item => (
               <li key={item.id}>
-                <Link href='/' className='text-base text-nowrap text-white opacity-[0.6] leading-[160%] tracking-[1px] font-latoRegular font-[400]'>{item.title}</Link>
+                <Link href='/' className='text-base text-nowrap text-white opacity-[0.6] hover:opacity-[1] transition-all duration-300 leading-[160%] tracking-[1px] font-latoRegular font-[400]'>{item.title}</Link>
               </li>
             ))}
           </ul>
@@ -94,17 +97,25 @@ export const Footer = () => {
             <span>hello@createx.com</span>
           </Link>
         </div>
-        <div className='flex flex-col gap-y-6 justify-start items-start w-full max-w-[140px]'>
+        <div className='flex flex-col gap-y-6 justify-start items-start w-full max-w-[286px]'>
           <Heading variant='h6' className='text-base uppercase leading-[150%] tracking-[1px] text-white text-nowrap'>
             SIGN UP TO OUR NEWSLETTER
           </Heading>
-
-          <span>
+          <EmailForm />
+          <span className='text-[0.625rem] text-white opacity-[0.6] font-latoRegular font-[400] leading-[150%]'>
             *Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.
           </span>
         </div>
       </Container>
-      <div className='w-full h-[58px] bg-bgFooter'></div>
+      <div className='flex justify-between items-center w-full h-[58px] bg-bgFooter'>
+        <div className='flex justify-start items-center'>
+          <Typography className=' text-[0.75rem] font-latoRegular font-[400] normal-case text-white ml-20 mb-0 mr-2'>© All rights reserved.</Typography>
+          <Typography className=' text-[0.75rem] font-latoRegular font-[400] normal-case text-white mb-0 mr-1'>Made with</Typography>
+          <Image src={heardIcon} alt='icon' className='w-4 h-4' />
+          <Typography className=' text-[0.75rem] font-latoRegular font-[400] normal-case text-white mb-0 ml-1'>by Createx Studio</Typography>
+        </div>
+        <Button className='bg-transparent border-none hover:bg-transparent hover:border-none opacity-[0.6]'>GO TO TOP</Button>
+      </div>
     </footer>
   )
 }
