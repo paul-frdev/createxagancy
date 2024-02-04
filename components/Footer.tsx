@@ -48,7 +48,7 @@ const socials = [
 export const Footer = () => {
   return (
     <footer className=' bg-gray900 w-full pt-14'>
-      <Container className='flex justify-between items-start mb-12'>
+      <Container className='flex w-full justify-between items-start mb-12'>
         <div className='flex flex-col gap-y-6 justify-start items-start w-full max-w-[280px]'>
           <Link href='/' className='max-w-[280px]'>
             <Image src={logo} alt='logo' className='w-[130px] h-[22px] !text-white' />
@@ -64,7 +64,7 @@ export const Footer = () => {
           <Heading variant='h6' className='text-base uppercase leading-[150%] tracking-[1px] text-white text-nowrap'>
             SITE MAP
           </Heading>
-          <ul className='flex flex-col justify-start items-start gap-y-2'>
+          <ul className='flex flex-col justify-start items-start gap-y-[0.7rem]'>
             {navbar.map(item => (
               <li key={item.id}>
                 <Link href='/' className='text-base hover:opacity-[1] transition-all duration-300 text-white opacity-[0.6] leading-[160%] tracking-[1px] font-latoRegular font-[400]'>{item.title}</Link>
@@ -76,7 +76,7 @@ export const Footer = () => {
           <Heading variant='h6' className='text-base uppercase leading-[150%] tracking-[1px] text-white text-nowrap'>
             COURSES
           </Heading>
-          <ul className='flex flex-col justify-start items-start gap-y-2'>
+          <ul className='flex flex-col justify-start items-start gap-y-[0.7rem]'>
             {footerLinks.map(item => (
               <li key={item.id}>
                 <Link href='/' className='text-base text-nowrap text-white opacity-[0.6] hover:opacity-[1] transition-all duration-300 leading-[160%] tracking-[1px] font-latoRegular font-[400]'>{item.title}</Link>
@@ -84,16 +84,16 @@ export const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className='flex flex-col gap-y-6 justify-start items-start w-full max-w-[140px]'>
+        <div className='flex flex-col gap-y-6 justify-start items-start w-full max-w-[160px]'>
           <Heading variant='h6' className='text-base uppercase leading-[150%] tracking-[1px] text-white text-nowrap'>
             CONTACT US
           </Heading>
-          <Link href='tel:4055550128' className='flex justify-start items-end gap-x-2 text-bgIcon hover:text-white opacity-[0.6] transition-colors divide-purple-3'>
-            <SmartphoneIcon />
+          <Link href='tel:4055550128' className='flex justify-start items-center gap-x-2 text-bgIcon hover:text-white opacity-[0.6] transition-colors divide-purple-3'>
+            <SmartphoneIcon className='w-4 h-4'/>
             <span className=' text-nowrap'>(405) 555-0128</span>
           </Link>
-          <Link href='mailto:hello@createx.com' className='flex justify-start items-end gap-x-2 text-bgIcon hover:text-white opacity-[0.6] transition-colors divide-purple-300'>
-            <MailOutlineIcon />
+          <Link href='mailto:hello@createx.com' className='flex justify-start items-center gap-x-2 text-bgIcon hover:text-white opacity-[0.6] transition-colors divide-purple-300'>
+            <MailOutlineIcon className='w-4 h-4' />
             <span>hello@createx.com</span>
           </Link>
         </div>

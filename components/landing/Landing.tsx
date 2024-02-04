@@ -27,13 +27,13 @@ export const Landing = ({ workshops, team, reviews, posts }: LandingProps) => {
       <Statistics />
       <WhyCreatex />
       <Courses />
-      <Benefits />
+      {/* <Benefits />
       <Workshops workshops={workshops} />
       <Certificate />
       <Team items={team} />
       <Reviews items={reviews} />
       <Posts items={posts} />
-      <Subscribe />
+      <Subscribe /> */}
     </>
   )
 }

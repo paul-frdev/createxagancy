@@ -37,7 +37,7 @@ export const EmailForm = () => {
       className='justify-center relative w-full'
       buttonLabel=""
       icon={<ArrowForwardIcon />}
-      buttonClasses='absolute -top-[6%] -right-[25px] bg-transparent hover:bg-transparent hover:text-orange hover:border-transparent'
+      buttonClasses='absolute -top-[15%] right-[1px] bg-transparent hover:bg-transparent hover:text-orange hover:border-transparent p-4'
       onSubmit={handleSubmit(onSubmit)}
     >
       <Input

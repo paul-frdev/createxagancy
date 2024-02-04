@@ -8,11 +8,12 @@ import { cn } from '@/lib/utils';
 
 type UserBlockProps = {
   className?: string;
+  buttonClasses?: string;
 }
-export const UserBlock: React.FC<UserBlockProps> = ({ className }) => {
+export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }) => {
   return (
     <div className={cn(`hidden justify-end items-end lg:items-center gap-y-2`, className)}>
-      <Button sizeCss='lg' className=' hover:bg-orange02 text-nowrap border-transparent hover:border-orange transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1'>Get consultation</Button>
+      <Button sizeCss='lg' className={cn(`hover:bg-orange02 text-nowrap border-transparent hover:border-orange transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`, buttonClasses)}>Get consultation</Button>
       <div className='flex justify-start items-center gap-x-2 order-1'>
         <Image src={person} alt='person' />
         <div className='flex justify-start items-center '>
