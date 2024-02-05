@@ -29,6 +29,7 @@ const config: Config = {
         dots: "url('/svg/dots.svg')",
         illustration1: "url('/assets/illustration1.png')",
         illustration2: "url('/assets/illustration2.png')",
+        lightOrange: 'linear-gradient(45.00deg, rgba(255, 63, 58, 0.2) 0%,rgb(247, 94, 5, 0.2) 0.2%)',
       },
       fontFamily: {
         latoBlack: 'LatoBlack',

@@ -25,10 +25,8 @@ export default function RootLayout({
       <body id='__next' className={lato.className}>
         <AppRouterCacheProvider>
           <MyContextProvider>
-            <ThemeProvider theme={theme}>
-              <CssBaseline />
+            <CssBaseline />
               {children}
-            </ThemeProvider>
           </MyContextProvider>
         </AppRouterCacheProvider>
       </body>

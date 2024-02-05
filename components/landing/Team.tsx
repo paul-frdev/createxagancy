@@ -18,33 +18,6 @@ type TeamProps = {
 type CarouselItemProps = TeamType & {
 };
 
-const carouselOptions = {
-  breakpoints: {
-    // 785: {
-    //   slidesPerView: 3,
-    //   spaceBetween: 20,
-    //   slidesOffsetBefore: 0,
-    // },
-    1200: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-      slidesOffsetBefore: 0,
-    },
-  },
-  spaceBetween: 32,
-  grabCursor: true,
-  loop: true,
-  pagination: false,
-  slidesPerView: 3,
-  navigation: {
-    clickable: true,
-    prevEl: ".custom-prev-arrow",
-    nextEl: ".custom-next-arrow",
-  },
-  slidesOffsetBefore: 20,
-};
-
-
 const CarouselItem: React.FC<CarouselItemProps> = ({ src, author, position, links }) => {
   return (
     <div className='w-full max-w-[285px] h-[416px]'>
@@ -70,44 +43,52 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
 
   const carouselOptions = {
     breakpoints: {
-      // 785: {
-      //   slidesPerView: 3,
-      //   spaceBetween: 20,
-      //   slidesOffsetBefore: 0,
-      // },
-      1200: {
+      315: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      540: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      827: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1060: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1250: {
         slidesPerView: 4,
         spaceBetween: 10,
-        slidesOffsetBefore: 0,
       },
     },
-    spaceBetween: 32,
     grabCursor: true,
     loop: true,
     pagination: false,
+    slidesOffsetBefore: 0,
     speed: 700,
-    slidesPerView: 3,
     navigation: {
       clickable: true,
       prevEl: navPrevButton.current,
       nextEl: navNextButton.current,
     },
-    slidesOffsetBefore: 20,
   };
 
   const carouselItems = items.map(item => (
     <CarouselItem key={item.id} {...item} />
   ))
   return (
-    <section className='w-full bg-gray200 py-[10rem] relative'>
+    <section className='w-full bg-gray200 py-[3rem] lg:py-[10rem] relative'>
       <Container>
         <span className=' bg-vector absolute top-[70px] left-0 w-[41px] h-[41px]' />
-        <div className='flex justify-between items-center'>
+        <div className='flex flex-col xsm:flex-row justify-between items-center'>
           <div>
-            <Typography>Best tutors are all here</Typography>
-            <Heading variant='h4' className='text-[2.875rem] mb-10'>Meet our team</Heading>
+            <Typography className='text-center xsm:text-left'>Best tutors are all here</Typography>
+            <Heading variant='h4' className='text-[2.5rem] md:text-[2.875rem] mb-10'>Meet our team</Heading>
           </div>
-          <div className='flex justify-end items-center gap-x-2'>
+          <div className='hidden xsm:flex justify-end items-center gap-x-2'>
             <CustomPrevArrow
               icon={<ArrowBackIcon className='w-[24px] h-[24px]' />}
               ref={navPrevButton}

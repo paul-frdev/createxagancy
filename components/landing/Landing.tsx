@@ -23,16 +23,15 @@ type LandingProps = {
 export const Landing = ({ workshops, team, reviews, posts }: LandingProps) => {
   return (
     <>
-      <Info />
       <Statistics />
       <WhyCreatex />
       <Courses />
-      {/* <Benefits />
+      <Benefits />
       <Workshops workshops={workshops} />
       <Certificate />
       <Team items={team} />
       <Reviews items={reviews} />
-      <Posts items={posts} />
+      {/* <Posts items={posts} />
       <Subscribe /> */}
     </>
   )
