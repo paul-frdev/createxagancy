@@ -20,7 +20,7 @@ type CarouselItemProps = TeamType & {
 
 const CarouselItem: React.FC<CarouselItemProps> = ({ src, author, position, links }) => {
   return (
-    <div className='w-full max-w-[285px] h-[416px]'>
+    <div className='w-full max-w-[285px] h-[416px] mx-auto'>
       <div className='w-full flex justify-center items-center mb-4'>
         <Image src={src} alt="person" className='w-full h-[320px] bg-cover bg-center' />
       </div>
@@ -45,19 +45,23 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
     breakpoints: {
       315: {
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 0,
       },
-      540: {
+      501: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
-      827: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-      1060: {
+      768: {
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 10,
+      },
+      1031: {
+        slidesPerView: 3,
+        spaceBetween: 10,
       },
       1250: {
         slidesPerView: 4,
@@ -86,7 +90,7 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
         <div className='flex flex-col xsm:flex-row justify-between items-center'>
           <div>
             <Typography className='text-center xsm:text-left'>Best tutors are all here</Typography>
-            <Heading variant='h4' className='text-[2.5rem] md:text-[2.875rem] mb-10'>Meet our team</Heading>
+            <Heading variant='h4' className='text-[2.5rem] md:text-[2.875rem] mb-10 z-[3]'>Meet our team</Heading>
           </div>
           <div className='hidden xsm:flex justify-end items-center gap-x-2'>
             <CustomPrevArrow
@@ -103,7 +107,7 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
             />
           </div>
         </div>
-        <div className='min-h-[420px]'>
+        <div className='min-h-[420px] max-w-[583px] md:max-w-[900px] xl:max-w-full mx-auto'>
           <Carousel onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
         </div>
         <span className=' bg-shapes absolute bottom-[70px] right-0 w-[96px] h-[96px] bg-no-repeat bg-center bg-cover' />

@@ -48,7 +48,7 @@ const socials = [
 export const Footer = () => {
   return (
     <footer className=' bg-gray900 w-full pt-14'>
-      <Container className='flex w-full justify-between items-start mb-12'>
+      <Container className='flex flex-wrap w-full justify-between items-start mb-12'>
         <div className='flex flex-col gap-y-6 justify-start items-start w-full max-w-[280px]'>
           <Link href='/' className='max-w-[280px]'>
             <Image src={logo} alt='logo' className='w-[130px] h-[22px] !text-white' />
@@ -107,14 +107,14 @@ export const Footer = () => {
           </span>
         </div>
       </Container>
-      <div className='flex justify-between items-center w-full h-[58px] bg-bgFooter'>
-        <div className='flex justify-start items-center'>
-          <Typography className=' text-[0.75rem] font-latoRegular font-[400] normal-case text-white ml-20 mb-0 mr-2'>© All rights reserved.</Typography>
-          <Typography className=' text-[0.75rem] font-latoRegular font-[400] normal-case text-white mb-0 mr-1'>Made with</Typography>
+      <div className='flex flex-col sm:flex-row justify-center sm:justify-between items-center w-full h-auto py-3 sm:py-0 sm:h-[58px] bg-bgFooter'>
+        <div className='flex  justify-center sm:justify-start items-center'>
+          <Typography className=' text-nowrap text-[0.75rem] font-latoRegular font-[400] normal-case text-white sm:ml-20 mb-0 mr-2'>© All rights reserved.</Typography>
+          <Typography className=' text-nowrap text-[0.75rem] font-latoRegular font-[400] normal-case text-white mb-0 mr-1'>Made with</Typography>
           <Image src={heardIcon} alt='icon' className='w-4 h-4' />
-          <Typography className=' text-[0.75rem] font-latoRegular font-[400] normal-case text-white mb-0 ml-1'>by Createx Studio</Typography>
+          <Typography className=' text-nowrap text-[0.75rem] font-latoRegular font-[400] normal-case text-white mb-0 ml-1'>by Createx Studio</Typography>
         </div>
-        <Button className='bg-transparent border-none hover:bg-transparent hover:border-none opacity-[0.6]'>GO TO TOP</Button>
+        <Button className='text-nowrap p-0 py-2 px-6 bg-transparent border-none hover:bg-transparent hover:border-none opacity-[0.6]'>GO TO TOP</Button>
       </div>
     </footer>
   )

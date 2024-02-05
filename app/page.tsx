@@ -27,7 +27,7 @@ export default function Home() {
           posts={posts}
         />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

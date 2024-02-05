@@ -31,8 +31,8 @@ export const Landing = ({ workshops, team, reviews, posts }: LandingProps) => {
       <Certificate />
       <Team items={team} />
       <Reviews items={reviews} />
-      {/* <Posts items={posts} />
-      <Subscribe /> */}
+      <Posts items={posts} />
+      <Subscribe />
     </>
   )
 }

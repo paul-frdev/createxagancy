@@ -33,7 +33,7 @@ export const SubscribeForm = () => {
 
   return (
     <Form
-      className='justify-center'
+      className='justify-center flex-col xsm:flex-row gap-y-4 xsm:gap-y-0 items-end xsm:items-center'
       buttonLabel="Subscribe"
       onSubmit={handleSubmit(onSubmit)}
     >
