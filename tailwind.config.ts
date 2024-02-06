@@ -30,6 +30,8 @@ const config: Config = {
         illustration1: "url('/assets/illustration1.png')",
         illustration2: "url('/assets/illustration2.png')",
         lightOrange: 'linear-gradient(45.00deg, rgba(255, 63, 58, 0.2) 0%,rgb(247, 94, 5, 0.2) 0.2%)',
+        hoverCard:
+          ' linear-gradient(180.00deg, rgba(30, 33, 44, 0) 43.897%,rgba(30, 33, 44, 0.03) 55.206%,rgba(30, 33, 44, 0.33) 68.728%,rgba(30, 33, 44, 0.56) 76.168%,rgba(30, 33, 44, 0.77) 83.749%,rgba(30, 33, 44, 0.92) 91.493%,rgb(30, 33, 44) 100%);',
       },
       fontFamily: {
         latoBlack: 'LatoBlack',

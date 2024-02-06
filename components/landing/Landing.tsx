@@ -1,5 +1,4 @@
 import React from 'react'
-import { Info } from './Info'
 import { Statistics } from './Statistics'
 import { WhyCreatex } from './WhyCreatex'
 import { Courses } from './Courses'

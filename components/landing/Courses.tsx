@@ -1,7 +1,6 @@
 import React from 'react'
 import { Heading } from '../ui/Heading'
 import { Button } from '../ui/Button'
-import { Box } from '@mui/material'
 import { Card } from '../ui/Card'
 import { CardCourse } from '../ui/CardCourse'
 import { coursesList } from '@/constants'

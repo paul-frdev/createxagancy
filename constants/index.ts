@@ -126,7 +126,7 @@ export const coursesList = [
     author: 'by Leslie Alexander Li',
   },
   {
-    id: 1,
+    id: 4,
     src: '/assets/4.jpg',
     alt: 'personfour',
     label: 'Marketing',
@@ -136,7 +136,7 @@ export const coursesList = [
     author: 'by Kristin Watson',
   },
   {
-    id: 1,
+    id: 5,
     src: '/assets/5.jpg',
     alt: 'personfive',
     label: 'Management',
@@ -146,7 +146,7 @@ export const coursesList = [
     author: 'by Dianne Russell',
   },
   {
-    id: 1,
+    id: 6,
     src: '/assets/6.jpg',
     alt: 'personsix',
     label: 'Design',
