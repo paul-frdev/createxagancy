@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Statistics } from './Statistics'
 import { WhyCreatex } from './WhyCreatex'
@@ -12,6 +13,8 @@ import { Reviews } from './Reviews'
 import { PostsType, ReviewsType } from '@/types'
 import { Posts } from './Posts'
 import { Subscribe } from './Subscribe'
+import { useMyContext } from '@/context/useContextMenu'
+import { Video } from '../Video'
 
 type LandingProps = {
   workshops: WorkshopPreview[];
@@ -20,6 +23,8 @@ type LandingProps = {
   posts: PostsType[]
 }
 export const Landing = ({ workshops, team, reviews, posts }: LandingProps) => {
+
+  const { showVideo } = useMyContext()
   return (
     <>
       <Statistics />
@@ -32,6 +37,7 @@ export const Landing = ({ workshops, team, reviews, posts }: LandingProps) => {
       <Reviews items={reviews} />
       <Posts items={posts} />
       <Subscribe />
+      {showVideo ? <Video videoId='https://youtu.be/8oON21G1Bqg?si=Frq0BUaNg6fcrBsy' /> : null}
     </>
   )
 }

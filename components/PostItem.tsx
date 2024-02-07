@@ -28,8 +28,8 @@ export const PostItem: React.FC<PostItemProps> = ({ post }) => {
         <div className='flex flex-col justify-between items-start h-full'>
           <div className='flex justify-start items-start text-sm mb-2 px-2 md:py-3'>
             {labels.map((label) => (
-              <>
-                {label.text ? (<span key={label.id} className='pr-[12px] font-latoBold font-[700] text-gray700'>{label.text}</span>) : null}
+              <React.Fragment key={label.id}>
+                {label.text ? (<span className='pr-[12px] font-latoBold font-[700] text-gray700'>{label.text}</span>) : null}
                 {label.src && label.date ? (
                   <div className='flex justify-between items-center gap-x-[2.5px] px-[12px] border-x border-gray700 '>
                     <Image src={label.src as string} alt='icon' className='w-4 h-4 text-gray700' />
@@ -42,7 +42,7 @@ export const PostItem: React.FC<PostItemProps> = ({ post }) => {
                     <span className=' font-latoRegular font-[400] text-gray700'>{label.time}</span>
                   </span>
                 ) : null}
-              </>
+              </React.Fragment>
             ))}
           </div>
           <div className='px-2'>

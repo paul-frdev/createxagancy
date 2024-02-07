@@ -14,10 +14,10 @@ import { useMyContext } from '@/context/useContextMenu'
 
 export const Statistics = () => {
 
-  const { toggleShowVideo, showVideo } = useMyContext()
+  const { toggleShowVideo } = useMyContext()
 
   return (
-    <section className='w-full bg-lightOrange bg-opacity-[0.2] pt-[2rem] h-screen relative'>
+    <section className='w-full bg-lightOrange bg-opacity-[0.2] pt-[2rem] h-screen'>
       <Container>
         <div className=' flex justify-between pt-[6em]'>
           <div>
@@ -25,7 +25,6 @@ export const Statistics = () => {
               <Image src={play} alt='play' className='animation-pulse rounded-full' />
               <span className='text-sm font-latoBold font-[700]'>Play showreel</span>
             </Link>
-            {showVideo ? <Video  videoId='https://youtu.be/8oON21G1Bqg?si=Frq0BUaNg6fcrBsy'/> : null}
             <div className='w-full'>
               <Heading variant='h1' className='text-[2.5rem] sm:text-[3rem] text-center md:text-left lg:text-[4rem] font-latoBlack font-[900] w-full md:max-w-[496px] tracking-[1px] leading-[130%] mb-8 sm:mb-[1.75em]'>
                 Enjoy studying
@@ -48,8 +47,8 @@ export const Statistics = () => {
         </div>
         <div className='w-ful mt-12 mb-8'>
           <div className='flex flex-col md:flex-row justify-between gap-x-[2rem] items-center '>
-            {statisticsList.map((item, idx) => (
-              <div key={item.id} className={cn(`flex justify-between items-center`, item.id < 4 ? 'w-full gap-x-[2rem]' : 'w-fit')}>
+            {statisticsList.map((item) => (
+              <React.Fragment key={item.id}>
                 <div className='flex flex-col lg:flex-row justify-start items-center gap-x-[0.75em] gap-x-[0.75em]'>
                   <span className='text-[2.875em] leading-[130%] font-latoBold font-[700] text-nowrap'>
                     {item.number}
@@ -59,7 +58,7 @@ export const Statistics = () => {
                   </span>
                 </div>
                 {item.id < 4 ? <div><span className='hidden md:block w-[8px] h-[8px] bg-red block rounded-full' /></div> : null}
-              </div>
+              </React.Fragment>
             ))}
           </div>
         </div>

@@ -4,17 +4,22 @@ import ReactPlayer from 'react-player';
 import CloseIcon from '@mui/icons-material/Close';
 import { Button } from './ui/Button';
 import { useMyContext } from '@/context/useContextMenu';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Fullscreen } from '@mui/icons-material';
 
 export const Video = ({ videoId }: { videoId: string }) => {
 
-  const { toggleShowVideo } = useMyContext()
+  const { toggleShowVideo } = useMyContext();
+  const isMobile = useMediaQuery('(max-width: 420px)');
+  const isLaptop = useMediaQuery('(max-width: 600px)');
 
+  const widthLaptop = isLaptop ? '310px' : '600px'
   const onError = (error: any) => {
     console.error('YouTube Player Error:', error);
   };
 
   return (
-    <div className='absolute top-[50%] bg-black opacity-[0.8] w-full h-screen flex justify-center items-center  z-20 left-[50%] -translate-y-1/2 -translate-x-1/2 right-0 bottom-0'>
+    <div className='absolute top-0 bottom-0 bg-black opacity-[1] w-full h-screen flex justify-center items-center  z-20 left-0 right-0 bottom-0'>
       <div className='relative'>
         <Button
           onClick={() => toggleShowVideo()}
@@ -22,11 +27,13 @@ export const Video = ({ videoId }: { videoId: string }) => {
           <CloseIcon className='w-[34px] h-[34px]' />
         </Button>
         <ReactPlayer
-          className='w-full max-w-[600px] h-auto z-30'
+          className='w-full z-30'
           url={videoId}
           playing
+          width={widthLaptop}
           onError={onError}
-          
+          volume={0.277}
+          light
         />
       </div>
     </div>

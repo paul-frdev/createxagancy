@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-between relative">
+      <main className="flex min-h-screen flex-col items-center justify-between">
         <Landing
           reviews={reviews}
           team={team}

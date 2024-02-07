@@ -6,6 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from '@mui/material';
 import { theme } from '@/lib/theme';
 import { MyContextProvider } from '@/context/useContextMenu';
+import { cn } from '@/lib/utils';
 
 
 const lato = Lato({ weight: "400", subsets: ["latin-ext"] });
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id='__next' className={lato.className}>
+      <body id='__next' className={cn(`relative`, lato.className)}>
         <AppRouterCacheProvider>
           <MyContextProvider>
             <CssBaseline />

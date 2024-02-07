@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useRef } from 'react'
 import { Container } from './ui/Container'
 import Link from 'next/link'
 import { Image } from './ui/Image'
@@ -17,6 +18,7 @@ import { footerLinks, navbar } from '@/constants'
 import { EmailForm } from './forms/EmailForm'
 import heardIcon from '../public/svg/heard.svg'
 import { Button } from './ui/Button'
+import { animateScroll as scroll } from 'react-scroll';
 
 const socials = [
   {
@@ -46,6 +48,13 @@ const socials = [
 ]
 
 export const Footer = () => {
+  const buttonRef = useRef<HTMLButtonElement>(null)
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
+
   return (
     <footer className=' bg-gray900 w-full pt-14'>
       <Container className='flex flex-col xsm:flex-row flex-wrap w-full justify-between items-center xsm:items-start mb-12'>
@@ -89,7 +98,7 @@ export const Footer = () => {
             CONTACT US
           </Heading>
           <Link href='tel:4055550128' className='flex justify-start items-center gap-x-2 text-bgIcon hover:text-white opacity-[0.6] transition-colors divide-purple-3'>
-            <SmartphoneIcon className='w-4 h-4'/>
+            <SmartphoneIcon className='w-4 h-4' />
             <span className=' text-nowrap'>(405) 555-0128</span>
           </Link>
           <Link href='mailto:hello@createx.com' className='flex justify-start items-center gap-x-2 text-bgIcon hover:text-white opacity-[0.6] transition-colors divide-purple-300'>
@@ -114,7 +123,7 @@ export const Footer = () => {
           <Image src={heardIcon} alt='icon' className='w-4 h-4' />
           <Typography className=' text-nowrap text-[0.75rem] font-latoRegular font-[400] normal-case text-white mb-0 ml-1'>by Createx Studio</Typography>
         </div>
-        <Button className='text-nowrap p-0 py-2 px-6 bg-transparent border-none hover:bg-transparent hover:border-none opacity-[0.6]'>GO TO TOP</Button>
+        <Button onClick={scrollToTop} ref={buttonRef} className='text-nowrap p-0 py-2 px-6 bg-transparent border-none hover:bg-transparent hover:border-none opacity-[0.6]'>GO TO TOP</Button>
       </div>
     </footer>
   )
