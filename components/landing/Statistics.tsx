@@ -19,7 +19,7 @@ export const Statistics = () => {
   return (
     <section className='w-full bg-lightOrange bg-opacity-[0.2] pt-[0.5rem] h-screen'>
       <Container>
-        <div className=' flex justify-between pt-[2rem] xsm:pt-[6em]'>
+        <div className=' flex justify-between pt-[2rem] md:pt-[6em]'>
           <div>
             <Link href='/' onClick={() => toggleShowVideo()} className='flex justify-center md:justify-start items-center gap-x-3 mb-[1.5em] text-black'>
               <Image src={play} alt='play' className='animation-pulse rounded-full' />
@@ -46,11 +46,11 @@ export const Statistics = () => {
           />
         </div>
         <div className='w-ful mt-12 mb-8'>
-          <div className='flex flex-col md:flex-row justify-between gap-x-[2rem] items-center '>
+          <div className='flex flex-col md:flex-row justify-between gap-y-2 md:gap-y-0 md:gap-x-[2rem] items-center '>
             {statisticsList.map((item) => (
               <React.Fragment key={item.id}>
                 <div className='flex flex-col lg:flex-row justify-start items-center gap-x-[0.75em] gap-x-[0.75em]'>
-                  <span className='text-[2.875em] leading-[130%] font-latoBold font-[700] text-nowrap'>
+                  <span className=' text-[2rem] md:text-[2.875rem] leading-[130%] font-latoBold font-[700] text-nowrap'>
                     {item.number}
                   </span>
                   <span className='text-base font-latoRegular font-[400] text-nowrap'>

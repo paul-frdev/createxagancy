@@ -43,6 +43,12 @@ export const Benefits = () => {
                   backgroundColor: "transparent",
                 }
               }}
+              sx={{
+                ".Mui-selected": {
+                  color: '#ff3f3a !important',
+                  border: '1px solid #ff3f3a'
+                },
+              }}
               onChange={handleChange}
               aria-label="lab API tabs example"
               orientation={!isDesktop ? 'vertical' : 'horizontal'}
