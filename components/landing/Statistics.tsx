@@ -17,7 +17,7 @@ export const Statistics = () => {
   const { toggleShowVideo } = useMyContext()
 
   return (
-    <section className='w-full bg-lightOrange bg-opacity-[0.2] pt-[2rem] h-screen'>
+    <section className='w-full bg-lightOrange bg-opacity-[0.2] pt-[2rem] h-screen [@media(max-width:501px)]:pb-8'>
       <Container>
         <div className=' flex justify-between pt-[6em]'>
           <div>

@@ -35,7 +35,7 @@ export const MobileMenu = () => {
 
   return (
     <div className='block md:hidden'>
-      <Hamburger toggled={isOpen} toggle={toggleOpen} size={40} color={'#fff'} />
+      <Hamburger toggled={isOpen} toggle={closeMenu} size={40} color={'#fff'} />
       <AnimatePresence>
         {isOpen ? (
           <motion.div

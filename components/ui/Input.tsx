@@ -20,6 +20,7 @@ interface TextInputProps {
   type?: string;
   inputStyles?: React.CSSProperties;
   labelStyles?: React.CSSProperties;
+  helperStyles?: React.CSSProperties;
 }
 
 export const Input: React.FC<TextInputProps> = ({
@@ -31,6 +32,7 @@ export const Input: React.FC<TextInputProps> = ({
   fullWidth = false,
   inputStyles,
   labelStyles,
+  helperStyles,
   ...rest
 }) => {
 
@@ -48,6 +50,7 @@ export const Input: React.FC<TextInputProps> = ({
           helperText={error ? error.message : null}
           size="small"
           error={!!error}
+          FormHelperTextProps={{ style: helperStyles }}
           sx={{
             input: {
               background: theme.palette.common.white,

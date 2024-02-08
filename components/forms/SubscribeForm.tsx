@@ -20,7 +20,7 @@ const Schema = yup.object().shape({
 
 export const SubscribeForm = () => {
 
-  const { register, control, handleSubmit, reset } = useForm<FormValues>({
+  const { control, handleSubmit, reset, formState: { errors } } = useForm<FormValues>({
     resolver: yupResolver(Schema),
     defaultValues: { email: "" }
   });
@@ -39,8 +39,9 @@ export const SubscribeForm = () => {
     >
       <Input
         className='bg-white w-full max-w-[422px] border-transparent rounded'
-        labelStyles={{ color: "#9a9ca5" }}
-        inputStyles={{ color: '#9a9ca5' }}
+        labelStyles={{ color: errors.email?.message ? "#d32f2f" : '#9a9ca5' }}
+        inputStyles={{ color: '#9a9ca5', border: errors.email?.message ? '1px solid #d32f2f' : '1px solid transparent' }}
+        helperStyles={{ position: 'absolute', bottom: '-24px', left: '0' }}
         name="email"
         control={control}
         label="Your working email"
