@@ -17,9 +17,9 @@ export const Statistics = () => {
   const { toggleShowVideo } = useMyContext()
 
   return (
-    <section className='w-full bg-lightOrange bg-opacity-[0.2] pt-[2rem] h-screen [@media(max-width:501px)]:pb-8'>
+    <section className='w-full bg-lightOrange bg-opacity-[0.2] pt-[2rem] h-screen'>
       <Container>
-        <div className=' flex justify-between pt-[6em]'>
+        <div className=' flex justify-between pt-[2rem] md:pt-[6em]'>
           <div>
             <Link href='/' onClick={() => toggleShowVideo()} className='flex justify-center md:justify-start items-center gap-x-3 mb-[1.5em] text-black'>
               <Image src={play} alt='play' className='animation-pulse rounded-full' />
