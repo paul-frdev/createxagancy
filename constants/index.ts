@@ -2,22 +2,27 @@ export const navbar = [
   {
     id: 1,
     title: 'About Us',
+    src: '/',
   },
   {
     id: 2,
     title: 'Courses',
+    src: 'courses',
   },
   {
     id: 3,
     title: 'Events',
+    src: '/',
   },
   {
     id: 4,
     title: 'Blog',
+    src: '/',
   },
   {
     id: 5,
     title: 'Contacts',
+    src: '/',
   },
 ];
 
@@ -91,69 +96,6 @@ export const whyCreatexList = [
   {
     id: 6,
     text: 'Ultricies amet justo et eget quisque purus vulputate dapibus tortor.',
-  },
-];
-
-export const coursesList = [
-  {
-    id: 1,
-    src: '/assets/1.jpg',
-    alt: 'personone',
-    label: 'Marketing',
-    colorLabel: '#03CEA4',
-    text: 'The Ultimate Google Ads Training Course',
-    price: '100',
-    author: 'by Jerome Bell',
-  },
-  {
-    id: 2,
-    src: '/assets/2.jpg',
-    alt: 'persontwo',
-    label: 'Management',
-    colorLabel: '#5A87FC',
-    text: 'Prduct Management Fundamentals',
-    price: '480',
-    author: 'by Marvin McKinney',
-  },
-  {
-    id: 3,
-    src: '/assets/3.jpg',
-    alt: 'personthree',
-    label: 'HR & Recruting',
-    colorLabel: '#F89828',
-    text: 'HR  Management and Analytics',
-    price: '200',
-    author: 'by Leslie Alexander Li',
-  },
-  {
-    id: 4,
-    src: '/assets/4.jpg',
-    alt: 'personfour',
-    label: 'Marketing',
-    colorLabel: '#03CEA4',
-    text: 'Brand Management & PR Communications',
-    price: '530',
-    author: 'by Kristin Watson',
-  },
-  {
-    id: 5,
-    src: '/assets/5.jpg',
-    alt: 'personfive',
-    label: 'Management',
-    colorLabel: '#5A87FC',
-    text: 'Business Development Management',
-    price: '400',
-    author: 'by Dianne Russell',
-  },
-  {
-    id: 6,
-    src: '/assets/6.jpg',
-    alt: 'personsix',
-    label: 'Design',
-    colorLabel: '#F52F6E',
-    text: 'Graphic Design Basic',
-    price: '500',
-    author: 'by Guy Hawkins',
   },
 ];
 

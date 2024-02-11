@@ -8,11 +8,16 @@ import { navbar } from '@/constants';
 import { Container } from './ui/Container';
 import { MobileMenu } from './MobileMenu';
 import { UserBlock } from './UserBlock';
+import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 
 export const Header = () => {
+
+  const pathname = usePathname();
+
   return (
-    <header className='w-full bg-orange02 pt-[1.25rem]'>
+    <header className={cn(`w-full bg-orange02 pt-[1.25rem]`, pathname !== '/courses' ? 'bg-orange02' : 'bg-white')}>
       <Container className='pb-2 lg:pb-0'>
         <div className='flex justify-between items-center'>
           <div className='flex justify-start items-center gap-x-[2.75em] lg:gap-x-[3.75em]'>
@@ -28,7 +33,7 @@ export const Header = () => {
               <ul className='flex justify-start items-center gap-x-[1.5em] lg:gap-x-[2.5em]'>
                 {navbar.map(item => (
                   <li key={item.id}>
-                    <Link href="/" className='text-[1em] text-nowrap text-black hover:text-orange transition-colors duration-300 font-latoBold font-extrabold'>
+                    <Link href={item.src} className='text-[1rem] text-nowrap text-black hover:text-orange transition-colors duration-300 font-latoBold font-extrabold'>
                       {item.title}
                     </Link>
                   </li>
@@ -36,7 +41,7 @@ export const Header = () => {
               </ul>
             </nav>
           </div>
-          <UserBlock className='md:flex flex-col lg:flex-row lg:gap-x-[2.25rem]'/>
+          <UserBlock className='md:flex flex-col lg:flex-row lg:gap-x-[2.25rem]' />
           <MobileMenu />
         </div>
       </Container>

@@ -6,13 +6,13 @@ import { Courses } from './Courses'
 import { Benefits } from './Benefits'
 import { Workshops } from './Workshops'
 import { WorkshopPreview } from '@/types/workshop'
-import { Certificate } from './Certificate'
+import { Certificate } from '../common/Certificate'
 import { Team } from './Team'
 import { Team as TeamType } from '@/types/team'
-import { Reviews } from './Reviews'
-import { PostsType, ReviewsType } from '@/types'
+import { Reviews } from '../common/Reviews'
+import { CourseType, PostsType, ReviewsType } from '@/types'
 import { Posts } from './Posts'
-import { Subscribe } from './Subscribe'
+import { Subscribe } from '../common/Subscribe'
 import { useMyContext } from '@/context/useContextMenu'
 import { Video } from '../Video'
 
@@ -20,16 +20,17 @@ type LandingProps = {
   workshops: WorkshopPreview[];
   team: TeamType[];
   reviews: ReviewsType[];
-  posts: PostsType[]
+  posts: PostsType[];
+  courses: CourseType[];
 }
-export const Landing = ({ workshops, team, reviews, posts }: LandingProps) => {
+export const Landing = ({ workshops, team, reviews, posts, courses }: LandingProps) => {
 
   const { showVideo } = useMyContext()
   return (
     <>
       <Statistics />
       <WhyCreatex />
-      <Courses />
+      <Courses courses={courses} />
       <Benefits />
       <Workshops workshops={workshops} />
       <Certificate />

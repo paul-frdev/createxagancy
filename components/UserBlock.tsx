@@ -4,6 +4,7 @@ import { Image } from './ui/Image'
 import Link from 'next/link';
 import person from '../public/svg/person.svg'
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 
 type UserBlockProps = {
@@ -11,9 +12,10 @@ type UserBlockProps = {
   buttonClasses?: string;
 }
 export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }) => {
+  const pathname = usePathname()
   return (
     <div className={cn(`hidden justify-end items-end lg:items-center gap-y-2`, className)}>
-      <Button sizeCss='lg' className={cn(`hover:bg-orange02 text-nowrap border-transparent hover:border-orange transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`, buttonClasses)}>Get consultation</Button>
+      <Button sizeCss='lg' className={cn(`text-nowrap border-transparent hover:border-orange transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`, buttonClasses, pathname !== '/courses' ? 'hover:bg-orange02' : 'hover:bg-transparent')}>Get consultation</Button>
       <div className='flex justify-start items-center gap-x-2 order-1'>
         <Image src={person} alt='person' />
         <div className='flex justify-start items-center '>

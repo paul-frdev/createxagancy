@@ -1,10 +1,14 @@
+'use client'
 import React from 'react'
 import { Container } from '../ui/Container'
 import { Typography } from '../ui/Typography'
 import { Heading } from '../ui/Heading'
 import { Image } from '../ui/Image';
+import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation'
 
 export const Certificate = () => {
+  const pathname = usePathname()
   return (
     <section className='bg-white w-full py-8 md:py-14'>
       <Container className='flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full relative'>
@@ -22,7 +26,7 @@ export const Certificate = () => {
             <Image src='/svg/logo3.svg' alt='logo-three' className='w-[100px] h-[100px] bg-cover bg-center' />
           </div>
         </div>
-        <div className='w-full flex justify-center lg:justify-end items-center lg:absolute lg:bottom-[-131px] lg:right-0 z-[1]'>
+        <div className={cn(`w-full flex justify-center lg:justify-end items-center`, pathname !== '/courses' ? 'lg:absolute lg:bottom-[-131px] lg:right-0 z-[1]' : '')}>
           <Image src='/assets/certificate.jpg' alt='certificate' className='max-w-[605px] xl:max-w-[705px] h-auto lg:h-[500px]' />
         </div>
       </Container>

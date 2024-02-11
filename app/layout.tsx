@@ -3,10 +3,10 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import CssBaseline from '@mui/material/CssBaseline';
 import { Lato } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from '@mui/material';
-import { theme } from '@/lib/theme';
 import { MyContextProvider } from '@/context/useContextMenu';
 import { cn } from '@/lib/utils';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 
 const lato = Lato({ weight: "400", subsets: ["latin-ext"] });
@@ -27,7 +27,11 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <MyContextProvider>
             <CssBaseline />
+            <Header />
+            <main className="flex min-h-screen flex-col items-center justify-between">
               {children}
+            </main>
+            <Footer />
           </MyContextProvider>
         </AppRouterCacheProvider>
       </body>

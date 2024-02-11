@@ -9,6 +9,7 @@ import { ReviewsType } from '@/types'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Swiper as SwiperCore } from 'swiper/types';
+import { cn } from '@/lib/utils'
 
 
 
@@ -16,7 +17,8 @@ type CarouselItemProps = ReviewsType & {
 };
 
 type ReviewsProps = {
-  items: ReviewsType[]
+  items: ReviewsType[];
+  className?: string
 }
 
 const ReviewItem: React.FC<CarouselItemProps> = ({ src, author, text, course }) => {
@@ -41,7 +43,7 @@ const ReviewItem: React.FC<CarouselItemProps> = ({ src, author, text, course }) 
   );
 };
 
-export const Reviews: React.FC<ReviewsProps> = ({ items }) => {
+export const Reviews: React.FC<ReviewsProps> = ({ items, className }) => {
 
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
@@ -74,7 +76,7 @@ export const Reviews: React.FC<ReviewsProps> = ({ items }) => {
   })
 
   return (
-    <section className='w-full bg-gray200 relative'>
+    <section className={cn(`w-full bg-gray200 relative`, className)}>
       <span className=' bg-circles absolute top-0 left-0 w-[145px] h-[145px]' />
       <Container>
         <div className='mb-12 relative'>

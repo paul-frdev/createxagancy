@@ -1,10 +1,10 @@
-import { Header } from '@/components/Header';
 import { Landing } from '@/components/landing/Landing';
 import workshops from '@/app/events.json';
 import team from '@/app/team.json';
 import reviews from '@/app/reviews.json';
 import posts from '@/app/posts.json'
-import { Footer } from '@/components/Footer';
+import courses from '@/app/courses.json';
+import { CourseType } from '@/types';
 
 
 export default function Home() {
@@ -15,19 +15,27 @@ export default function Home() {
     time: workshop.time,
     title: workshop.title,
     type: workshop.type
+  }));
+
+  const coursesPreview: CourseType[] = courses.map(course => ({
+    id: course.id,
+    src: course.src,
+    alt: course.alt,
+    label: course.label,
+    colorLabel: course.colorLabel,
+    text: course.text,
+    author: course.author,
+    price: course.price[0].price || ''
   }))
   return (
     <>
-      <Header />
-      <main className="flex min-h-screen flex-col items-center justify-between">
-        <Landing
-          reviews={reviews}
-          team={team}
-          workshops={workshopsPreview}
-          posts={posts}
-        />
-      </main>
-      <Footer />
+      <Landing
+        reviews={reviews}
+        team={team}
+        workshops={workshopsPreview}
+        posts={posts}
+        courses={coursesPreview}
+      />
     </>
   );
 }
