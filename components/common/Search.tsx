@@ -1,18 +1,18 @@
-'use client'
-import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
-import Autocomplete from '@mui/material/Autocomplete';
+'use client';
+
 import { CourseType } from '@/types';
+import Autocomplete from '@mui/material/Autocomplete';
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import * as React from 'react';
 
 type SearchProps = {
-  items: CourseType[]
+  items: CourseType[];
   searchQuery: string;
   handleSearchInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
-}
+};
 export const Search: React.FC<SearchProps> = ({ items, searchQuery, handleSearchInputChange, label = 'Search...' }) => {
-
   return (
     <Stack spacing={2} sx={{ width: 300 }}>
       <Autocomplete
@@ -40,4 +40,4 @@ export const Search: React.FC<SearchProps> = ({ items, searchQuery, handleSearch
       />
     </Stack>
   );
-}
+};

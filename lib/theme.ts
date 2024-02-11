@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import { createTheme } from '@mui/material';
 
 declare module '@mui/system' {
@@ -20,8 +21,6 @@ export const theme = createTheme({
     },
   },
   components: {
-    MuiTextField: {
-      
-    }
-  }
+    MuiTextField: {},
+  },
 });

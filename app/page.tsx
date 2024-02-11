@@ -1,23 +1,21 @@
-import { Landing } from '@/components/landing/Landing';
-import workshops from '@/app/events.json';
-import team from '@/app/team.json';
-import reviews from '@/app/reviews.json';
-import posts from '@/app/posts.json'
 import courses from '@/app/courses.json';
+import workshops from '@/app/events.json';
+import posts from '@/app/posts.json';
+import reviews from '@/app/reviews.json';
+import team from '@/app/team.json';
+import { Landing } from '@/components/landing/Landing';
 import { CourseType } from '@/types';
 
-
 export default function Home() {
-
   const workshopsPreview = workshops.map((workshop) => ({
     id: workshop.id,
     date: workshop.date,
     time: workshop.time,
     title: workshop.title,
-    type: workshop.type
+    type: workshop.type,
   }));
 
-  const coursesPreview: CourseType[] = courses.map(course => ({
+  const coursesPreview: CourseType[] = courses.map((course) => ({
     id: course.id,
     src: course.src,
     alt: course.alt,
@@ -25,17 +23,11 @@ export default function Home() {
     colorLabel: course.colorLabel,
     text: course.text,
     author: course.author,
-    price: course.price[0].price || ''
-  }))
+    price: course.price[0].price || '',
+  }));
   return (
     <>
-      <Landing
-        reviews={reviews}
-        team={team}
-        workshops={workshopsPreview}
-        posts={posts}
-        courses={coursesPreview}
-      />
+      <Landing reviews={reviews} team={team} workshops={workshopsPreview} posts={posts} courses={coursesPreview} />
     </>
   );
 }

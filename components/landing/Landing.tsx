@@ -1,20 +1,21 @@
-'use client'
-import React from 'react'
-import { Statistics } from './Statistics'
-import { WhyCreatex } from './WhyCreatex'
-import { Courses } from './Courses'
-import { Benefits } from './Benefits'
-import { Workshops } from './Workshops'
-import { WorkshopPreview } from '@/types/workshop'
-import { Certificate } from '../common/Certificate'
-import { Team } from './Team'
-import { Team as TeamType } from '@/types/team'
-import { Reviews } from '../common/Reviews'
-import { CourseType, PostsType, ReviewsType } from '@/types'
-import { Posts } from './Posts'
-import { Subscribe } from '../common/Subscribe'
-import { useMyContext } from '@/context/useContextMenu'
-import { Video } from '../Video'
+'use client';
+
+import { Video } from '../Video';
+import { Certificate } from '../common/Certificate';
+import { Reviews } from '../common/Reviews';
+import { Subscribe } from '../common/Subscribe';
+import { Benefits } from './Benefits';
+import { Courses } from './Courses';
+import { Posts } from './Posts';
+import { Statistics } from './Statistics';
+import { Team } from './Team';
+import { WhyCreatex } from './WhyCreatex';
+import { Workshops } from './Workshops';
+import { useMyContext } from '@/context/useContextMenu';
+import { CourseType, PostsType, ReviewsType } from '@/types';
+import { Team as TeamType } from '@/types/team';
+import { WorkshopPreview } from '@/types/workshop';
+import React from 'react';
 
 type LandingProps = {
   workshops: WorkshopPreview[];
@@ -22,10 +23,9 @@ type LandingProps = {
   reviews: ReviewsType[];
   posts: PostsType[];
   courses: CourseType[];
-}
+};
 export const Landing = ({ workshops, team, reviews, posts, courses }: LandingProps) => {
-
-  const { showVideo } = useMyContext()
+  const { showVideo } = useMyContext();
   return (
     <>
       <Statistics />
@@ -38,7 +38,7 @@ export const Landing = ({ workshops, team, reviews, posts, courses }: LandingPro
       <Reviews items={reviews} />
       <Posts items={posts} />
       <Subscribe />
-      {showVideo ? <Video videoId='https://youtu.be/8oON21G1Bqg?si=Frq0BUaNg6fcrBsy' /> : null}
+      {showVideo ? <Video videoId="https://youtu.be/8oON21G1Bqg?si=Frq0BUaNg6fcrBsy" /> : null}
     </>
-  )
-}
+  );
+};

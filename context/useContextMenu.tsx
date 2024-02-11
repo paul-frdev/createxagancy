@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import React, { useContext, useState } from 'react';
 
 type MyContextType = {
@@ -23,14 +24,14 @@ export const MyContextProvider: React.FC<ProviderProps> = ({ children }) => {
   };
 
   const toggleShowVideo = () => {
-    setShowVideo((prev) => !prev)
-  }
+    setShowVideo((prev) => !prev);
+  };
 
   const contextValue: MyContextType = {
     isOpen,
     toggleOpen,
     toggleShowVideo,
-    showVideo
+    showVideo,
   };
 
   return <OpenContext.Provider value={contextValue}>{children}</OpenContext.Provider>;

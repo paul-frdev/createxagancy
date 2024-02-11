@@ -1,8 +1,7 @@
-import React from 'react'
 import { Button } from '../ui/Button';
 import { cn } from '@/lib/utils';
+import React from 'react';
 import { SubmitHandler, UseFormHandleSubmit, useForm } from 'react-hook-form';
-
 
 export interface IFormProps {
   defaultValues?: Record<string, any>;
@@ -15,16 +14,14 @@ export interface IFormProps {
 }
 
 export const Form: React.FC<IFormProps> = ({ onSubmit, defaultValues, children, buttonLabel, className, buttonClasses, icon, ...rest }) => {
-
   const { handleSubmit: handleFormSubmit } = useForm({ defaultValues });
-
 
   return (
     <form onSubmit={handleFormSubmit(onSubmit)} {...rest} className={cn(`flex justify-start items-start gap-x-3`, className)}>
       {children}
-      <Button icon={icon} sizeCss='lg' className={cn(`border-transparent hover:bg-orange02 hover:border-orange`, buttonClasses)} type='submit'>{buttonLabel}</Button>
+      <Button icon={icon} sizeCss="lg" className={cn(`border-transparent hover:bg-orange02 hover:border-orange`, buttonClasses)} type="submit">
+        {buttonLabel}
+      </Button>
     </form>
-  )
-}
-
-
+  );
+};

@@ -1,6 +1,7 @@
-'use client'
+'use client';
+
 import { TextField, useTheme } from '@mui/material';
-import React from "react";
+import React from 'react';
 import { Controller } from 'react-hook-form';
 
 interface TextInputProps {
@@ -23,19 +24,7 @@ interface TextInputProps {
   helperStyles?: React.CSSProperties;
 }
 
-export const Input: React.FC<TextInputProps> = ({
-  name,
-  control,
-  label,
-  className,
-  type = "text",
-  fullWidth = false,
-  inputStyles,
-  labelStyles,
-  helperStyles,
-  ...rest
-}) => {
-
+export const Input: React.FC<TextInputProps> = ({ name, control, label, className, type = 'text', fullWidth = false, inputStyles, labelStyles, helperStyles, ...rest }) => {
   const theme = useTheme();
   return (
     <Controller
@@ -56,8 +45,8 @@ export const Input: React.FC<TextInputProps> = ({
               background: theme.palette.common.white,
               height: 26,
               borderRadius: '4px',
-              border: `1px solid bg-gray`
-            }
+              border: `1px solid bg-gray`,
+            },
           }}
           onChange={onChange}
           value={value}
@@ -65,10 +54,10 @@ export const Input: React.FC<TextInputProps> = ({
           variant="filled"
           fullWidth={fullWidth}
           InputProps={{
-            disableUnderline: true
+            disableUnderline: true,
           }}
         />
       )}
     />
-  )
-}
+  );
+};

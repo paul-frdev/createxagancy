@@ -1,9 +1,9 @@
-import React from 'react';
-import Typography, { TypographyProps } from '@mui/material/Typography';
 import { cn } from '@/lib/utils';
+import Typography, { TypographyProps } from '@mui/material/Typography';
+import React from 'react';
 
 type HeadingProps = {
-  variant?: TypographyProps['variant']; 
+  variant?: TypographyProps['variant'];
   children: string;
   className?: string;
 } & Omit<TypographyProps, 'variant'>;

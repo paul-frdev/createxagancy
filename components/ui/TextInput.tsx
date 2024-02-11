@@ -1,6 +1,6 @@
-import React from 'react'
-import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { cn } from '@/lib/utils';
+import TextField, { TextFieldProps } from '@mui/material/TextField';
+import React from 'react';
 
 type TextInputProps = {
   className?: string;
@@ -16,5 +16,5 @@ export const TextInput: React.FC<TextInputProps> = ({ className, ...props }) => 
       }}
       {...props}
     />
-  )
-}
+  );
+};
