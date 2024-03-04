@@ -11,10 +11,11 @@ type SearchProps = {
   searchQuery: string;
   handleSearchInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
+  className?: string;
 };
-export const Search: React.FC<SearchProps> = ({ items, searchQuery, handleSearchInputChange, label = 'Search...' }) => {
+export const Search: React.FC<SearchProps> = ({ items, searchQuery, handleSearchInputChange, className, label = 'Search...' }) => {
   return (
-    <Stack spacing={2} sx={{ width: 300 }}>
+    <Stack spacing={2} className={className}>
       <Autocomplete
         freeSolo
         options={items}

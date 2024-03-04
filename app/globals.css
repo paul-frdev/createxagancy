@@ -23,6 +23,8 @@
   --primary: #ff3f3a;
   --secondary: #ffcf2d;
   --bg-icon: #a5a6aa;
+  --light: rgb(229, 232, 237);
+  --rgbGray: rgb(120, 122, 128);
 }
 
 @media (prefers-color-scheme: dark) {

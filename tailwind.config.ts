@@ -48,6 +48,7 @@ const config: Config = {
         gray800: 'var(--gray-800)',
         gray900: 'var(--gray-900)',
         secondary: 'var(--secondary)',
+        primary: 'rgba(255, 63, 58, .12)',
         yellow:
           'linear-gradient(180deg, rgba(30, 33, 44, 0.00) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.77) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%)',
         bgFooter: '#2a2c37',
@@ -56,8 +57,10 @@ const config: Config = {
       borderColor: {
         orange: '#fc4b26',
         gray: 'var(--gray-300)',
+        gray400: 'var(--gray-400)',
         gray600: 'var(--gray-600)',
         gray700: 'var(--gray-700)',
+        light: 'var(--light)',
       },
       colors: {
         orange: '#fc4b26',
@@ -69,11 +72,13 @@ const config: Config = {
         danger: 'var(--danger)',
         gray: 'var(--gray-700)',
         primary: 'var(--primary)',
+        gray400: 'var(--gray-400)',
         gray600: 'var(--gray-600)',
         gray700: 'var(--gray-700)',
         gray800: 'var(--gray-800)',
         gray900: 'var(--gray-900)',
         bgIcon: 'var(--bg-icon)',
+        rgbGray: 'var(--rgbGray)',
       },
       boxShadow: {
         card: '0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);',

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "src": "/assets/1.jpg",
+    "src": "/courses/1.png",
     "alt": "personone",
     "label": "Marketing",
     "colorLabel": "#03CEA4",
@@ -24,37 +24,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$120 per month"
+        "value": "$120 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 2,
-    "src": "/assets/2.jpg",
+    "src": "/courses/1.png",
     "alt": "persontwo",
     "label": "Management",
     "colorLabel": "#5A87FC",
@@ -77,37 +78,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$480 per month"
+        "value": "$480 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 3,
-    "src": "/assets/3.jpg",
+    "src": "/courses/1.png",
     "alt": "personthree",
     "label": "HR & Recruting",
     "colorLabel": "#F89828",
@@ -130,37 +132,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$200 per month"
+        "value": "$200 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 4,
-    "src": "/assets/4.jpg",
+    "src": "/courses/1.png",
     "alt": "personone",
     "label": "Marketing",
     "colorLabel": "#03CEA4",
@@ -183,37 +186,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$530 per month"
+        "value": "$530 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 5,
-    "src": "/assets/5.jpg",
+    "src": "/courses/1.png",
     "alt": "personfive",
     "label": "Management",
     "colorLabel": "#5A87FC",
@@ -236,37 +240,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$400 per month"
+        "value": "$400 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 6,
-    "src": "/assets/6.jpg",
+    "src": "/courses/1.png",
     "alt": "personsix",
     "label": "Design",
     "colorLabel": "#F52F6E",
@@ -289,37 +294,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$500 per month"
+        "value": "$500 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 7,
-    "src": "/assets/1.jpg",
+    "src": "/courses/1.png",
     "alt": "personone",
     "label": "Marketing",
     "colorLabel": "#03CEA4",
@@ -342,37 +348,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$120 per month"
+        "value": "$120 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 8,
-    "src": "/assets/2.jpg",
+    "src": "/courses/1.png",
     "alt": "persontwo",
     "label": "Management",
     "colorLabel": "#5A87FC",
@@ -395,37 +402,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$480 per month"
+        "value": "$480 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 9,
-    "src": "/assets/3.jpg",
+    "src": "/courses/1.png",
     "alt": "personthree",
     "label": "HR & Recruting",
     "colorLabel": "#F89828",
@@ -448,37 +456,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$200 per month"
+        "value": "$200 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 10,
-    "src": "/assets/4.jpg",
+    "src": "/courses/1.png",
     "alt": "personone",
     "label": "Marketing",
     "colorLabel": "#03CEA4",
@@ -501,37 +510,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$530 per month"
+        "value": "$530 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 11,
-    "src": "/assets/5.jpg",
+    "src": "/courses/1.png",
     "alt": "personfive",
     "label": "Management",
     "colorLabel": "#5A87FC",
@@ -554,37 +564,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$400 per month"
+        "value": "$400 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 12,
-    "src": "/assets/6.jpg",
+    "src": "/courses/1.png",
     "alt": "personsix",
     "label": "Design",
     "colorLabel": "#F52F6E",
@@ -607,37 +618,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$500 per month"
+        "value": "$500 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 13,
-    "src": "/assets/1.jpg",
+    "src": "/courses/1.png",
     "alt": "personone",
     "label": "Marketing",
     "colorLabel": "#03CEA4",
@@ -660,37 +672,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$120 per month"
+        "value": "$120 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 14,
-    "src": "/assets/2.jpg",
+    "src": "/courses/1.png",
     "alt": "persontwo",
     "label": "Management",
     "colorLabel": "#5A87FC",
@@ -713,37 +726,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$480 per month"
+        "value": "$480 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 15,
-    "src": "/assets/3.jpg",
+    "src": "/courses/1.png",
     "alt": "personthree",
     "label": "HR & Recruting",
     "colorLabel": "#F89828",
@@ -766,37 +780,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$200 per month"
+        "value": "$200 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 16,
-    "src": "/assets/4.jpg",
+    "src": "/courses/1.png",
     "alt": "personone",
     "label": "Marketing",
     "colorLabel": "#03CEA4",
@@ -819,37 +834,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$530 per month"
+        "value": "$530 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 17,
-    "src": "/assets/5.jpg",
+    "src": "/courses/1.png",
     "alt": "personfive",
     "label": "Management",
     "colorLabel": "#5A87FC",
@@ -872,37 +888,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$400 per month"
+        "value": "$400 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 18,
-    "src": "/assets/6.jpg",
+    "src": "/courses/1.png",
     "alt": "personsix",
     "label": "Design",
     "colorLabel": "#F52F6E",
@@ -925,37 +942,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$500 per month"
+        "value": "$500 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 19,
-    "src": "/assets/1.jpg",
+    "src": "/courses/1.png",
     "alt": "personone",
     "label": "Marketing",
     "colorLabel": "#03CEA4",
@@ -978,37 +996,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$120 per month"
+        "value": "$120 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 20,
-    "src": "/assets/2.jpg",
+    "src": "/courses/1.png",
     "alt": "persontwo",
     "label": "Management",
     "colorLabel": "#5A87FC",
@@ -1031,37 +1050,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$480 per month"
+        "value": "$480 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 21,
-    "src": "/assets/3.jpg",
+    "src": "/courses/1.png",
     "alt": "personthree",
     "label": "HR & Recruting",
     "colorLabel": "#F89828",
@@ -1084,37 +1104,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$200 per month"
+        "value": "$200 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 22,
-    "src": "/assets/4.jpg",
+    "src": "/courses/1.png",
     "alt": "personone",
     "label": "Marketing",
     "colorLabel": "#03CEA4",
@@ -1137,37 +1158,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$530 per month"
+        "value": "$530 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 23,
-    "src": "/assets/5.jpg",
+    "src": "/courses/1.png",
     "alt": "personfive",
     "label": "Management",
     "colorLabel": "#5A87FC",
@@ -1190,37 +1212,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$400 per month"
+        "value": "$400 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 24,
-    "src": "/assets/6.jpg",
+    "src": "/courses/1.png",
     "alt": "personsix",
     "label": "Design",
     "colorLabel": "#F52F6E",
@@ -1243,37 +1266,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$500 per month"
+        "value": "$500 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 25,
-    "src": "/assets/6.jpg",
+    "src": "/courses/1.png",
     "alt": "personsix",
     "label": "Development",
     "colorLabel": "#7772f1",
@@ -1296,37 +1320,38 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$600 per month"
+        "value": "$600 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   },
   {
     "id": 26,
-    "src": "/assets/6.jpg",
+    "src": "/courses/1.png",
     "alt": "personsix",
     "label": "HR & Recruting",
     "colorLabel": "##f89827",
@@ -1349,32 +1374,33 @@
     "dates": [
       {
         "id": 1,
-        "dates": "Sept 7 – Nov 2"
+        "value": "Sept 7 – Nov 2"
       },
       {
         "id": 2,
-        "description": "Metus turpis sit lorem lacus, in elit tellus lacus."
+        "value": "Metus turpis sit lorem lacus, in elit tellus lacus."
       }
     ],
     "duration": [
       {
         "id": 1,
-        "duration": "2 months – 8 lessons"
+        "value": "2 months – 8 lessons"
       },
       {
         "id": 2,
-        "description": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
+        "value": "Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut."
       }
     ],
     "price": [
       {
         "id": 1,
-        "price": "$150 per month"
+        "value": "$150 per month"
       },
       {
         "id": 2,
-        "description": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
+        "value": "Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis."
       }
-    ]
+    ],
+    "socialLinks": ["/link", "/link", "/link", "/link"]
   }
 ]

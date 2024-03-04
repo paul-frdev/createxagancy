@@ -10,12 +10,12 @@ import { Image } from './ui/Image';
 import { Typography } from './ui/Typography';
 import { footerLinks, navbar } from '@/constants';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Link from 'next/link';
 import React, { useRef } from 'react';
@@ -64,7 +64,7 @@ export const Footer = () => {
           </Link>
           <Typography className="text-white text-center xsm:text-left text-[0.75rem] normal-case opacity-[0.6] font-latoRegular font-[400]">
             Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online
-            learning, internships and employment in the largest companies in the country.{' '}
+            learning, internships and employment in the largest companies in the country.
           </Typography>
           <div className="flex justify-between items-center gap-x-6">
             {socials.map((item) => (

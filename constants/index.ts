@@ -105,3 +105,22 @@ export const benefitsList = [
     text: 'Experienced Tutors',
   },
 ];
+
+export const benefitsCourseItem = [
+  {
+    id: 1,
+    text: 'Specialists with more than 1 year of active work experience',
+  },
+  {
+    id: 2,
+    text: 'Mobile app designers who want to improve their skills in solving business problems, creating and testing human-centered interfaces',
+  },
+  {
+    id: 3,
+    text: 'Professional designers who want to feel more confident in UX',
+  },
+  {
+    id: 4,
+    text: 'Specialists who would like to structure their knowledge, fill in the gaps',
+  },
+];

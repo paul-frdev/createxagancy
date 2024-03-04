@@ -24,6 +24,8 @@ export type PostsType = {
   text: string;
 };
 
+export type DetailItem = { id: number; value: string };
+
 export type CourseType = {
   id: number;
   src: string;
@@ -34,12 +36,13 @@ export type CourseType = {
   price: string;
   author: string;
 };
-export type CourseItem = CourseType & {
+export type CourseItem<T extends CourseType> = Omit<T, 'price'> & {
   description: string;
   study: string[];
-  dates: [{ id: number; dates: string }, { id: number; description: string }];
-  duration: [{ id: number; duration: string }, { id: number; description: string }];
-  price: [{ id: number; price: string }, { id: number; description: string }];
+  dates: { id: number; value: string }[];
+  duration: { id: number; value: string }[];
+  price: { id: number; value: string }[];
+  socialLinks?: string[];
   position: string;
   rate: string;
   quantityCourses: string;
