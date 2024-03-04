@@ -66,8 +66,14 @@ export const CourseList: React.FC<CourseListProps> = ({ coursesPreview }) => {
           Our online courses
         </Heading>
         <div className="flex flex-col gap-y-6 lg:flex-row justify-start lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem] ">
-          <Categories items={coursesPreview} categories={labelCounts} filterItems={filterItems} className=' overflow-hidden' />
-          <Search className='w-full max-w-[950px] lg:max-w-[350px] ' label="Search course..." searchQuery={searchQuery} handleSearchInputChange={handleSearchInputChange} items={coursesPreview} />
+          <Categories items={coursesPreview} categories={labelCounts} filterItems={filterItems} className=" overflow-hidden" />
+          <Search
+            className="w-full max-w-[950px] lg:max-w-[350px] "
+            label="Search course..."
+            searchQuery={searchQuery}
+            handleSearchInputChange={handleSearchInputChange}
+            items={coursesPreview}
+          />
         </div>
         <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 max-w-fit lg:max-w-full mx-auto  gap-[1.875rem]">
           {(!searchResults.length ? coursesPreview : searchResults).slice(0, visibleCourses).map((course: CourseType) => (

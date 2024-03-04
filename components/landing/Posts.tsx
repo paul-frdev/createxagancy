@@ -10,7 +10,6 @@ type PostsProps = {
   items: PostsType[];
 };
 export const Posts: React.FC<PostsProps> = ({ items }) => {
-
   return (
     <section className=" w-full bg-white mb-16">
       <Container>

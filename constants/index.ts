@@ -124,3 +124,54 @@ export const benefitsCourseItem = [
     text: 'Specialists who would like to structure their knowledge, fill in the gaps',
   },
 ];
+
+export const courseLearnList = [
+  {
+    id: 1,
+    title: 'Aliquet lectus urna viverra in odio.',
+    text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+    pannel: '1',
+  },
+  {
+    id: 2,
+    title: 'Orci commodo, viverra orci mollis ut euismod.',
+    text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+    pannel: '2',
+  },
+  {
+    id: 3,
+    title: 'Sagittis vitae facilisi rutrum amet mauris quisque vel.',
+    text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+    pannel: '3',
+  },
+  {
+    id: 4,
+    title: 'In id dolor quis nunc, urna hendrerit pharetra.',
+    text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+    pannel: '4',
+  },
+  {
+    id: 5,
+    title: 'Est, ut tempus id rutrum facilisi.',
+    text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+    pannel: '5',
+  },
+  {
+    id: 6,
+    title: 'Amet nec in pellentesque.',
+    text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+    pannel: '6',
+  },
+  {
+    id: 7,
+    title: 'Massa vel arcu mauris, id vel rhoncus mattis quis.',
+    text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+    pannel: '7',
+  },
+  {
+    id: 8,
+    title: 'Neque, cursus sapien nullam id.',
+    text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.',
+    pannel: '8',
+  },
+];

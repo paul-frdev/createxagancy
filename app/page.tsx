@@ -23,7 +23,7 @@ export default function Home() {
     colorLabel: course.colorLabel,
     text: course.text,
     author: course.author,
-    price: course.price[0].price || '',
+    price: course.price[0].value || '',
   }));
   return (
     <>

@@ -1,29 +1,28 @@
-'use client'
-import { CourseItem as CourseItemType, CourseType } from '@/types';
-import React from 'react';
+'use client';
+
+import { BenefitsItem } from '../common/BenefitsItem';
+import { Reviews } from '../common/Reviews';
+import { DiscountForm } from '../forms/DiscountForm';
 import { AboutCourse } from './AboutCourse';
 import { CourseProcess } from './CourseProcess';
-import { DiscountForm } from '../forms/DiscountForm';
-import { BenefitsItem } from '../common/BenefitsItem';
-import { benefitsCourseItem } from '@/constants';
 import { YouWillLearn } from './YouWillLearn';
+import { benefitsCourseItem } from '@/constants';
+import { CourseItem as CourseItemType, CourseType, ReviewsType } from '@/types';
+import React from 'react';
 
 type CourseItemProps = {
   course: CourseItemType<CourseType>;
+  reviews: ReviewsType[];
 };
-export const CourseItem: React.FC<CourseItemProps> = ({ course }) => {
-
+export const CourseItem: React.FC<CourseItemProps> = ({ course, reviews }) => {
   return (
     <>
       <AboutCourse course={course} />
       <CourseProcess />
       <DiscountForm />
-      <BenefitsItem
-        title='Who will benefit from the course:'
-        subtitle='For whom?'
-        list={benefitsCourseItem}
-      />
+      <BenefitsItem title="Who will benefit from the course:" subtitle="For whom?" list={benefitsCourseItem} />
       <YouWillLearn />
+      <Reviews items={reviews} />
     </>
-  )
+  );
 };

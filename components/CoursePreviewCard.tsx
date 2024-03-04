@@ -1,13 +1,14 @@
-'use client'
-import { cn } from '@/lib/utils';
+'use client';
+
 import { Image } from './ui/Image';
+import { cn } from '@/lib/utils';
 import { CourseType } from '@/types';
 import { Card } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 export const CoursePreviewCard = ({ id, src, alt, label, colorLabel, text, price, author }: CourseType) => {
-  const route = useRouter()
+  const route = useRouter();
   return (
     <Card className={cn(`cursor-pointer hover:shadow-cardHover p-0 rounded shadow-card  max-w-[390px] w-full border border-solid border-gray min-h-[214px] mx-auto`)}>
       <Link href={`courses/${id}`}>
