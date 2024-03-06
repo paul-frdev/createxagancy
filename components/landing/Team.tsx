@@ -120,17 +120,17 @@ export const Team: React.FC<TeamProps> = ({ items }) => {
               Meet our team
             </Heading>
           </div>
-          <div className="hidden xsm:flex justify-end items-center gap-x-2">
+          <div className="hidden xsm:flex w-full max-w-[100px] justify-end items-center gap-x-2">
             <CustomPrevArrow
               icon={<ArrowBackIcon className="w-[24px] h-[24px]" />}
               ref={navPrevButton}
-              className="w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0"
+              className="min-w-fit w-full max-w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0"
               variant="outline"
             />
             <CustomNextArrow
               icon={<ArrowForwardIcon className="w-[24px] h-[24px]" />}
               ref={navNextButton}
-              className="w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0"
+              className="min-w-fit w-full max-w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0"
               variant="outline"
             />
           </div>

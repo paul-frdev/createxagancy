@@ -91,7 +91,7 @@ export const DiscountForm = () => {
               label="Email address"
               type="email"
             />
-            <PhoneInput name="phoneNumber" className="w-full max-w-[291px]" control={control} onChange={(phone) => setPhone(phone)} value={phone} />
+            <PhoneInput height="20px" name="phoneNumber" className="w-full max-w-[291px]" control={control} onChange={(phone) => setPhone(phone)} value={phone} />
           </div>
         </Form>
       </Container>

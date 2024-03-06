@@ -9,9 +9,12 @@ export interface MUIPhoneProps extends BaseTextFieldProps {
   onChange: (phone: string) => void;
   name: string;
   control: any;
+  className?: string;
+  height?: string;
+  backgroundColor?: string;
 }
 
-export const PhoneInput: React.FC<MUIPhoneProps> = ({ value, onChange, name, control, ...restProps }) => {
+export const PhoneInput: React.FC<MUIPhoneProps> = ({ value, onChange, name, control, className, height, backgroundColor, ...restProps }) => {
   const { inputValue, handlePhoneValueChange, inputRef, country, setCountry } = usePhoneInput({
     defaultCountry: 'us',
     value,
@@ -32,6 +35,7 @@ export const PhoneInput: React.FC<MUIPhoneProps> = ({ value, onChange, name, con
 
   return (
     <TextField
+      className={className}
       name={name}
       variant="outlined"
       label="Phone number"
@@ -40,10 +44,11 @@ export const PhoneInput: React.FC<MUIPhoneProps> = ({ value, onChange, name, con
       value={inputValue}
       onChange={handlePhoneValueChange}
       type="tel"
-      inputProps={{ style: { padding: '11px 10px 11px 10px', outline: 'none' } }}
+      inputProps={{ style: { padding: '11px 10px 11px 10px', outline: 'none', height: height, backgroundColor: backgroundColor } }}
       InputLabelProps={{ shrink: false, style: { display: 'none' } }}
       inputRef={inputRef}
       InputProps={{
+        style: { backgroundColor: backgroundColor },
         startAdornment: (
           <InputAdornment position="start" style={{ marginRight: '2px', marginLeft: '-8px' }}>
             <Select

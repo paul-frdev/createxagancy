@@ -68,9 +68,9 @@ export const Reviews: React.FC<ReviewsProps> = ({ items, className }) => {
   });
 
   return (
-    <section className={cn(`w-full bg-gray200 relative`, className)}>
-      <span className=" bg-circles absolute top-0 left-0 w-[145px] h-[145px]" />
-      <Container>
+    <section className="w-full bg-gray200 relative">
+      <span className="bg-circles absolute top-0 left-0 w-[145px] h-[145px]" />
+      <Container className={className}>
         <div className="mb-12 relative">
           <Typography className="text-center mb-2">TESTIMONIALS</Typography>
           <Heading variant="h4" className="text-center text-[2.4rem] md:text-[2.875rem]">
@@ -82,14 +82,14 @@ export const Reviews: React.FC<ReviewsProps> = ({ items, className }) => {
           <CustomPrevArrow
             ref={navPrevButton}
             icon={<ArrowBackIcon className="w-[24px] h-[24px]" />}
-            className="hidden md:block w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0"
+            className="hidden md:flex min-w-fit w-full max-w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0"
             variant="outline"
           />
           <Carousel className="reviews px-3 xsm:px-4 h-[500px] xsm:h-auto" onBeforeInit={setSwipe} height={344} options={carouselOptions} items={carouselItems} />
           <CustomNextArrow
             ref={navNextButton}
             icon={<ArrowForwardIcon className="w-[24px] h-[24px]" />}
-            className="hidden md:block w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0"
+            className="hidden md:flex min-w-fit w-full max-w-[48px] h-[48px] rounded-full bg-transparent border-none hover:bg-orange p-0"
             variant="outline"
           />
           <span className=" bg-dots absolute bottom-[50px] left-0 w-[143px] h-[105px]" />
