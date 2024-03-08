@@ -20,7 +20,7 @@ export const CoursePreviewCard = ({ id, src, alt, label, colorLabel, text, price
             <span className=" text-sm font-latoRegular font-[400] text-white leading-[150%] py-[3px] px-2 rounded" style={{ backgroundColor: colorLabel }}>
               {label}
             </span>
-            <p className="text-[1.25rem] text-center xsm:text-left font-latoBold font-[700] leading-[150%]">{text}</p>
+            <p className="text-[1.25rem] text-center xsm:text-left font-latoBold font-[700] leading-[150%] text-green-900">{text}</p>
             <div className="flex justify-start items-start gap-x-[4px]">
               <span className="text-[1.125rem] font-latoBold font-[700] leading-[150%] text-danger">{price.slice(0, 4)}</span>
               <span className="text-gray">|</span>

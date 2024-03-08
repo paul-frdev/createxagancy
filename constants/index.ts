@@ -7,7 +7,7 @@ export const navbar = [
   {
     id: 2,
     title: 'Courses',
-    src: 'courses',
+    src: '/courses',
   },
   {
     id: 3,

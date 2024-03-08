@@ -1,24 +1,25 @@
-import { Image } from '../ui/Image';
+import { cn } from '@/lib/utils';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import Link from 'next/link';
 import React from 'react';
 
 type SocialLinksProps = {
   socialLinks: string[];
+  className?: string;
 };
-export const SocialLinks: React.FC<SocialLinksProps> = ({ socialLinks }) => {
+export const SocialLinks: React.FC<SocialLinksProps> = ({ socialLinks, className }) => {
   return (
-    <div className="w-full max-w-[168px] flex justify-between items-center">
+    <div className={cn(`w-full max-w-[100px] flex justify-between items-center`, className)}>
       <Link href={socialLinks?.[0] as any} className="w-full h-auto flex justify-center items-center">
-        <Image src="/svg/bacebook.svg" alt="behance" className="w-6 h-6" />
+        <FacebookIcon className="w-6 h6 text-gray700 hover:text-primary" />
       </Link>
       <Link href={socialLinks?.[1] as any} className="w-full h-auto flex justify-center items-center">
-        <Image src="/svg/behance.svg" alt="behance" className="w-6 h-6" />
+        <TwitterIcon className="w-6 h6 text-gray700 hover:text-primary" />
       </Link>
       <Link href={socialLinks?.[2] as any} className="w-full h-auto flex justify-center items-center">
-        <Image src="/svg/twitter.svg" alt="behance" className="w-6 h-6" />
-      </Link>
-      <Link href={socialLinks?.[3] as any} className="w-full h-auto text-gray700 flex justify-center items-center">
-        <Image src="/svg/linkedin.svg" alt="behance" className="w-6 h-6 text-gray700" />
+        <LinkedInIcon className="w-6 h6 text-gray700 hover:text-primary" />
       </Link>
     </div>
   );

@@ -13,11 +13,11 @@ type BenefitItemProps = {
 export const BenefitsItem: React.FC<BenefitItemProps> = ({ title, subtitle, list }) => {
   return (
     <section className="w-full">
-      <Container className=" mb-32">
-        <div className="flex w-full justify-between items-start">
-          <div className="w-full max-w-[492px] -mt-14">
-            <Typography>{subtitle}</Typography>
-            <Heading className="text-[2.875rem]">{title}</Heading>
+      <Container className="mb-16 lg:mb-32">
+        <div className="flex flex-col lg:flex-row w-full justify-between items-center lg:items-start">
+          <div className="w-full lg:max-w-[492px] -mt-14">
+            <Typography className="text-center lg:text-left">{subtitle}</Typography>
+            <Heading className="text-center lg:text-left text-[2rem] md:text-[2.875rem]">{title}</Heading>
           </div>
           <div className="flex flex-col w-full max-w-[600px] gap-y-[1.25rem] ">
             {list.map((item) => (

@@ -21,7 +21,7 @@ type ReviewsProps = {
 
 const ReviewItem: React.FC<CarouselItemProps> = ({ src, author, text, course }) => {
   return (
-    <div className="bg-white rounded shadow-xl py-8 lg:py-14 px-6 lg:px-10">
+    <div className="bg-white rounded shadow-xl py-8 lg:py-14 px-4 md:px-6 lg:px-10">
       <div className="flex justify-start items-start gap-x-[1.875rem] mb-6">
         <span className="hidden xsm:block">
           <Image src="/svg/braces.svg" alt="braces" className="w-[28px] h-[20px]" />

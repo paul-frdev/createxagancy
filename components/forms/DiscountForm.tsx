@@ -46,15 +46,20 @@ export const DiscountForm = () => {
 
   return (
     <section className="w-full mb-32">
-      <Container className="bg-orange02 rounded py-12 px-[3.75rem]">
-        <Stack className="flex w-full flex-row justify-between items-center mb-8">
-          <Heading variant="h4" className="text-[2rem]">
+      <Container className="bg-orange02 rounded py-12 px-[1rem] xsm:px-[2.5rem] lg:px-[3.75rem]">
+        <Stack className="flex flex-col md:flex-row w-full flex-row justify-between items-center mb-8">
+          <Heading variant="h4" className="text-[1.6rem] sm:text-[2rem] text-center md:text-left">
             20% discount for early birds!
           </Heading>
-          <Timer expiryTimestamp={time} />
+          <Timer className="" expiryTimestamp={time} />
         </Stack>
-        <Form buttonLabel="Join the course" onSubmit={handleSubmit(onSubmit)} buttonClasses="text-nowrap py-[0.55rem]">
-          <div className="flex justify-between items-center w-full">
+        <Form
+          className="flex-col md:flex-row gap-y-8 md:gap-y-0 items-center"
+          buttonLabel="Join the course"
+          onSubmit={handleSubmit(onSubmit)}
+          buttonClasses="text-nowrap py-[0.55rem] w-[292px] md:w-full md:max-w-[192.5px]"
+        >
+          <div className="flex flex-col md:flex-row justify-between items-center gap-x-2 gap-y-4 md:gap-y-0 w-full">
             <Input
               className="w-full max-w-[291px] border-white rounded text-gray600"
               name="fullName"

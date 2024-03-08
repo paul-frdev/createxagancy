@@ -2,7 +2,6 @@
 
 import { Button } from './ui/Button';
 import { useMyContext } from '@/context/useContextMenu';
-import { Fullscreen } from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';

@@ -21,7 +21,7 @@ const CoursesPage = () => {
   return (
     <>
       <CourseList coursesPreview={coursesPreview} />
-      <Reviews items={reviews} className="pt-[5rem]" />
+      <Reviews items={reviews} className="px-0 sm:px-4 pt-[5rem]" />
       <Certificate />
       <Subscribe />
     </>

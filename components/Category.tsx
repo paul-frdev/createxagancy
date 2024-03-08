@@ -8,7 +8,7 @@ type CategoryProps = {
   className?: string;
   onClick: (str: React.MouseEvent<HTMLButtonElement>) => void;
 };
-export const Category: React.FC<CategoryProps> = ({ title, quantity, className, onClick }) => {
+export const Category: React.FC<CategoryProps> = ({ title = 'All', quantity, className, onClick }) => {
   return (
     <Button
       value={title}

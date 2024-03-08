@@ -21,22 +21,22 @@ export const AboutCourse: React.FC<AboutCourseProps> = ({ course }) => {
       <div className="w-full bg-orange02 py-24">
         <Container className="w-full max-w-[1060px] px-4 mx-auto">
           <Typography className="text-primary text-center">course</Typography>
-          <Heading variant="h3" className="text-center text-[2.875rem]">
+          <Heading variant="h3" className="text-center text-[2rem] md:text-[2.875rem]">
             User Experience. Principles of Human-Centered Design
           </Heading>
         </Container>
       </div>
       <Container className="my-[3.75rem]">
-        <div className="flex justify-between items-center mb-[10rem]">
-          <div className="flex-col justify-start items-start w-full max-w-[600px]">
+        <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 justify-between items-center mb-[3rem] lg:mb-[10rem]">
+          <div className="flex flex-col justify-start items-start w-full lg:max-w-[600px] mr-4 px-2">
             <div className="mb-[3rem]">
-              <Heading variant="h4" className="text-[3.75rem] mb-[2.5rem]">
+              <Heading variant="h4" className="text-center lg:text-left text-[3rem] md:text-[3.75rem] mb-[2.5rem]">
                 About the course
               </Heading>
-              <Typography className=" normal-case text-base text-gray800 font-latoRegular font-[400] mb-0">{course.description}</Typography>
+              <Typography className=" normal-case text-base text-center lg:text-left text-gray800 font-latoRegular font-[400] mb-0">{course.description}</Typography>
             </div>
-            <div>
-              <Heading variant="h5" className=" font-latoBold font-[700] text-[1.75rem] mb-6">
+            <div className=" mx-auto">
+              <Heading variant="h5" className=" text-center lg:text-left font-latoBold font-[700] text-[1.75rem] mb-6">
                 You will learn:
               </Heading>
               {course.study.map((item) => (
@@ -47,38 +47,38 @@ export const AboutCourse: React.FC<AboutCourseProps> = ({ course }) => {
               ))}
             </div>
           </div>
-          <Card classname="max-w-[495px] w-full py-[2.5rem] px-8 border border-solid border-light shadow-xl">
+          <Card classname=" max-w-[700px] lg:max-w-[495px] w-full py-[2.5rem] px-8 border border-solid border-light shadow-xl">
             <Outline className="mb-14" title="Dates" date={course.dates[0].value} desc={course.dates[1].value} />
             <Outline className="mb-14" title="Duration" date={course.duration[0].value} desc={course.duration[1].value} />
-            <Outline title="Duration" date={course.price[0].value} desc={course.price[1].value} />
+            <Outline title="Price" date={course.price[0].value} desc={course.price[1].value} />
           </Card>
         </div>
-        <div className="flex justify-between items-start">
-          <Image src={course.src} alt="person" className="w-full max-w-[458px] h-auto" />
-          <div className="w-full max-w-[600px] pt-4">
-            <Heading variant="h5" className="text-base font-latoBold font-[700] uppercase tracking-[1px] mb-2">
+        <div className="flex flex-col lg:flex-row justify-between items-start">
+          <Image src={course.src} alt="person" className="w-full max-w-[458px] h-auto mx-auto" />
+          <div className="w-full lg:max-w-[600px] pt-4 lg:ml-4">
+            <Heading variant="h5" className="text-base text-center lg:text-left font-latoBold font-[700] uppercase tracking-[1px] mb-2">
               Course curator
             </Heading>
-            <Heading variant="h5" className="text-[2.875rem] mb-4">
+            <Heading variant="h5" className="text-[2.875rem] text-center lg:text-left mb-4">
               {course.author.slice(2)}
             </Heading>
-            <Typography className=" normal-case text-rgbGray text-[1.25rem] font-latoRegular font-[400] leading-[150%] mb-8">{course.position}</Typography>
-            <div className="mb-8">
-              <div className="flex justify-start items-center gap-x-2 mb-1">
+            <Typography className=" normal-case text-center lg:text-left text-rgbGray text-[1.25rem] font-latoRegular font-[400] leading-[150%] mb-8">{course.position}</Typography>
+            <div className="mb-8 flex flex-row lg:justify-start justify-center items-center lg:items-start lg:flex-col gap-x-1">
+              <div className="flex justify-start items-center gap-x-0 xsm:gap-x-2 mb-1">
                 <StarIcon className="text-primary" />
-                <Typography className="mb-0 normal-case text-base text-gray700">{course.rate}</Typography>
+                <Typography className="mb-0 normal-case text-base text-gray700 text-nowrap">{course.rate}</Typography>
               </div>
-              <div className="flex justify-start items-center gap-x-2 mb-1">
+              <div className="flex justify-start items-center gap-x-0 xsm:gap-x-2 mb-1">
                 <PlayCircleOutlineIcon className="text-primary" />
-                <Typography className="mb-0 normal-case text-base text-gray700">{course.quantityCourses}</Typography>
+                <Typography className="mb-0 normal-case text-base text-gray700 text-nowrap">{course.quantityCourses}</Typography>
               </div>
-              <div className="flex justify-start items-center gap-x-2">
+              <div className="flex justify-start items-center gap-x-0 xsm:gap-x-2">
                 <PersonOutlineIcon className="text-primary" />
-                <Typography className="mb-0 normal-case text-base text-gray700">{course.quantityStudents}</Typography>
+                <Typography className="mb-0 normal-case text-base text-gray700 text-nowrap">{course.quantityStudents}</Typography>
               </div>
             </div>
-            <Typography className=" normal-case text-base font-latoRegular font-[400] text-rgbGray mb-10">{course.aboutAuthor}</Typography>
-            <SocialLinks socialLinks={course.socialLinks!} />
+            <Typography className=" normal-case text-center lg:text-left text-base font-latoRegular font-[400] text-rgbGray mb-10">{course.aboutAuthor}</Typography>
+            <SocialLinks className="mx-auto lg:ml-0 lg:mr-auto" socialLinks={course.socialLinks!} />
           </div>
         </div>
       </Container>

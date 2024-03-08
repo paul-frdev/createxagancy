@@ -11,6 +11,7 @@ const config: Config = {
       xsm: '501px',
       sm: '640px',
       md: '768px',
+      xmd: '968px',
       lg: '1031px',
       xl: '1250px',
     },
@@ -57,6 +58,7 @@ const config: Config = {
       borderColor: {
         orange: '#fc4b26',
         gray: 'var(--gray-300)',
+        gray300: 'var(--gray-300)',
         gray400: 'var(--gray-400)',
         gray600: 'var(--gray-600)',
         gray700: 'var(--gray-700)',
@@ -65,10 +67,11 @@ const config: Config = {
       colors: {
         orange: '#fc4b26',
         gray: '#D7DADD',
+        gray700: 'var(--gray-700)',
       },
       textColor: {
         orange: '#fc4b26',
-        black: 'var(--gray-800, #424551);',
+        black: 'var(--gray-800);',
         danger: 'var(--danger)',
         gray: 'var(--gray-700)',
         primary: 'var(--primary)',
@@ -86,6 +89,8 @@ const config: Config = {
           '0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.10), 0px 80px 80px -20px rgba(154, 156, 165, 0.16);',
         workshopHover:
           '0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 30px 24px -10px rgba(255, 63, 58, 0.10), 0px 80px 80px -20px rgba(255, 63, 58, 0.16);',
+        preview:
+          '0px 4px 4px -4px rgba(30, 33, 44, 0.03),0px 12px 10px -6px rgba(154, 156, 165, 0.04),0px 30px 24px -10px rgba(154, 156, 165, 0.05),0px 80px 80px -20px rgba(154, 156, 165, 0.08)',
       },
     },
   },

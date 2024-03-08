@@ -3,6 +3,7 @@ import { Input } from '../ui/Input';
 import { PhoneInput } from '../ui/PhoneInput';
 import { Typography } from '../ui/Typography';
 import { Form } from './Form';
+import { cn } from '@/lib/utils';
 import { yupResolver } from '@hookform/resolvers/yup';
 import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -20,7 +21,11 @@ type FormValues = {
   phoneNumber: string;
 };
 
-export const RegisterForm = () => {
+type RegisterFormProps = {
+  className?: string;
+};
+
+export const RegisterForm = ({ className }: RegisterFormProps) => {
   const [phone, setPhone] = useState('');
 
   const {
@@ -40,9 +45,9 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div className="w-full max-w-[495px]">
-      <Typography>Leave a request now and get 20% off!</Typography>
-      <Heading className="text-[2.875rem] mb-10" variant="h3">
+    <div className={cn(`w-full max-w-[495px]`, className)}>
+      <Typography className="text-center lg:text-left">Leave a request now and get 20% off!</Typography>
+      <Heading className="text-center lg:text-left text-[2rem] md:text-[2.875rem] mb-10" variant="h3">
         Register for the course
       </Heading>
       <Form buttonLabel="Join the course" onSubmit={handleSubmit(onSubmit)} className="flex-col gap-y-10" buttonClasses="text-nowrap py-[0.78rem] w-full">
