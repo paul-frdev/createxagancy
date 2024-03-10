@@ -3,12 +3,13 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 type CategoryProps = {
+  allItemsQuantity: number;
   title: string;
   quantity?: number;
   className?: string;
   onClick: (str: React.MouseEvent<HTMLButtonElement>) => void;
 };
-export const Category: React.FC<CategoryProps> = ({ title = 'All', quantity, className, onClick }) => {
+export const Category: React.FC<CategoryProps> = ({ title = 'All', quantity, className, onClick, allItemsQuantity }) => {
   return (
     <Button
       value={title}
@@ -20,7 +21,7 @@ export const Category: React.FC<CategoryProps> = ({ title = 'All', quantity, cla
         className
       )}
     >
-      <span className="absolute -top-[4px] right-[5px]">{quantity}</span>
+      <span className="absolute -top-[4px] right-[5px]">{title === 'All' ? allItemsQuantity : quantity}</span>
       {title}
     </Button>
   );

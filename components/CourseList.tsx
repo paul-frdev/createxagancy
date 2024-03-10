@@ -67,12 +67,7 @@ export const CourseList: React.FC<CourseListProps> = ({ coursesPreview }) => {
           Our online courses
         </Heading>
         <div className="flex flex-col gap-y-6 lg:flex-row justify-start lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem] ">
-          {/* <Categories
-            items={coursesPreview}
-            categories={labelCounts}
-            filterItems={filterItems}
-            className="overflow-hidden"
-          /> */}
+          <Categories items={coursesPreview} categories={labelCounts} filterItems={filterItems} className="overflow-hidden" />
           <Search
             className="w-full max-w-[950px] lg:max-w-[350px] "
             label="Search course..."

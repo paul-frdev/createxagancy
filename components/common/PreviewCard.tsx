@@ -1,3 +1,5 @@
+'use client';
+
 import { Image } from '../ui/Image';
 import { cn } from '@/lib/utils';
 import { CourseType } from '@/types';
@@ -8,7 +10,9 @@ type PreviewCardProps = {
 };
 
 export const PreviewCard = ({ course, className }: PreviewCardProps) => {
-  console.log('course', course);
+  if (!course) {
+    return <div>Loading</div>;
+  }
 
   return (
     <div className={cn(`flex flex-col xsm:flex-row justify-start xsm:gap-x-[2rem] gap-y-8 items-center h-auto xsm:h-[214px]`, className)}>

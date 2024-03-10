@@ -1,8 +1,9 @@
 import person from '../public/svg/person.svg';
+import { LoginDialog } from './dialogs/LoginDialog';
+import { SignUpDialog } from './dialogs/SignUpDialog';
 import { Button } from './ui/Button';
 import { Image } from './ui/Image';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
@@ -12,6 +13,26 @@ type UserBlockProps = {
 };
 export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }) => {
   const pathname = usePathname();
+  const [openSignUp, setOpenSignUp] = React.useState(false);
+  const [openLogin, setOpenLogin] = React.useState(false);
+
+  const handleClickOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    const element = event.target as HTMLButtonElement;
+
+    console.log('element.value', element);
+    if (element.value === 'Log in') {
+      setOpenLogin(true);
+    } else {
+      setOpenSignUp(true);
+    }
+  };
+
+  const handleClose = () => {
+    setOpenSignUp(false);
+    setOpenLogin(false);
+  };
+
   return (
     <div className={cn(`hidden justify-end items-end lg:items-center gap-y-2`, className)}>
       <Button
@@ -27,15 +48,29 @@ export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }
       <div className="flex justify-start items-center gap-x-2 order-1">
         <Image src={person} alt="person" />
         <div className="flex justify-start items-center ">
-          <Link className="text-base text-nowrap text-black mr-[5px] font-latoBold font-[700]  hover:text-orange transition-colors duration-300" href="/">
+          <Button
+            onClick={handleClickOpen}
+            variantCss="link"
+            sizeCss="icon"
+            className="text-base hover:bg-transparent text-nowrap text-black hover:no-underline mr-[5px] font-latoBold font-[700]  hover:text-orange transition-colors duration-300"
+            href="/"
+          >
             Log in
-          </Link>
+          </Button>
           /
-          <Link className="text-base text-nowrap text-black ml-[5px] font-latoBold font-[700]  hover:text-orange transition-colors duration-300" href="/">
+          <Button
+            onClick={handleClickOpen}
+            variantCss="link"
+            sizeCss="icon"
+            className="text-base hover:bg-transparent hover:no-underline text-nowrap text-black ml-[5px] font-latoBold font-[700]  hover:text-orange transition-colors duration-300"
+            href="/"
+          >
             Register
-          </Link>
+          </Button>
         </div>
       </div>
+      <SignUpDialog open={openSignUp} close={handleClose} />
+      <LoginDialog open={openLogin} close={handleClose} />
     </div>
   );
 };
