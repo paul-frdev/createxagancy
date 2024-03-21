@@ -20,8 +20,7 @@ export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }
     event.preventDefault();
     const element = event.target as HTMLButtonElement;
 
-    console.log('element.value', element);
-    if (element.value === 'Log in') {
+    if (element.innerText === 'Log in') {
       setOpenLogin(true);
     } else {
       setOpenSignUp(true);

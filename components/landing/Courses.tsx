@@ -31,7 +31,7 @@ export const Courses: React.FC<CoursesProps> = ({ courses }) => {
               key={course.id}
               classname=" cursor-pointer hover:shadow-cardHover p-0 rounded shadow-card  max-w-[600px] w-full lg:max-w-[603px] border border-solid border-gray min-h-[214px] mx-auto lg:mx-0"
             >
-              <PreviewCard {...course} />
+              <PreviewCard course={course} />
             </Card>
           ))}
         </div>

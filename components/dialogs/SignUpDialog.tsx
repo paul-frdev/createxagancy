@@ -8,7 +8,7 @@ type SignUpDialogProps = {
 };
 export const SignUpDialog: React.FC<SignUpDialogProps> = ({ open, close }) => {
   return (
-    <AppDialog onClose={close} open={open}>
+    <AppDialog onClose={close} open={open} title='Sign Up'>
       <SignUpForm />
     </AppDialog>
   );
