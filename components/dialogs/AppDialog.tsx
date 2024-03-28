@@ -23,7 +23,7 @@ export const AppDialog = (props: SimpleDialogProps) => {
   return (
     <Dialog onClose={handleClose} open={open} className={className}>
       <div className='flex justify-end items-center px-2 pt-4'>
-        <Button className='w-fit border-none bg-transparent p-2 text-gray700 hover:text-white hover:border-none hover:bg-orange p-0 w-[42px] h-[42px] rounded-full'>
+        <Button onClick={handleClose} className='w-fit border-none bg-transparent p-2 text-gray700 hover:text-orange hover:border-none hover:bg-transparent p-0 w-[42px] h-[42px] rounded-full'>
           <CloseIcon className='w-6 h-6' />
         </Button>
       </div>

@@ -10,12 +10,15 @@ import { Heading } from '../ui/Heading';
 import { Input } from '../ui/Input';
 import { CheckboxLabels } from '../ui/Checkbox';
 import { Button } from '../ui/Button';
+import { AuthSocialMedia } from '../common/AuthSocialMedia';
 
 const Schema = yup.object().shape({
   fullName: yup.string().required(),
   email: yup.string().email('Enter a valid email address').required('Email address is required').required(),
   password: yup.string().required(),
-  repeatPassword: yup.string().required(),
+  repeatPassword: yup.string().required().test('passwords-match', 'Passwords must match', function (value) {
+    return this.parent.password === value;
+  })
 });
 
 type FormValues = {
@@ -51,7 +54,7 @@ export const SignUpForm = () => {
         className="flex-col  gap-y-4 items-center border-b border-b-solid border-b-gray300"
         buttonLabel="Sign Up"
         onSubmit={handleSubmit(onSubmit)}
-        buttonClasses="text-nowrap py-[0.55rem] w-full mx-auto mb-4"
+        buttonClasses="text-nowrap py-[0.55rem] w-full mx-auto mb-4 hover:bg-transparent"
       >
         <div className="flex flex-col  justify-between items-center gap-y-8 w-full">
           <Input
@@ -128,7 +131,7 @@ export const SignUpForm = () => {
             label="repeat password"
             type="password"
           />
-          <CheckboxLabels label='Remember me' className='mr-auto' />
+          <CheckboxLabels label='Remember me' className='mb-4 mr-auto' />
         </div>
       </Form>
       <div className='flex justify-start items-center'>
@@ -139,6 +142,7 @@ export const SignUpForm = () => {
           Sign in
         </Button>
       </div>
+      <AuthSocialMedia title='Or sign in with' />
     </div>
   );
 };

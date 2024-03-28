@@ -67,8 +67,8 @@ export const Input: React.FC<TextInputProps> = ({ name, control, label, classNam
           />
         )}
       />
-      {!isPassword && type === 'password' && <VisibilityIcon onClick={() => setIsPassword(!isPassword)} className='absolute right-[14px] top-[25%] text-gray800' />}
-      {isPassword && ariaLabel === 'password' && <VisibilityOffIcon onClick={() => setIsPassword(!isPassword)} className='absolute right-[14px] top-[25%] text-gray800' />}
+      {!isPassword && type === 'password' && <VisibilityIcon onClick={() => setIsPassword(!isPassword)} className='absolute right-[14px] top-[34%] text-gray800 cursor-pointer hover:text-orange text-gray800 w-4 h-4' />}
+      {isPassword && ariaLabel === 'password' && <VisibilityOffIcon onClick={() => setIsPassword(!isPassword)} className='absolute right-[14px] top-[34%] text-gray800 cursor-pointer hover:text-orange text-gray800 w-4 h-4' />}
 
     </div>
   );

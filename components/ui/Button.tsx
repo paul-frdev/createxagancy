@@ -33,7 +33,7 @@ export const Button = forwardRef(
     const appliedSizeCss = propSizeCss ? sizeCss[propSizeCss] : sizeCss.default;
     const commonProps = {
       className: cn(
-        `inline-flex normal-case	 text-white items-center tracking-[0.031em] font-latoBold justify-center rounded-[4px] font-bold  `,
+        `inline-flex normal-case text-nowrap text-white items-center tracking-[0.031em] font-latoBold justify-center rounded-[4px] font-bold  `,
         appliedVariantCss,
         appliedSizeCss,
         className
