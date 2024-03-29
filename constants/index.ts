@@ -2,7 +2,7 @@ export const navbar = [
   {
     id: 1,
     title: 'About Us',
-    src: '/',
+    src: '/about',
   },
   {
     id: 2,
@@ -12,17 +12,17 @@ export const navbar = [
   {
     id: 3,
     title: 'Events',
-    src: '/',
+    src: '/events',
   },
   {
     id: 4,
     title: 'Blog',
-    src: '/',
+    src: '/blog',
   },
   {
     id: 5,
     title: 'Contacts',
-    src: '/',
+    src: '/contacts',
   },
 ];
 

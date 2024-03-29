@@ -1,10 +1,10 @@
 'use client';
 
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { TextField, useTheme } from '@mui/material';
 import React, { useState } from 'react';
 import { Controller } from 'react-hook-form';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 interface TextInputProps {
   label: string | React.ReactNode;
@@ -21,18 +21,30 @@ interface TextInputProps {
   fullWidth?: boolean;
   className?: string;
   type?: string;
-  ariaLabel?: string
+  ariaLabel?: string;
   inputStyles?: React.CSSProperties;
   labelStyles?: React.CSSProperties;
   helperStyles?: React.CSSProperties;
 }
 
-export const Input: React.FC<TextInputProps> = ({ name, control, label, className, type = 'text', ariaLabel, fullWidth = false, inputStyles, labelStyles, helperStyles, ...rest }) => {
+export const Input: React.FC<TextInputProps> = ({
+  name,
+  control,
+  label,
+  className,
+  type = 'text',
+  ariaLabel,
+  fullWidth = false,
+  inputStyles,
+  labelStyles,
+  helperStyles,
+  ...rest
+}) => {
   const theme = useTheme();
-  const [isPassword, setIsPassword] = useState(false)
+  const [isPassword, setIsPassword] = useState(false);
 
   return (
-    <div className='w-full relative'>
+    <div className="w-full relative">
       <Controller
         name={name}
         control={control}
@@ -67,9 +79,15 @@ export const Input: React.FC<TextInputProps> = ({ name, control, label, classNam
           />
         )}
       />
-      {!isPassword && type === 'password' && <VisibilityIcon onClick={() => setIsPassword(!isPassword)} className='absolute right-[14px] top-[34%] text-gray800 cursor-pointer hover:text-orange text-gray800 w-4 h-4' />}
-      {isPassword && ariaLabel === 'password' && <VisibilityOffIcon onClick={() => setIsPassword(!isPassword)} className='absolute right-[14px] top-[34%] text-gray800 cursor-pointer hover:text-orange text-gray800 w-4 h-4' />}
-
+      {!isPassword && type === 'password' && (
+        <VisibilityIcon onClick={() => setIsPassword(!isPassword)} className="absolute right-[14px] top-[34%] text-gray800 cursor-pointer hover:text-orange text-gray800 w-4 h-4" />
+      )}
+      {isPassword && ariaLabel === 'password' && (
+        <VisibilityOffIcon
+          onClick={() => setIsPassword(!isPassword)}
+          className="absolute right-[14px] top-[34%] text-gray800 cursor-pointer hover:text-orange text-gray800 w-4 h-4"
+        />
+      )}
     </div>
   );
 };

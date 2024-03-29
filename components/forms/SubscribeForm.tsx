@@ -32,7 +32,11 @@ export const SubscribeForm = () => {
   };
 
   return (
-    <Form className="justify-center flex-col max-w-[560px] mx-auto xsm:flex-row gap-y-4 xsm:gap-y-0 items-end xsm:items-center" buttonLabel="Subscribe" onSubmit={handleSubmit(onSubmit)}>
+    <Form
+      className="justify-center flex-col max-w-[560px] mx-auto xsm:flex-row gap-y-4 xsm:gap-y-0 items-end xsm:items-center"
+      buttonLabel="Subscribe"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Input
         className="bg-white w-full max-w-[422px] border-transparent rounded"
         labelStyles={{ color: errors.email?.message ? '#d32f2f' : '#9a9ca5' }}

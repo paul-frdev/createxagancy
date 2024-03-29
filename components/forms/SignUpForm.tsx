@@ -1,24 +1,27 @@
+import { AuthSocialMedia } from '../common/AuthSocialMedia';
+import { Button } from '../ui/Button';
+import { CheckboxLabels } from '../ui/Checkbox';
+import { Heading } from '../ui/Heading';
+import { Input } from '../ui/Input';
 import { PhoneInput } from '../ui/PhoneInput';
+import { Typography } from '../ui/Typography';
 import { Form } from './Form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Stack } from '@mui/material';
 import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import { Typography } from '../ui/Typography';
-import { Heading } from '../ui/Heading';
-import { Input } from '../ui/Input';
-import { CheckboxLabels } from '../ui/Checkbox';
-import { Button } from '../ui/Button';
-import { AuthSocialMedia } from '../common/AuthSocialMedia';
 
 const Schema = yup.object().shape({
   fullName: yup.string().required(),
   email: yup.string().email('Enter a valid email address').required('Email address is required').required(),
   password: yup.string().required(),
-  repeatPassword: yup.string().required().test('passwords-match', 'Passwords must match', function (value) {
-    return this.parent.password === value;
-  })
+  repeatPassword: yup
+    .string()
+    .required()
+    .test('passwords-match', 'Passwords must match', function (value) {
+      return this.parent.password === value;
+    }),
 });
 
 type FormValues = {
@@ -28,9 +31,7 @@ type FormValues = {
   repeatPassword: string;
 };
 
-
 export const SignUpForm = () => {
-
   const {
     control,
     handleSubmit,
@@ -48,8 +49,10 @@ export const SignUpForm = () => {
   };
 
   return (
-    <div className='w-full max-w-[390px] mx-auto mx-4'>
-      <Typography className=' text-gray700 text-[0.85rem] mb-8 normal-case text-center'>Registration takes less than a minute but gives you full control over your studying.</Typography>
+    <div className="w-full max-w-[390px] mx-auto mx-4">
+      <Typography className=" text-gray700 text-[0.85rem] mb-8 normal-case text-center">
+        Registration takes less than a minute but gives you full control over your studying.
+      </Typography>
       <Form
         className="flex-col  gap-y-4 items-center border-b border-b-solid border-b-gray300"
         buttonLabel="Sign Up"
@@ -96,7 +99,7 @@ export const SignUpForm = () => {
           <Input
             className="w-full border-white rounded text-gray600"
             name="password"
-            ariaLabel='password'
+            ariaLabel="password"
             control={control}
             inputStyles={{
               height: 36,
@@ -115,7 +118,7 @@ export const SignUpForm = () => {
           <Input
             className="w-full border-white rounded text-gray600"
             name="repeatPassword"
-            ariaLabel='password'
+            ariaLabel="password"
             control={control}
             inputStyles={{
               height: 36,
@@ -131,18 +134,16 @@ export const SignUpForm = () => {
             label="repeat password"
             type="password"
           />
-          <CheckboxLabels label='Remember me' className='mb-4 mr-auto' />
+          <CheckboxLabels label="Remember me" className="mb-4 mr-auto" />
         </div>
       </Form>
-      <div className='flex justify-start items-center'>
-        <p className='text-[0.88rem] font-latoRegular font-[400]'>
-          Already have an account?
-        </p>
-        <Button href='/' className='text-orange bg-transparent border-none hover:text-orange hover:border-none hover:bg-transparent p-0 w-fit underline'>
+      <div className="flex justify-start items-center">
+        <p className="text-[0.88rem] font-latoRegular font-[400]">Already have an account?</p>
+        <Button href="/" className="text-orange bg-transparent border-none hover:text-orange hover:border-none hover:bg-transparent p-0 w-fit underline">
           Sign in
         </Button>
       </div>
-      <AuthSocialMedia title='Or sign in with' />
+      <AuthSocialMedia title="Or sign in with" />
     </div>
   );
 };
