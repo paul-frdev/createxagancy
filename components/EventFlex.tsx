@@ -1,14 +1,14 @@
-import React from 'react'
-import { Card } from './ui/Card'
-import { WorkshopPreview } from '@/types/workshop';
-import { Heading } from './ui/Heading';
 import { Button } from './ui/Button';
+import { Card } from './ui/Card';
+import { Heading } from './ui/Heading';
 import { cn } from '@/lib/utils';
+import { WorkshopPreview } from '@/types/workshop';
+import React from 'react';
 
 type EventFlexProps = {
   event: WorkshopPreview;
   style: string;
-}
+};
 export const EventFlex: React.FC<EventFlexProps> = ({ event, style }) => {
   const day = event.date.split('').splice(0, 2);
   const month = event.date.split('').splice(2);
@@ -31,5 +31,5 @@ export const EventFlex: React.FC<EventFlexProps> = ({ event, style }) => {
         View more
       </Button>
     </>
-  )
-}
+  );
+};

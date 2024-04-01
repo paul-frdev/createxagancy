@@ -1,13 +1,13 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import { Typography } from './Typography';
+import { cn } from '@/lib/utils';
+import { createTheme } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
+import OutlinedInput from '@mui/material/OutlinedInput';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import React, { useState } from 'react';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import { createTheme } from '@mui/material';
 
 type BaseSelectProps = {
   text?: string;
@@ -28,9 +28,7 @@ const MenuProps = {
   },
 };
 
-const theme = createTheme({
- 
-})
+const theme = createTheme({});
 
 export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, items, description, setQuery }) => {
   const [value, setValue] = useState('');
@@ -41,7 +39,7 @@ export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, it
 
   return (
     <div className={cn(`flex justify-center items-center gap-x-2`, className)}>
-      <Typography className=' normal-case text-base font-latoBlack font-[700] leading-[160%] text-nowrap mb-0'>{text}</Typography>
+      <Typography className=" normal-case text-base font-latoBlack font-[700] leading-[160%] text-nowrap mb-0">{text}</Typography>
       <FormControl fullWidth>
         <Select
           displayEmpty
@@ -51,7 +49,7 @@ export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, it
           input={<OutlinedInput />}
           renderValue={(selected) => {
             if (selected.length === 0) {
-              return <p className='text-[1rem] normal-case font-latoRegular font-[400]'>{items![0]}</p>;
+              return <p className="text-[1rem] normal-case font-latoRegular font-[400]">{items![0]}</p>;
             }
 
             return selected;
@@ -60,17 +58,13 @@ export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, it
           inputProps={{ 'aria-label': 'Without label' }}
         >
           {items?.map((item, index) => (
-            <MenuItem
-              value={item as any}
-              key={index}
-              className='text-[1rem] normal-case font-latoRegular font-[400]'
-            >
+            <MenuItem value={item as any} key={index} className="text-[1rem] normal-case font-latoRegular font-[400]">
               {item}
             </MenuItem>
           ))}
         </Select>
       </FormControl>
-      {description && <Typography className='normal-case text-[0.875rem] font-latoRegular font-[400] leading-[160%] text-nowrap mb-0'>{description}</Typography>}
+      {description && <Typography className="normal-case text-[0.875rem] font-latoRegular font-[400] leading-[160%] text-nowrap mb-0">{description}</Typography>}
     </div>
   );
 };
