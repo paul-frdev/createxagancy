@@ -1,6 +1,6 @@
 import courses from '@/app/courses.json';
 import workshops from '@/app/events.json';
-import { EventsList } from '@/components/EventsList';
+import { EventList } from '@/components/EventList';
 import { CourseType } from '@/types';
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <EventsList />
+      <EventList events={workshopsPreview} />
     </>
   );
 }

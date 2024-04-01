@@ -175,3 +175,9 @@ export const courseLearnList = [
     pannel: '8',
   },
 ];
+
+// TODO filters
+export const themes = ['All', 'Online master-class', 'Online lecture', 'Online workshop'];
+export const sortBy = ['newest', 'oldest'];
+export const showItems = [6, 9, 12];
+export const view = ['flex', 'grid'];

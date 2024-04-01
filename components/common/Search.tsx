@@ -8,8 +8,8 @@ import * as React from 'react';
 
 type SearchProps = {
   items: CourseType[];
-  searchQuery: string;
-  handleSearchInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  searchQuery?: string;
+  handleSearchInputChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
   className?: string;
 };
