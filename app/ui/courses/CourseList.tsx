@@ -1,15 +1,15 @@
 'use client';
 
-import SyncIcon from '@mui/icons-material/Sync';
-import React, { useEffect, useState } from 'react';
-import { CourseType } from '@/types/courses';
-import { Container } from '../elements/Container';
-import { Typography } from '../elements/Typography';
-import { Heading } from '../elements/Heading';
 import { Categories } from '../Categories';
 import { Search } from '../Search';
 import { CoursePreviewCard } from '../courseId/CoursePreviewCard';
 import { Button } from '../elements/Button';
+import { Container } from '../elements/Container';
+import { Heading } from '../elements/Heading';
+import { Typography } from '../elements/Typography';
+import { CourseType } from '@/types/courses';
+import SyncIcon from '@mui/icons-material/Sync';
+import React, { useEffect, useState } from 'react';
 
 type CourseListProps = {
   coursesPreview: CourseType[];

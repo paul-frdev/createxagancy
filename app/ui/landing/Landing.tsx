@@ -1,7 +1,9 @@
 'use client';
 
-import { Video } from '../Video';
+import { Certificate } from '../Certificate';
 import { Subscribe } from '../Subscribe';
+import { Video } from '../Video';
+import { Reviews } from '../reviews/Reviews';
 import { Benefits } from './Benefits';
 import { Courses } from './Courses';
 import { Posts } from './Posts';
@@ -11,12 +13,10 @@ import { WhyCreatex } from './WhyCreatex';
 import { Workshops } from './Workshops';
 import { useMyContext } from '@/context/useContextMenu';
 import { PostsType, ReviewsType } from '@/types';
+import { CourseType } from '@/types/courses';
 import { Team as TeamType } from '@/types/team';
 import { WorkshopPreview } from '@/types/workshop';
 import React from 'react';
-import { CourseType } from '@/types/courses';
-import { Certificate } from '../Certificate';
-import { Reviews } from '../reviews/Reviews';
 
 type LandingProps = {
   events: WorkshopPreview[];

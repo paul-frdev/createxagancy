@@ -1,7 +1,8 @@
 'use client';
 
-import { CourseType, CourseItem as CourseItemType } from '@/types/courses';
+import { BenefitsItem } from '../BenefitsItem';
 import { DiscountForm } from '../forms/DiscountForm';
+import { Reviews } from '../reviews/Reviews';
 import { AboutCourse } from './AboutCourse';
 import { CourseProcess } from './CourseProcess';
 import { MayLikeCarousel } from './MayLikeCarousel';
@@ -9,9 +10,8 @@ import { RegisterCourse } from './RegisterCourse';
 import { YouWillLearn } from './YouWillLearn';
 import { benefitsCourseItem } from '@/constants';
 import { ReviewsType } from '@/types';
+import { CourseItem as CourseItemType, CourseType } from '@/types/courses';
 import React from 'react';
-import { BenefitsItem } from '../BenefitsItem';
-import { Reviews } from '../reviews/Reviews';
 
 type CourseItemProps = {
   courseById: CourseType;

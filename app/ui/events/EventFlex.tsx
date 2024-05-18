@@ -1,8 +1,8 @@
+import { Button } from '../elements/Button';
+import { Heading } from '../elements/Heading';
 import { cn } from '@/app/lib/utils';
 import { WorkshopPreview } from '@/types/workshop';
 import React from 'react';
-import { Heading } from '../elements/Heading';
-import { Button } from '../elements/Button';
 
 type EventFlexProps = {
   event: WorkshopPreview;

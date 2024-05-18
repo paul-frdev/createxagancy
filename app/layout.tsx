@@ -1,13 +1,12 @@
+import { lato } from './fonts';
 import './lib/globals.css';
+import { cn } from '@/app/lib/utils';
 import { Footer } from '@/app/ui/Footer';
 import { Header } from '@/app/ui/Header';
 import { MyContextProvider } from '@/context/useContextMenu';
-import { cn } from '@/app/lib/utils';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import CssBaseline from '@mui/material/CssBaseline';
 import type { Metadata } from 'next';
-import { lato } from './fonts';
-
 
 export const metadata: Metadata = {
   title: 'Createx',

@@ -1,6 +1,6 @@
-import { RegisterForm } from '../forms/RegisterForm';
 import { Container } from '../elements/Container';
 import { Image } from '../elements/Image';
+import { RegisterForm } from '../forms/RegisterForm';
 import register from '/public/courses/register.svg';
 import React from 'react';
 

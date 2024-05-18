@@ -48,9 +48,7 @@ export const PostItem: React.FC<PostItemProps> = ({ post }) => {
             <Heading variant="h6" className="text-[1.25rem] text-gray900 mb-2">
               {post.title.length > 64 ? post.title.slice(0, 64) + '...' : post.title}
             </Heading>
-            <Typography className=" normal-case text-base font-lato font-normal leading-[160%]">
-              {post.text.length > 99 ? post.text.slice(0, 94) + '...' : post.text}
-            </Typography>
+            <Typography className=" normal-case text-base font-lato font-normal leading-[160%]">{post.text.length > 99 ? post.text.slice(0, 94) + '...' : post.text}</Typography>
           </div>
           <div className="h-full mt-auto flex justify-start items-end">
             <Button

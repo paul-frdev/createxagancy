@@ -1,19 +1,16 @@
-
-import { PrismaClient } from '@prisma/client';
 import { getCourses } from '../actions/getCourses';
 import { getReviews } from '../actions/getReviews';
-import { CourseList } from '../ui/courses/CourseList';
 import { Certificate } from '../ui/Certificate';
-import { Reviews } from '../ui/reviews/Reviews';
 import { Subscribe } from '../ui/Subscribe';
+import { CourseList } from '../ui/courses/CourseList';
+import { Reviews } from '../ui/reviews/Reviews';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-
 const CoursesPage = async () => {
-
-  const courses = await getCourses()
-  const reviews = await getReviews()
+  const courses = await getCourses();
+  const reviews = await getReviews();
 
   return (
     <>

@@ -1,15 +1,15 @@
-import { Carousel, CustomNextArrow, CustomPrevArrow } from '../swiper/Carousel';
+import { PreviewCard } from '../PreviewCard';
 import { Button } from '../elements/Button';
 import { Container } from '../elements/Container';
 import { Heading } from '../elements/Heading';
 import { Typography } from '../elements/Typography';
+import { Carousel, CustomNextArrow, CustomPrevArrow } from '../swiper/Carousel';
+import { CourseType } from '@/types/courses';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useMediaQuery } from '@mui/material';
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import { CourseType } from '@/types/courses';
-import { PreviewCard } from '../PreviewCard';
 
 type MayLikeCarouselProps = {
   courses: CourseType[];

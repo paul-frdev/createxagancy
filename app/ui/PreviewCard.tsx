@@ -1,9 +1,8 @@
 'use client';
 
-import { CourseType } from '@/types/courses';
 import { Image } from '../../app/ui/elements/Image';
 import { cn } from '@/app/lib/utils';
-
+import { CourseType } from '@/types/courses';
 
 type PreviewCardProps = {
   course: CourseType;

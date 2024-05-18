@@ -1,5 +1,5 @@
-import { ICourseId } from '@/types/courses';
 import prisma from '@/app/lib/prismadb';
+import { ICourseId } from '@/types/courses';
 
 export async function getCourseById(param: ICourseId) {
   const { courseId } = param;

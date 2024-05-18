@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
   --background-body: #ffffff;
   --btn-gradient: #fc4a2e;
-  --btn-gradient-start: #ff3f3a; 
+  --btn-gradient-start: #ff3f3a;
   --btn-gradient-end: #f75e05;
   --gray-300: #e5e8ed;
   --gray-200: #f4f5f6;
@@ -26,7 +26,6 @@
   --light: rgb(229, 232, 237);
   --rgbGray: rgb(120, 122, 128);
   --list: rgb(255, 63, 58);
-  
 }
 
 @media (prefers-color-scheme: dark) {

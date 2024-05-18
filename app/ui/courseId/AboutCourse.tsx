@@ -1,4 +1,3 @@
-import { CourseItem, CourseType } from '@/types/courses';
 import { Card } from '../elements/Card';
 import { Container } from '../elements/Container';
 import { Heading } from '../elements/Heading';
@@ -6,6 +5,7 @@ import { Image } from '../elements/Image';
 import { Typography } from '../elements/Typography';
 import { Outline } from './Outline';
 import { SocialLinks } from './SocialLinks';
+import { CourseItem, CourseType } from '@/types/courses';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
@@ -16,7 +16,6 @@ type AboutCourseProps = {
   course: CourseType;
 };
 export const AboutCourse: React.FC<AboutCourseProps> = ({ course }) => {
-
   console.log(course);
 
   return (

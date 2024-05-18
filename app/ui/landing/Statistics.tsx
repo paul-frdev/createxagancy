@@ -10,13 +10,12 @@ import Image from 'next/image';
 import React from 'react';
 
 export const Statistics = () => {
-
   return (
     <section className="w-full bg-lightOrange bg-opacity-[0.2] pt-[0.5rem] h-screen">
       <Container>
         <div className=" flex justify-between pt-[2rem] md:pt-[6em]">
           <div>
-            <Showreel text='Play showreel' />
+            <Showreel text="Play showreel" />
             <div className="w-full">
               <Heading
                 variant="h1"

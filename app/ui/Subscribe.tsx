@@ -1,7 +1,7 @@
-import { SubscribeForm } from './forms/SubscribeForm';
 import { Container } from './elements/Container';
 import { Heading } from './elements/Heading';
 import { Typography } from './elements/Typography';
+import { SubscribeForm } from './forms/SubscribeForm';
 import React from 'react';
 
 export const Subscribe = () => {

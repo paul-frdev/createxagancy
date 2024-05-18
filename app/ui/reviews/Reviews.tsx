@@ -1,16 +1,16 @@
 'use client';
 
+import { Container } from '../elements/Container';
+import { Heading } from '../elements/Heading';
+import { Image } from '../elements/Image';
+import { Typography } from '../elements/Typography';
+import { Carousel, CustomNextArrow, CustomPrevArrow } from '../swiper/Carousel';
 import { cn } from '@/app/lib/utils';
 import { ReviewsType } from '@/types';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import { Image } from '../elements/Image';
-import { Typography } from '../elements/Typography';
-import { Heading } from '../elements/Heading';
-import { Container } from '../elements/Container';
-import { Carousel, CustomNextArrow, CustomPrevArrow } from '../swiper/Carousel';
 
 type CarouselItemProps = ReviewsType & {};
 

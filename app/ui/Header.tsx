@@ -1,21 +1,20 @@
 'use client';
 
 import logo from '../../public/svg/logo.svg';
-
-import { navbar } from '@/constants';
+import { MobileMenu } from './MobileMenu';
+import { UserBlock } from './UserBlock';
+import { Container } from './elements/Container';
 import { cn } from '@/app/lib/utils';
+import { navbar } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import { Container } from './elements/Container';
-import { UserBlock } from './UserBlock';
-import { MobileMenu } from './MobileMenu';
 
 export const Header = () => {
   const pathname = usePathname();
 
-  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about'; 
+  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about';
 
   return (
     <header className={cn(`w-full bg-orange02 pt-[1.25rem]`, !bgWhite ? 'bg-orange02' : 'bg-white')}>

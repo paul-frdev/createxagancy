@@ -1,11 +1,10 @@
+import { cn } from '../lib/utils';
+import { BaseSelect } from './elements/BaseSelect';
+import { Button } from './elements/Button';
 import { showItems, sortBy, themes } from '@/constants';
-
 import ViewAgendaIcon from '@mui/icons-material/ViewAgenda';
 import WindowIcon from '@mui/icons-material/Window';
 import React from 'react';
-import { BaseSelect } from './elements/BaseSelect';
-import { Button } from './elements/Button';
-import { cn } from '../lib/utils';
 
 type FiltersProps = {
   setTopic: (str: string) => void;

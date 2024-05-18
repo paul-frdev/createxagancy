@@ -5,7 +5,6 @@ export type ICourseId = {
 export type PriceCourse = { id: number; value: string; courseId: number };
 export type ValueCourse = { id: number; value: string };
 
-
 export type CourseType = {
   id?: number;
   createdAt: Date;
@@ -17,7 +16,7 @@ export type CourseType = {
   text: string;
   price: PriceCourse[];
   author: string;
-  description: string; 
+  description: string;
   study?: string[];
   dates?: ValueCourse[];
   durations?: ValueCourse[];
@@ -30,5 +29,5 @@ export type CourseType = {
 };
 
 export type CourseItem = Omit<CourseType, 'study'> & {
-  study: string[]; 
+  study: string[];
 };

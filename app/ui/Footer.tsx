@@ -2,12 +2,12 @@
 
 import heardIcon from '../../public/svg/heard.svg';
 import logo from '../../public/svg/logoFooter.svg';
-import { EmailForm } from './forms/EmailForm';
 import { Button } from './elements/Button';
 import { Container } from './elements/Container';
 import { Heading } from './elements/Heading';
 import { Image } from './elements/Image';
 import { Typography } from './elements/Typography';
+import { EmailForm } from './forms/EmailForm';
 import { footerLinks, navbar } from '@/constants';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -81,10 +81,7 @@ export const Footer = () => {
           <ul className="flex flex-col justify-start items-center xsm:items-start gap-y-[0.7rem]">
             {navbar.map((item) => (
               <li key={item.id}>
-                <Link
-                  href="/"
-                  className="text-base hover:opacity-[1] transition-all duration-300 text-white opacity-[0.6] leading-[160%] tracking-[1px] font-lato font-normal"
-                >
+                <Link href="/" className="text-base hover:opacity-[1] transition-all duration-300 text-white opacity-[0.6] leading-[160%] tracking-[1px] font-lato font-normal">
                   {item.title}
                 </Link>
               </li>

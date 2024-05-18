@@ -1,13 +1,13 @@
 'use client';
 
-import person from '@/public/svg/person.svg';
+import { cn } from '../lib/utils';
 import { LoginDialog } from './dialogs/LoginDialog';
 import { SignUpDialog } from './dialogs/SignUpDialog';
+import { Button } from './elements/Button';
+import { Image } from './elements/Image';
+import person from '@/public/svg/person.svg';
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import { Button } from './elements/Button';
-import { cn } from '../lib/utils';
-import { Image } from './elements/Image';
 
 type UserBlockProps = {
   className?: string;

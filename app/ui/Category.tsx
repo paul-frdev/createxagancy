@@ -1,6 +1,6 @@
-import React from 'react';
-import { Button } from './elements/Button';
 import { cn } from '../lib/utils';
+import { Button } from './elements/Button';
+import React from 'react';
 
 type CategoryProps = {
   allItemsQuantity: number;

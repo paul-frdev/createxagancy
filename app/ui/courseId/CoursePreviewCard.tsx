@@ -1,11 +1,11 @@
 'use client';
 
+import { Image } from '../elements/Image';
 import { cn } from '@/app/lib/utils';
 import { CourseType } from '@/types/courses';
 import { Card } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Image } from '../elements/Image';
 
 export const CoursePreviewCard = ({ id, src, alt, label, colorLabel, text, price, author }: CourseType) => {
   const route = useRouter();
@@ -20,7 +20,9 @@ export const CoursePreviewCard = ({ id, src, alt, label, colorLabel, text, price
             <span className=" text-sm font-latoRegular font-[400] text-white leading-[150%] py-[3px] px-2 rounded" style={{ backgroundColor: colorLabel }}>
               {label}
             </span>
-            <p className="text-[1.25rem] text-center xsm:text-left font-latoBold font-[700] leading-[150%] text-green-900 text-nowrap">{text.length > 30 ? text.slice(0, 30) + '...' : text}</p>
+            <p className="text-[1.25rem] text-center xsm:text-left font-latoBold font-[700] leading-[150%] text-green-900 text-nowrap">
+              {text.length > 30 ? text.slice(0, 30) + '...' : text}
+            </p>
             <div className="flex justify-start items-start gap-x-[4px]">
               <span className="text-[1.125rem] font-latoBold font-[700] leading-[150%] text-danger">{price[0].value.slice(0, 4)}</span>
               <span className="text-gray">|</span>

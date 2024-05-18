@@ -9,12 +9,7 @@ import React from 'react';
 const CoursePage = async ({ params }: { params: ICourseId }) => {
   const { courseId } = params;
 
-  const [courseById, courses, reviews] = await Promise.all([
-    getCourseById({ courseId }),
-    getCourses(),
-    getReviews()
-  ])
-
+  const [courseById, courses, reviews] = await Promise.all([getCourseById({ courseId }), getCourses(), getReviews()]);
 
   if (!courseById) {
     notFound();

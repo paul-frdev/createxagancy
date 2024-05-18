@@ -5,7 +5,6 @@ import reviewData from './reviews.json';
 import teamData from './team.json';
 import prisma from '@/app/lib/prismadb';
 
-
 async function main() {
   const courses = await prisma.$transaction(
     coursesData.map((course) =>

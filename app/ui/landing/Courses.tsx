@@ -1,10 +1,10 @@
-import { CourseType } from '@/types/courses';
+import { PreviewCard } from '../PreviewCard';
 import { Button } from '../elements/Button';
 import { Card } from '../elements/Card';
 import { Container } from '../elements/Container';
 import { Heading } from '../elements/Heading';
+import { CourseType } from '@/types/courses';
 import React from 'react';
-import { PreviewCard } from '../PreviewCard';
 
 type CoursesProps = {
   courses: CourseType[];

@@ -5,7 +5,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Link from 'next/link';
 import React from 'react';
 
-type ILink = { id: number, url: string, courseId: number }
+type ILink = { id: number; url: string; courseId: number };
 type SocialLinksProps = {
   socialLinks: ILink[];
   className?: string;
