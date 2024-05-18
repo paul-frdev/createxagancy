@@ -1,14 +1,13 @@
-import './globals.css';
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
+import './lib/globals.css';
+import { Footer } from '@/app/ui/Footer';
+import { Header } from '@/app/ui/Header';
 import { MyContextProvider } from '@/context/useContextMenu';
-import { cn } from '@/lib/utils';
+import { cn } from '@/app/lib/utils';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import CssBaseline from '@mui/material/CssBaseline';
 import type { Metadata } from 'next';
-import { Lato } from 'next/font/google';
+import { lato } from './fonts';
 
-const lato = Lato({ weight: '400', subsets: ['latin-ext'] });
 
 export const metadata: Metadata = {
   title: 'Createx',
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="__next" className={cn(`relative`, lato.className)}>
+      <body id="__next" className={cn(`relative`, lato.variable)}>
         <AppRouterCacheProvider>
           <MyContextProvider>
             <CssBaseline />

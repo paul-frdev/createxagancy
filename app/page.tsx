@@ -1,33 +1,31 @@
-import courses from '@/app/courses.json';
-import workshops from '@/app/events.json';
-import posts from '@/app/posts.json';
-import reviews from '@/app/reviews.json';
-import team from '@/app/team.json';
-import { Landing } from '@/components/landing/Landing';
-import { CourseType } from '@/types';
 
-export default function Home() {
-  const workshopsPreview = workshops.map((workshop) => ({
-    id: workshop.id,
-    date: workshop.date,
-    time: workshop.time,
-    title: workshop.title,
-    type: workshop.type,
-  }));
+import { Landing } from '@/app/ui/landing/Landing';
+import { getCourses } from './actions/getCourses';
+import { getEvents } from './actions/getEvents';
+import { getTeam } from './actions/getTeam';
+import { getPosts } from './actions/getPosts';
+import { getReviews } from './actions/getReviews';
 
-  const coursesPreview: CourseType[] = courses.map((course) => ({
-    id: course.id,
-    src: course.src,
-    alt: course.alt,
-    label: course.label,
-    colorLabel: course.colorLabel,
-    text: course.text,
-    author: course.author,
-    price: course.price[0].value || '',
-  }));
+
+export default async function Home() {
+
+  const [courses, events, team, posts, reviews] = await Promise.all([
+    getCourses(),
+    getEvents(),
+    getTeam(),
+    getPosts(),
+    getReviews()
+  ])
+
   return (
     <>
-      <Landing reviews={reviews} team={team} workshops={workshopsPreview} posts={posts} courses={coursesPreview} />
+      <Landing
+        events={events}
+        courses={courses}
+        reviews={reviews}
+        team={team}
+        posts={posts}
+      />
     </>
   );
 }

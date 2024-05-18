@@ -1,0 +1,136 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// model User {
+//   id        Int      @id @default(autoincrement())
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+//   email     String?  @unique
+//   image     String?
+//   role      Role     @default(USER)
+// }
+// enum Role {
+//   USER
+//   ADMIN
+// }
+
+model course {
+  id               Int           @id @default(autoincrement())
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  src              String
+  alt              String
+  label            String
+  colorLabel       String
+  text             String
+  author           String
+  position         String
+  rate             String
+  quantityCourses  String
+  quantityStudents String
+  aboutAuthor      String
+  description      String
+  study            String[]
+  dates            dates[]
+  durations        duration[]
+  price            price[]
+  socialLinks      socialLinks[]
+}
+
+model event {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  time        String[]
+  date        String
+  title       String
+  type        String
+  price       String
+  author      String
+  position    String
+  description String
+  aboutAuthor String
+  photo       String
+}
+
+model team {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  src       String
+  author    String
+  position  String
+  links     String[]
+}
+
+model post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  icon      String
+  type      String
+  image     String
+  labels    labels[]
+  title     String
+  text      String
+}
+
+model reviews {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  text      String
+  src       String
+  author    String
+  course    String
+}
+
+model dates {
+  id       Int    @id @default(autoincrement())
+  value    String
+  course   course @relation(fields: [courseId], references: [id])
+  courseId Int
+}
+
+model duration {
+  id       Int    @id @default(autoincrement())
+  value    String
+  course   course @relation(fields: [courseId], references: [id])
+  courseId Int
+}
+
+model price {
+  id       Int    @id @default(autoincrement())
+  value    String
+  course   course @relation(fields: [courseId], references: [id])
+  courseId Int
+}
+
+model socialLinks {
+  id       Int    @id @default(autoincrement())
+  url      String
+  courseId Int
+  course   course @relation(fields: [courseId], references: [id])
+}
+
+model labels {
+  id     Int     @id @default(autoincrement())
+  icon   String?
+  text   String?
+  src    String?
+  date   String?
+  postId Int
+  post   post    @relation(fields: [postId], references: [id])
+}

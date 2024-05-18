@@ -35,9 +35,7 @@ const config: Config = {
           ' linear-gradient(180.00deg, rgba(30, 33, 44, 0) 43.897%,rgba(30, 33, 44, 0.03) 55.206%,rgba(30, 33, 44, 0.33) 68.728%,rgba(30, 33, 44, 0.56) 76.168%,rgba(30, 33, 44, 0.77) 83.749%,rgba(30, 33, 44, 0.92) 91.493%,rgb(30, 33, 44) 100%);',
       },
       fontFamily: {
-        latoBlack: 'LatoBlack',
-        latoBold: 'LatoBold',
-        latoRegular: 'LatoRegular',
+        lato: ['var(--font-lato)'],
       },
       backgroundColor: {
         orange: 'var(--btn-gradient, linear-gradient(56deg, #FF3F3A 0%, #F75E05 100%));',
@@ -82,6 +80,7 @@ const config: Config = {
         gray900: 'var(--gray-900)',
         bgIcon: 'var(--bg-icon)',
         rgbGray: 'var(--rgbGray)',
+        list: 'var(--list)',
       },
       boxShadow: {
         card: '0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);',

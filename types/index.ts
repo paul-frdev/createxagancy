@@ -1,5 +1,7 @@
 export type ReviewsType = {
-  id: number;
+  id?: number;
+  createdAt: Date;
+  updatedAt: Date;
   text: string;
   src: string;
   author: string;
@@ -16,36 +18,14 @@ export type LabelPost = {
 };
 export type PostsType = {
   id: number;
+  createdAt: Date;
+  updatedAt: Date;
   icon: string;
   type: string;
   image: string;
-  labels: LabelPost[];
+  labels?: LabelPost[];
   title: string;
   text: string;
 };
 
 export type DetailItem = { id: number; value: string };
-
-export type CourseType = {
-  id: number;
-  src: string;
-  alt: string;
-  label: string;
-  colorLabel: string;
-  text: string;
-  price: string;
-  author: string;
-};
-export type CourseItem<T extends CourseType> = Omit<T, 'price'> & {
-  description: string;
-  study: string[];
-  dates: { id: number; value: string }[];
-  duration: { id: number; value: string }[];
-  price: { id: number; value: string }[];
-  socialLinks?: string[];
-  position: string;
-  rate: string;
-  quantityCourses: string;
-  quantityStudents: string;
-  aboutAuthor: string;
-};

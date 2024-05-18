@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "icon": "/svg/mic.svg",
+    "type": "Podcast",
+    "image": "/assets/podcast.jpg",
+    "labels": [
+      { "id": 1, "text": "Marketing", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "September 4, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
+    ],
+    "title": "What is traffic arbitrage and does it really make money?",
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida..."
+  },
+  {
+    "id": 2,
+    "icon": "/svg/play.svg",
+    "type": "Video",
+    "image": "/assets/video.jpg",
+    "labels": [
+      { "id": 1, "text": "Management", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "August 25, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "45 min" }
+    ],
+    "title": "What to do and who to talk to if you want to get feedback on the product",
+    "text": "Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus..."
+  },
+  {
+    "id": 3,
+    "icon": "/svg/files.svg",
+    "type": "Article",
+    "image": "/assets/article.jpg",
+    "labels": [
+      { "id": 1, "text": "Design", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "August 8, 2020" }
+    ],
+    "title": "Should you choose a creative profession if you are attracted to creativity?",
+    "text": "Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices..."
+  },
+  {
+    "id": 4,
+    "icon": "/svg/files.svg",
+    "type": "Article",
+    "image": "/assets/article.jpg",
+    "labels": [
+      { "id": 1, "text": "Design", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "August 8, 2020" }
+    ],
+    "title": "Should you choose a creative profession if you are attracted to creativity?",
+    "text": "Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices..."
+  },
+  {
+    "id": 5,
+    "icon": "/svg/play.svg",
+    "type": "Video",
+    "image": "/assets/video.jpg",
+    "labels": [
+      { "id": 1, "text": "Management", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "August 25, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "45 min" }
+    ],
+    "title": "What to do and who to talk to if you want to get feedback on the product",
+    "text": "Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus..."
+  },
+  {
+    "id": 6,
+    "icon": "/svg/mic.svg",
+    "type": "Podcast",
+    "image": "/assets/podcast.jpg",
+    "labels": [
+      { "id": 1, "text": "Marketing", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "September 4, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
+    ],
+    "title": "What is traffic arbitrage and does it really make money?",
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida..."
+  }
+]

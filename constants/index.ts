@@ -176,6 +176,55 @@ export const courseLearnList = [
   },
 ];
 
+export const listVideo = [
+  {
+    id: 1,
+    numbers: 1200,
+    text: 'students graduated',
+  },
+  {
+    id: 2,
+    numbers: 84,
+    text: 'completed courses',
+  },
+  {
+    id: 3,
+    numbers: 16,
+    text: 'qualified tutors',
+  },
+  {
+    id: 4,
+    numbers: 5,
+    text: 'years of experience',
+  },
+];
+
+export const coreValues = [
+  {
+    id: 1,
+    src: './svg/structure.svg',
+    title: 'Structured Approach',
+    text: 'Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. ',
+  },
+  {
+    id: 2,
+    src: './svg/chat.svg',
+    title: 'Professional Feedbacks',
+    text: 'Culpa nostrud commodo ea consequat reprehenderit aliquip.',
+  },
+  {
+    id: 3,
+    src: './svg/target.svg',
+    title: 'Efficiency',
+    text: 'Viverra scelerisque consequat net. Adipisicing esse consequat.',
+  },
+  {
+    id: 4,
+    src: './svg/calendar2.svg',
+    title: 'Flexible Shedule',
+    text: 'Aute eiusmod dolore dolore deserunt veniam ad deserunt.',
+  },
+];
 // TODO filters
 export const themes = ['All', 'Online master-class', 'Online lecture', 'Online workshop'];
 export const sortBy = ['newest', 'oldest'];

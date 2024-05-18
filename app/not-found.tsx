@@ -1,7 +1,7 @@
-import { NotFoundClient } from '@/components/NotFoundClient';
+import { NotFoundClient } from '@/app/ui/NotFoundClient';
 
-const NotFount = () => {
+const NotFound = () => {
   return <NotFoundClient />;
 };
 
-export default NotFount;
+export default NotFound;
