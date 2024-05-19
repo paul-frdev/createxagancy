@@ -1,12 +1,12 @@
 'use client';
 
 import { Certificate } from '../Certificate';
+import { Posts } from '../Posts';
+import { Reviews } from '../Reviews';
 import { Subscribe } from '../Subscribe';
 import { Video } from '../Video';
-import { Reviews } from '../reviews/Reviews';
 import { Benefits } from './Benefits';
 import { Courses } from './Courses';
-import { Posts } from './Posts';
 import { Statistics } from './Statistics';
 import { Team } from './Team';
 import { WhyCreatex } from './WhyCreatex';

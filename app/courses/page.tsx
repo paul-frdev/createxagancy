@@ -1,9 +1,9 @@
 import { getCourses } from '../actions/getCourses';
 import { getReviews } from '../actions/getReviews';
 import { Certificate } from '../ui/Certificate';
+import { Reviews } from '../ui/Reviews';
 import { Subscribe } from '../ui/Subscribe';
 import { CourseList } from '../ui/courses/CourseList';
-import { Reviews } from '../ui/reviews/Reviews';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();

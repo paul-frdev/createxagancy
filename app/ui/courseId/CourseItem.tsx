@@ -1,8 +1,8 @@
 'use client';
 
 import { BenefitsItem } from '../BenefitsItem';
+import { Reviews } from '../Reviews';
 import { DiscountForm } from '../forms/DiscountForm';
-import { Reviews } from '../reviews/Reviews';
 import { AboutCourse } from './AboutCourse';
 import { CourseProcess } from './CourseProcess';
 import { MayLikeCarousel } from './MayLikeCarousel';

@@ -46,6 +46,7 @@ const config: Config = {
         gray200: 'var(--gray-200)',
         gray800: 'var(--gray-800)',
         gray900: 'var(--gray-900)',
+        gray600: 'var(--gray-600)',
         secondary: 'var(--secondary)',
         primary: 'rgba(255, 63, 58, .12)',
         yellow:
@@ -92,6 +93,8 @@ const config: Config = {
           '0px 4px 4px -4px rgba(30, 33, 44, 0.03),0px 12px 10px -6px rgba(154, 156, 165, 0.04),0px 30px 24px -10px rgba(154, 156, 165, 0.05),0px 80px 80px -20px rgba(154, 156, 165, 0.08)',
         eventShadow:
           '0px 4px 4px -4px rgba(30, 33, 44, 0.03),0px 12px 10px -6px rgba(154, 156, 165, 0.04),0px 30px 24px -10px rgba(154, 156, 165, 0.05),0px 80px 80px -20px rgba(154, 156, 165, 0.08);',
+        shadowSmall:
+          '0px 4px 4px -4px rgba(30, 33, 44, 0.03),0px 12px 10px -6px rgba(154, 156, 165, 0.04),0px 30px 24px -10px rgba(154, 156, 165, 0.05),0px 80px 80px -20px rgba(154, 156, 165, 0.08)',
       },
     },
   },

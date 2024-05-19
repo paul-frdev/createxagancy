@@ -1,8 +1,8 @@
-import { Button } from '../elements/Button';
-import { Card } from '../elements/Card';
-import { Heading } from '../elements/Heading';
-import { Image } from '../elements/Image';
-import { Typography } from '../elements/Typography';
+import { Button } from './elements/Button';
+import { Card } from './elements/Card';
+import { Heading } from './elements/Heading';
+import { Image } from './elements/Image';
+import { Typography } from './elements/Typography';
 import { PostsType } from '@/types';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import React from 'react';

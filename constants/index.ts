@@ -225,6 +225,72 @@ export const coreValues = [
     text: 'Aute eiusmod dolore dolore deserunt veniam ad deserunt.',
   },
 ];
+
+export const aboutCourses = [
+  {
+    id: 1,
+    src: '/about/course1.jpeg',
+    label: 'Marketing',
+    color: 'rgb(3, 206, 164)',
+    text: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.',
+  },
+  {
+    id: 2,
+    src: '/about/course2.jpeg',
+    label: 'Management',
+    color: 'rgb(90, 135, 252)',
+    text: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.',
+  },
+  {
+    id: 3,
+    src: '/about/course3.jpeg',
+    label: 'HR & Recruting',
+    color: 'rgb(248, 152, 40)',
+    text: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.',
+  },
+  {
+    id: 4,
+    src: '/about/course4.jpeg',
+    label: 'Design',
+    color: 'rgb(245, 47, 110)',
+    text: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.',
+  },
+  {
+    id: 5,
+    src: '/about/course5.jpeg',
+    label: 'Development',
+    color: 'rgb(119, 114, 241)',
+    text: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.',
+  },
+];
+
+export const studyList = [
+  {
+    id: 1,
+    step: 1,
+    title: 'Watching online video lectures',
+    text: 'Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisl, imperdiet gravida massa neque.',
+  },
+  {
+    id: 2,
+    step: 2,
+    title: 'Passing test',
+    text: 'Facilisis pellentesque quis accumsan ultricies. Eu egestas eget feugiat lacus, amet, sollicitudin egestas laoreet etiam. ',
+  },
+  {
+    id: 3,
+    step: 3,
+    title: 'Curator’s feedback',
+    text: 'Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis. Aliquet orci varius volutpat egestas facilisi lobortis. ',
+  },
+  {
+    id: 4,
+    step: 4,
+    title: 'Corrections if needed',
+    text: 'Non tempor pulvinar tincidunt aliquam. Placerat ultricies malesuada dui auctor.',
+  },
+];
+
 // TODO filters
 export const themes = ['All', 'Online master-class', 'Online lecture', 'Online workshop'];
 export const sortBy = ['newest', 'oldest'];

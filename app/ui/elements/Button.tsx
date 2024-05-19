@@ -45,7 +45,7 @@ export const Button = forwardRef(
 
     return (
       <BaseButton {...commonProps}>
-        {Icon && <span className="mr-2">{Icon}</span>}
+        {Icon && Icon}
         {children}
       </BaseButton>
     );

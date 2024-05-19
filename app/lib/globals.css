@@ -26,6 +26,7 @@
   --light: rgb(229, 232, 237);
   --rgbGray: rgb(120, 122, 128);
   --list: rgb(255, 63, 58);
+  --success: rgb(3, 206, 164);
 }
 
 @media (prefers-color-scheme: dark) {

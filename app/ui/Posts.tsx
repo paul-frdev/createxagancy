@@ -1,8 +1,8 @@
-import { Button } from '../elements/Button';
-import { Container } from '../elements/Container';
-import { Heading } from '../elements/Heading';
-import { Typography } from '../elements/Typography';
-import { PostItem } from '../posts/PostItem';
+import { PostItem } from './PostItem';
+import { Button } from './elements/Button';
+import { Container } from './elements/Container';
+import { Heading } from './elements/Heading';
+import { Typography } from './elements/Typography';
 import { PostsType } from '@/types';
 import React from 'react';
 
