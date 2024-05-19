@@ -6,7 +6,7 @@ import { getTeam } from './actions/getTeam';
 import { Landing } from '@/app/ui/landing/Landing';
 
 export default async function Home() {
-  const [courses, events, team, posts, reviews] = await Promise.all([getCourses(), getEvents(), getTeam(), getPosts(), getReviews()]);
+  const [courses, events, team, posts, reviews] = await Promise.all([getCourses(), getEvents(), getTeam(), getPosts({ number: 6 }), getReviews()]);
 
   return (
     <>

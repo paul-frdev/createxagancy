@@ -16,7 +16,6 @@ type AboutCourseProps = {
   course: CourseType;
 };
 export const AboutCourse: React.FC<AboutCourseProps> = ({ course }) => {
-  console.log(course);
 
   return (
     <section className="w-full">

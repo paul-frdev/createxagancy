@@ -1,5 +1,8 @@
+import { getPosts } from '../actions/getPosts';
 import { getReviews } from '../actions/getReviews';
 import { getTeam } from '../actions/getTeam';
+import { Posts } from '../ui/Posts';
+import { Subscribe } from '../ui/Subscribe';
 import { AboutUs } from '../ui/about/AboutUs';
 import { AboutVideo } from '../ui/about/AboutVideo';
 import { Clients } from '../ui/about/Clients';
@@ -9,7 +12,7 @@ import { Teach } from '../ui/about/Teach';
 import { Team } from '../ui/about/Team';
 
 const AboutPage = async () => {
-  const [team, reviews] = await Promise.all([getTeam(), getReviews()]);
+  const [team, reviews, posts] = await Promise.all([getTeam(), getReviews(), getPosts({ number: 3 })]);
   return (
     <>
       <AboutUs />
@@ -19,6 +22,8 @@ const AboutPage = async () => {
       <Study />
       <Team members={team} />
       <Clients reviews={reviews} />
+      <Posts items={posts} />
+      <Subscribe />
     </>
   );
 };

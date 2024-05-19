@@ -291,6 +291,81 @@ export const studyList = [
   },
 ];
 
+export const clients = [
+  {
+    id: 1,
+    src: '/clients/client1.png',
+  },
+  {
+    id: 2,
+    src: '/clients/client2.png',
+  },
+  {
+    id: 3,
+    src: '/clients/client3.png',
+  },
+  {
+    id: 4,
+    src: '/clients/client4.png',
+  },
+  {
+    id: 5,
+    src: '/clients/client4.png',
+  },
+  {
+    id: 6,
+    src: '/clients/client6.png',
+  },
+  {
+    id: 7,
+    src: '/clients/client7.png',
+  },
+  {
+    id: 8,
+    src: '/clients/client8.png',
+  },
+  {
+    id: 9,
+    src: '/clients/client9.png',
+  },
+  {
+    id: 10,
+    src: '/clients/client10.png',
+  },
+  {
+    id: 11,
+    src: '/clients/client10.png',
+  },
+  {
+    id: 12,
+    src: '/clients/client10.png',
+  },
+];
+
+export const contactList = [
+  {
+    id: 1,
+    src: '/contacts/chat.svg',
+    type: 'mailto:hello@createx.com',
+    label: 'Talk to us',
+    desc: 'hello@createx.com',
+  },
+  {
+    id: 2,
+    src: '/contacts/phone.svg',
+    type: 'tel:(405)-555-0128',
+    label: 'Call us',
+    desc: '(405) 555-0128',
+  },
+  {
+    id: 3,
+    src: '/contacts/mark.svg',
+    type: 'text',
+    label: 'Address',
+    desc: '2464 Royal Ln. Mesa, New Jersey 45463, USA',
+  },
+];
+
 // TODO filters
 export const themes = ['All', 'Online master-class', 'Online lecture', 'Online workshop'];
 export const sortBy = ['newest', 'oldest'];
