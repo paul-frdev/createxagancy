@@ -15,6 +15,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { ContactForm } from '../forms/ContactForm'
 
 
 export const defaultMapContainerStyle = {
@@ -27,7 +28,7 @@ const defaultMapCenter = {
   lat: 35.8799866,
   lng: 76.5048004
 }
-const defaultMapZoom = 18
+const defaultMapZoom = 10
 
 const defaultMapOptions = {
   zoomControl: true,
@@ -75,6 +76,7 @@ const MapAddress = () => {
           />
         </div>
       </Container>
+      <ContactForm />
     </section>
   )
 }

@@ -35,6 +35,8 @@ export const Input: React.FC<TextInputProps> = ({
   type = 'text',
   ariaLabel,
   fullWidth = false,
+  multiline = false,
+  maxRows,
   inputStyles,
   labelStyles,
   helperStyles,
@@ -44,28 +46,30 @@ export const Input: React.FC<TextInputProps> = ({
   const [isPassword, setIsPassword] = useState(false);
 
   return (
-    <div className="w-full relative">
+    <>
       <Controller
         name={name}
         control={control}
         render={({ field: { onChange, value }, fieldState: { error } }) => (
           <TextField
+            {...rest}
             aria-label={ariaLabel}
-            onClick={() => setIsPassword(isPassword!)}
             inputProps={{ style: inputStyles }}
             InputLabelProps={{ style: labelStyles }}
             type={isPassword ? 'text' : type}
             className={className}
-            helperText={error ? error.message : null}
+            helperText={error ? error.message : rest.helperText}
             size="small"
             error={!!error}
             FormHelperTextProps={{ style: helperStyles }}
             sx={{
               input: {
                 background: theme.palette.common.white,
-                height: 26,
+                height: multiline ? 'auto' : 26,
                 borderRadius: '4px',
                 border: `1px solid bg-gray`,
+                position: 'relative',
+                paddingRight: '0'
               },
             }}
             onChange={onChange}
@@ -73,21 +77,31 @@ export const Input: React.FC<TextInputProps> = ({
             label={label}
             variant="filled"
             fullWidth={fullWidth}
+            multiline={multiline}
+            maxRows={maxRows}
             InputProps={{
               disableUnderline: true,
+              endAdornment: (
+                !multiline && type === 'password' && (
+                  isPassword ? (
+                    <VisibilityOffIcon
+                      onClick={() => setIsPassword(!isPassword)}
+                      className="w-4 h-4 cursor-pointer absolute top-[14px] right-[10px]"
+                      style={{ color: theme.palette.grey[800] }}
+                    />
+                  ) : (
+                    <VisibilityIcon
+                      onClick={() => setIsPassword(!isPassword)}
+                      className="w-4 h-4 cursor-pointer absolute top-[14px] right-[10px]"
+                      style={{ color: theme.palette.grey[800] }}
+                    />
+                  )
+                )
+              ),
             }}
           />
         )}
       />
-      {!isPassword && type === 'password' && (
-        <VisibilityIcon onClick={() => setIsPassword(!isPassword)} className="absolute right-[14px] top-[34%] text-gray800 cursor-pointer hover:text-orange text-gray800 w-4 h-4" />
-      )}
-      {isPassword && ariaLabel === 'password' && (
-        <VisibilityOffIcon
-          onClick={() => setIsPassword(!isPassword)}
-          className="absolute right-[14px] top-[34%] text-gray800 cursor-pointer hover:text-orange text-gray800 w-4 h-4"
-        />
-      )}
-    </div>
+    </>
   );
 };
