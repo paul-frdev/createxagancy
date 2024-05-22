@@ -9,10 +9,10 @@ import React from 'react';
 
 export const CoreValues = () => {
   return (
-    <section className=" w-full my-10 py-10">
-      <Container className="py-10">
-        <Head text=" We always stand for" title="Our core values" />
-        <div className=" flex justify-between items-start w-full">
+    <section className=" w-full my-5 xmd:my-10">
+      <Container className="py-5 xmd:py-10">
+        <Head text=" We always stand for" title="Our core values"  />
+        <div className="grid grid-cols-1 xsm:grid-cols-2 xmd:grid-cols-4 justify-center mx-auto max-w-fit items-start w-full">
           {coreValues.map((value) => {
             return (
               <React.Fragment key={value.id}>

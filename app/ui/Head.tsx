@@ -10,7 +10,7 @@ export const Head: React.FC<IHead> = ({ text, title }) => {
   return (
     <>
       <Typography className=" font-bold text-center">{text}</Typography>
-      <Heading variant="h3" className=" text-[2.875rem] mb-12 text-center">
+      <Heading variant="h3" className=" text-[2.3rem] xmd:text-[2.875rem] mb-12 text-center">
         {title}
       </Heading>
     </>

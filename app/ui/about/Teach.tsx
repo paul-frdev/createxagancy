@@ -9,10 +9,10 @@ import React from 'react';
 
 export const Teach = () => {
   return (
-    <section className=" w-full my-10">
-      <Container className="py-10">
+    <section className=" w-full my-5 xmd:my-10">
+      <Container className="py-5 xmd:py-10">
         <Head text="our main directions" title="What do we teach" />
-        <div className=" grid grid-cols-3 justify-between items-center gap-y-6">
+        <div className=" grid w-full max-w-fit mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between items-center gap-y-6 gap-x-4">
           {aboutCourses.map((course) => (
             <div key={course.id} className=" w-full max-w-[390px] rounded border-solid border border-gray300 hover:shadow-shadowSmall transition-all duration-300">
               <Image src={course.src} alt={course.label} className=" w-full mb-4" />

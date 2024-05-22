@@ -22,7 +22,7 @@ export const Posts: React.FC<PostsProps> = ({ items }) => {
           </div>
           <Button sizeCss="lg">Go to blog</Button>
         </div>
-        <div className="flex flex-col xl:flex-row  gap-x-4 flex-nowrap xl:flex-wrap gap-y-0 xl:gap-y-4 justify-between items-center xl:items-start">
+        <div className="flex flex-col xl:flex-row  gap-x-4 flex-nowrap xl:flex-wrap gap-y-4 justify-between items-center xl:items-start">
           {items.map((item) => (
             <PostItem key={item.id} post={item} />
           ))}
