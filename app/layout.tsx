@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="__next" className={cn(`relative`, lato.variable)}>
+      <body id="__next" className={cn(`relative antialiased`, lato.variable)}>
         <AppRouterCacheProvider>
           <MyContextProvider>
             <CssBaseline />

@@ -2,12 +2,11 @@
 
 import { Category } from './Category';
 import { cn } from '@/app/lib/utils';
-import { CourseType } from '@/types/courses';
 import React from 'react';
 
 type CategoriesProps = {
   categories: { [label: string]: number };
-  items: CourseType[];
+  quantityCourses: number;
   filterItems: (event: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
 };
@@ -39,23 +38,23 @@ const categoryTitle = [
   },
 ];
 
-export const Categories: React.FC<CategoriesProps> = ({ categories, items, filterItems, className }) => {
+export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCourses, filterItems, className }) => {
   const handleOnclick = (event: React.MouseEvent<HTMLButtonElement>) => {
     filterItems(event);
   };
 
   return (
     <div className={cn(`flex w-full max-w-[815px] justify-between items-center`, className)}>
-      {categoryTitle.map((item) => {
+      {categoryTitle.map((item, index) => {
         const quantity = Object.entries(categories).map(([key, value]) => item.title === key && value);
         return (
           <Category
-            className="focus:text-orange focus:border focus:border-solid focus:border-orange text-nowrap"
+            className={cn('focus:text-orange focus:border focus:border-solid focus:border-orange text-nowrap')}
             onClick={handleOnclick}
             key={item.id}
             title={item.title}
             quantity={quantity as any}
-            allItemsQuantity={items.length}
+            allItemsQuantity={quantityCourses}
           />
         );
       })}
