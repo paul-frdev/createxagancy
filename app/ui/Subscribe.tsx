@@ -14,7 +14,7 @@ export const Subscribe = () => {
         <Heading variant="h3" className="mx-auto max-w-[810px] text-center text-[2rem] xsm:text-[2.2rem] md:text-[2.875rem] mb-10">
           Subscribe to the Createx School announcements
         </Heading>
-        <SubscribeForm />
+        <SubscribeForm className="xsm:items-center xsm:gap-y-0 xsm:flex-row" />
       </Container>
     </section>
   );

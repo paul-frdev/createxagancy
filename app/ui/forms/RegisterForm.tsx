@@ -1,3 +1,5 @@
+'use client';
+
 import { Heading } from '../elements/Heading';
 import { Input } from '../elements/Input';
 import { PhoneInput } from '../elements/PhoneInput';
@@ -23,9 +25,19 @@ type FormValues = {
 
 type RegisterFormProps = {
   className?: string;
+  title?: string;
+  text?: string;
+  buttonLabel?: string;
+  classesBtn?: string;
 };
 
-export const RegisterForm = ({ className }: RegisterFormProps) => {
+export const RegisterForm = ({
+  className,
+  title = 'Register for the course',
+  text = 'Leave a request now and get 20% off!',
+  buttonLabel = 'Join the course',
+  classesBtn,
+}: RegisterFormProps) => {
   const [phone, setPhone] = useState('');
 
   const {
@@ -35,7 +47,7 @@ export const RegisterForm = ({ className }: RegisterFormProps) => {
     getValues,
     formState: { errors },
   } = useForm<FormValues>({
-    resolver: yupResolver(Schema),
+    resolver: yupResolver(Schema) as any,
     defaultValues: { email: '', fullName: '', phoneNumber: '' },
   });
 
@@ -46,11 +58,11 @@ export const RegisterForm = ({ className }: RegisterFormProps) => {
 
   return (
     <div className={cn(`w-full max-w-[495px]`, className)}>
-      <Typography className="text-center lg:text-left">Leave a request now and get 20% off!</Typography>
+      <Typography className="text-center lg:text-left">{text}</Typography>
       <Heading className="text-center lg:text-left text-[2rem] md:text-[2.875rem] mb-10" variant="h3">
-        Register for the course
+        {title}
       </Heading>
-      <Form buttonLabel="Join the course" onSubmit={handleSubmit(onSubmit)} className="flex-col gap-y-10" buttonClasses="text-nowrap py-[0.78rem] w-full">
+      <Form buttonLabel={buttonLabel} onSubmit={handleSubmit(onSubmit)} className="flex-col gap-y-10" buttonClasses={cn(`text-nowrap py-[0.78rem] w-full`, classesBtn)}>
         <div className=" w-full flex flex-col gap-y-10 justify-start items-start">
           <Input
             className="w-full max-w-[495px] border-white rounded text-gray600"

@@ -2,6 +2,10 @@ export type ICourseId = {
   courseId: string;
 };
 
+export type IEventId = {
+  eventId: string;
+};
+
 export type PriceCourse = { id: number; value: string; courseId: number };
 export type ValueCourse = { id: number; value: string };
 

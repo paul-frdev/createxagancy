@@ -366,8 +366,22 @@ export const contactList = [
   },
 ];
 
+export const benefitsEvent = [
+  {
+    id: 1,
+    text: 'Specialists with more than 1 year of active work experience',
+  },
+  {
+    id: 2,
+    text: 'Mobile app designers who want to improve their skills in solving business problems, creating and testing human-centered interfaces',
+  },
+  {
+    id: 3,
+    text: 'Professional designers who want to feel more confident in UX',
+  },
+];
 // TODO filters
-export const themes = ['All', 'Online master-class', 'Online lecture', 'Online workshop'];
+export const themes = ['all', 'Online master-class', 'Online lecture', 'Online workshop'];
 export const sortBy = ['newest', 'oldest'];
 export const showItems = [6, 9, 12];
 export const view = ['flex', 'grid'];

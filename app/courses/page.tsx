@@ -1,12 +1,9 @@
-import { getCourses, getAllCourses, countCourses } from '../actions/getCourses';
+import { countCourses, getAllCourses } from '../actions/getCourses';
 import { getReviews } from '../actions/getReviews';
 import { Certificate } from '../ui/Certificate';
 import { Reviews } from '../ui/Reviews';
 import { Subscribe } from '../ui/Subscribe';
 import { CourseList } from '../ui/courses/CourseList';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
 
 const CoursesPage = async ({
   searchParams,
@@ -22,13 +19,9 @@ const CoursesPage = async ({
   let limit = searchParams?.limit! || '9';
   const query = searchParams?.query || '';
 
-
   const allCourses = await getAllCourses(limit.toString(), filter, query);
   const reviews = await getReviews();
   const quantity = await countCourses();
-
-  // console.log(quantity);
-
 
   return (
     <>

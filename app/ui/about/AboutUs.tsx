@@ -20,11 +20,13 @@ export const AboutUs = () => {
             specialty from scratch. During your studies, we will help you find a job. Check the courses and online events that we organise.
           </Typography>
           <div className=" flex justify-center md:justify-start gap-x-6">
-            <Button className='text-[0.85rem] xsm:text-base' variantCss="outline">Explore events</Button>
-            <Button className='text-[0.85rem] xsm:text-base'>Browse courses</Button>
+            <Button className="text-[0.85rem] xsm:text-base" variantCss="outline">
+              Explore events
+            </Button>
+            <Button className="text-[0.85rem] xsm:text-base">Browse courses</Button>
           </div>
         </div>
-        <div className='order-1 md:order-2'>
+        <div className="order-1 md:order-2">
           <Image src="/svg/about.svg" className=" w-full max-w-[465px] h-full" alt="about-us" />
         </div>
       </Container>

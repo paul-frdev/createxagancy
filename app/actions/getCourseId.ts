@@ -21,10 +21,10 @@ export async function getCourseById(param: ICourseId) {
       return null;
     }
 
-    return {
-      ...course,
-      createAt: course.createdAt.toISOString(),
-    };
+    delete course['createdAt'];
+    delete course['updatedAt'];
+
+    return course;
   } catch (error: any) {
     throw new Error(error);
   }

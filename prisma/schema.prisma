@@ -50,9 +50,9 @@ model course {
 }
 
 model event {
-  id          Int      @id @default(autoincrement())
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id          Int           @id @default(autoincrement())
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @default(now())
   time        String[]
   date        String
   title       String
@@ -63,6 +63,8 @@ model event {
   description String
   aboutAuthor String
   photo       String
+  socialLinks socialLinks[]
+  faq         faq[]
 }
 
 model team {
@@ -76,15 +78,20 @@ model team {
 }
 
 model post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  icon      String
-  type      String
-  image     String
-  labels    labels[]
-  title     String
-  text      String
+  id          Int           @id @default(autoincrement())
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @default(now())
+  icon        String
+  type        String
+  image       String
+  title       String
+  text        String
+  date        String
+  read        String
+  author      String
+  labels      labels[]
+  socialLinks socialLinks[]
+  tags        tags[]
 }
 
 model reviews {
@@ -119,10 +126,14 @@ model price {
 }
 
 model socialLinks {
-  id       Int    @id @default(autoincrement())
+  id       Int     @id @default(autoincrement())
   url      String
-  courseId Int
-  course   course @relation(fields: [courseId], references: [id])
+  courseId Int?
+  eventId  Int?
+  postId   Int?
+  course   course? @relation(fields: [courseId], references: [id])
+  event    event?  @relation(fields: [eventId], references: [id])
+  post     post?   @relation(fields: [postId], references: [id])
 }
 
 model labels {
@@ -133,4 +144,19 @@ model labels {
   date   String?
   postId Int
   post   post    @relation(fields: [postId], references: [id])
+}
+
+model faq {
+  id      Int    @id @default(autoincrement())
+  title   String
+  text    String
+  eventId Int
+  event   event  @relation(fields: [eventId], references: [id])
+}
+
+model tags {
+  id     Int     @id @default(autoincrement())
+  text   String
+  postId Int
+  post   post   @relation(fields: [postId], references: [id])
 }

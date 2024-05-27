@@ -1,11 +1,12 @@
+import { AboutTitle } from '../AboutTitle';
+import { Outline } from '../Outline';
+import { SocialLinks } from '../SocialLinks';
 import { Card } from '../elements/Card';
 import { Container } from '../elements/Container';
 import { Heading } from '../elements/Heading';
 import { Image } from '../elements/Image';
 import { Typography } from '../elements/Typography';
-import { Outline } from './Outline';
-import { SocialLinks } from './SocialLinks';
-import { CourseItem, CourseType } from '@/types/courses';
+import { CourseType } from '@/types/courses';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
@@ -16,17 +17,9 @@ type AboutCourseProps = {
   course: CourseType;
 };
 export const AboutCourse: React.FC<AboutCourseProps> = ({ course }) => {
-
   return (
     <section className="w-full">
-      <div className="w-full bg-orange02 py-24">
-        <Container className="w-full max-w-[1060px] px-4 mx-auto">
-          <Typography className="text-primary text-center">course</Typography>
-          <Heading variant="h3" className="text-center text-[2rem] md:text-[2.875rem]">
-            User Experience. Principles of Human-Centered Design
-          </Heading>
-        </Container>
-      </div>
+      <AboutTitle text="course" title="User Experience. Principles of Human-Centered Design" />
       <Container className="my-[3.75rem]">
         <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 justify-between items-center mb-[3rem] lg:mb-[10rem]">
           <div className="flex flex-col justify-start items-start w-full lg:max-w-[600px] mr-4 px-2">

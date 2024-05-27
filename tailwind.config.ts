@@ -53,6 +53,7 @@ const config: Config = {
           'linear-gradient(180deg, rgba(30, 33, 44, 0.00) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.77) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%)',
         bgFooter: '#2a2c37',
         bgInput: 'rgba(255, 255, 255, 0.12)',
+        gray300: 'var(--gray-300)',
       },
       borderColor: {
         orange: '#fc4b26',
@@ -67,6 +68,8 @@ const config: Config = {
         orange: '#fc4b26',
         gray: '#D7DADD',
         gray700: 'var(--gray-700)',
+        frombg: 'var(--btn-gradient-start)',
+        tobg: 'var(--btn-gradient-end)',
       },
       textColor: {
         orange: '#fc4b26',

@@ -1,6 +1,5 @@
 'use client';
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Categories } from '../Categories';
 import { Search } from '../Search';
 import { CoursePreviewCard } from '../courseId/CoursePreviewCard';
@@ -10,28 +9,22 @@ import { Heading } from '../elements/Heading';
 import { Typography } from '../elements/Typography';
 import { CourseType } from '@/types/courses';
 import SyncIcon from '@mui/icons-material/Sync';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useMemo, useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
 type CourseListProps = {
   allCourses: CourseType[];
-  quantityCourses: { id: number, label: string }[];
+  quantityCourses: { id: number; label: string }[];
 };
 
 export const CourseList: React.FC<CourseListProps> = ({ allCourses, quantityCourses }) => {
-
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const [limit, setLimit] = useState(12)
+  const [limit, setLimit] = useState(12);
   const [labelCounts, setLabelCounts] = useState<{ [label: string]: number }>({});
-
-
-  const currentCategory = searchParams.get('filter')
-  const quantityOfCategory = currentCategory !== null ? labelCounts[currentCategory] : 0
-  console.log(quantityOfCategory, quantityOfCategory < 9);
-
 
   // TODO set query params
   const setQueryParams = (query: string, str: string) => {
@@ -42,12 +35,11 @@ export const CourseList: React.FC<CourseListProps> = ({ allCourses, quantityCour
       params.delete(query);
     }
     replace(`${pathname}?${params.toString()}`);
-  }
-
+  };
 
   const handleSearchInputChange = useDebouncedCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value;
-    setQueryParams('query', term)
+    setQueryParams('query', term);
   }, 500);
 
   const filterItems = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -56,22 +48,20 @@ export const CourseList: React.FC<CourseListProps> = ({ allCourses, quantityCour
     setQueryParams('filter', element.value as any);
   };
 
-
   const loadMore = () => {
-    setLimit((prev) => prev += 3)
+    setLimit((prev) => (prev += 3));
     setQueryParams('limit', limit.toString());
-  }
+  };
 
   useEffect(() => {
     // TODO count labels
-    console.log('useeffect');
     let counts: { [label: string]: number; id: number } = { id: 0 };
     quantityCourses.forEach((course, index) => {
       counts[course.label] = counts[course.label] ? counts[course.label] + 1 : 1;
       counts.id = index + 1;
     });
     setLabelCounts(counts);
-  }, [])
+  }, []);
 
   return (
     <section className="w-full my-[5rem]">
@@ -91,9 +81,7 @@ export const CourseList: React.FC<CourseListProps> = ({ allCourses, quantityCour
           />
         </div>
         <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 max-w-fit lg:max-w-full mx-auto  gap-[1.875rem]">
-          {allCourses ? allCourses.map((course: CourseType) => (
-            <CoursePreviewCard key={course.id} {...course} />
-          )) : null}
+          {allCourses ? allCourses.map((course: CourseType) => <CoursePreviewCard key={course.id} {...course} />) : null}
         </div>
         {labelCounts.id >= limit ? (
           <div className="flex justify-center mt-12">

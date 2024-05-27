@@ -1,9 +1,9 @@
+import prisma from '../app/lib/prismadb';
 import coursesData from './courses.json';
 import eventData from './events.json';
 import postData from './posts.json';
 import reviewData from './reviews.json';
 import teamData from './team.json';
-import prisma from '@/app/lib/prismadb';
 
 async function main() {
   const courses = await prisma.$transaction(
@@ -70,10 +70,22 @@ async function main() {
           description: event.description,
           aboutAuthor: event.aboutAuthor,
           photo: event.photo,
+          socialLinks: {
+            create: event.socialLinks.map((link) => ({
+              url: link,
+            })),
+          },
+          faq: {
+            create: event.faq.map((question) => ({
+              title: question.title,
+              text: question.text,
+            })),
+          },
         },
       })
     )
   );
+
   const team = await prisma.$transaction(
     teamData.map((team) =>
       prisma.team.upsert({
@@ -90,6 +102,7 @@ async function main() {
       })
     )
   );
+
   const posts = await prisma.$transaction(
     postData.map((post) =>
       prisma.post.upsert({
@@ -103,12 +116,25 @@ async function main() {
           image: post.image,
           title: post.title,
           text: post.text,
+          read: post.read,
+          author: post.author,
+          date: post.date,
           labels: {
             create: post.labels.map((label) => ({
               icon: label.icon,
               text: label.text,
               src: label.src,
               date: label.date,
+            })),
+          },
+          socialLinks: {
+            create: post.socialLinks.map((link) => ({
+              url: link,
+            })),
+          },
+          tags: {
+            create: post.tags?.map((word) => ({
+              text: word,
             })),
           },
         },
@@ -133,6 +159,7 @@ async function main() {
     )
   );
 }
+
 main()
   .then(async () => {
     await prisma.$disconnect();

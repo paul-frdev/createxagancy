@@ -32,6 +32,7 @@ type SwipperProps = {
   slidesPerView?: number | 'auto';
   height?: number;
   className?: string;
+  maxWidth?: string;
   onBeforeInit?: (swiper: any) => void;
 };
 
@@ -47,11 +48,11 @@ export const CustomNextArrow = React.forwardRef<HTMLButtonElement, CustomArrowNe
   </Button>
 ));
 
-export const Carousel: React.FC<SwipperProps> = ({ options, items, height = 416, slidesPerView = 3, className, onBeforeInit }) => {
+export const Carousel: React.FC<SwipperProps> = ({ options, items, height = 416, maxWidth = '100%', slidesPerView = 3, className, onBeforeInit }) => {
   return (
     <Swiper modules={[Navigation, Pagination]} onBeforeInit={onBeforeInit} slidesPerView={slidesPerView} {...options} className={cn(className)}>
       {items.map((item, index) => (
-        <SwiperSlide style={{ height: height }} key={index}>
+        <SwiperSlide style={{ height: height, width: '390px' }} key={index}>
           {item}
         </SwiperSlide>
       ))}

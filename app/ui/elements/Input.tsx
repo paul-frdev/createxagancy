@@ -69,7 +69,7 @@ export const Input: React.FC<TextInputProps> = ({
                 borderRadius: '4px',
                 border: `1px solid bg-gray`,
                 position: 'relative',
-                paddingRight: '0'
+                paddingRight: '0',
               },
             }}
             onChange={onChange}
@@ -81,23 +81,22 @@ export const Input: React.FC<TextInputProps> = ({
             maxRows={maxRows}
             InputProps={{
               disableUnderline: true,
-              endAdornment: (
-                !multiline && type === 'password' && (
-                  isPassword ? (
-                    <VisibilityOffIcon
-                      onClick={() => setIsPassword(!isPassword)}
-                      className="w-4 h-4 cursor-pointer absolute top-[14px] right-[10px]"
-                      style={{ color: theme.palette.grey[800] }}
-                    />
-                  ) : (
-                    <VisibilityIcon
-                      onClick={() => setIsPassword(!isPassword)}
-                      className="w-4 h-4 cursor-pointer absolute top-[14px] right-[10px]"
-                      style={{ color: theme.palette.grey[800] }}
-                    />
-                  )
-                )
-              ),
+              endAdornment:
+                !multiline &&
+                type === 'password' &&
+                (isPassword ? (
+                  <VisibilityOffIcon
+                    onClick={() => setIsPassword(!isPassword)}
+                    className="w-4 h-4 cursor-pointer absolute top-[14px] right-[10px]"
+                    style={{ color: theme.palette.grey[800] }}
+                  />
+                ) : (
+                  <VisibilityIcon
+                    onClick={() => setIsPassword(!isPassword)}
+                    className="w-4 h-4 cursor-pointer absolute top-[14px] right-[10px]"
+                    style={{ color: theme.palette.grey[800] }}
+                  />
+                )),
             }}
           />
         )}

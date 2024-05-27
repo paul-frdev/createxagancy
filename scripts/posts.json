@@ -10,7 +10,13 @@
       { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
     ],
     "title": "What is traffic arbitrage and does it really make money?",
-    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida..."
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["marketing", "HR"]
   },
   {
     "id": 2,
@@ -23,7 +29,13 @@
       { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "45 min" }
     ],
     "title": "What to do and who to talk to if you want to get feedback on the product",
-    "text": "Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus..."
+    "text": "Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["recruiting", "learning"]
   },
   {
     "id": 3,
@@ -35,7 +47,13 @@
       { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "August 8, 2020" }
     ],
     "title": "Should you choose a creative profession if you are attracted to creativity?",
-    "text": "Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices..."
+    "text": "Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["learning", "HR", "self-development"]
   },
   {
     "id": 4,
@@ -47,7 +65,13 @@
       { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "August 8, 2020" }
     ],
     "title": "Should you choose a creative profession if you are attracted to creativity?",
-    "text": "Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices..."
+    "text": "Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["learning", "HR", "self-development"]
   },
   {
     "id": 5,
@@ -60,7 +84,13 @@
       { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "45 min" }
     ],
     "title": "What to do and who to talk to if you want to get feedback on the product",
-    "text": "Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus..."
+    "text": "Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["recruiting", "learning"]
   },
   {
     "id": 6,
@@ -73,6 +103,125 @@
       { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
     ],
     "title": "What is traffic arbitrage and does it really make money?",
-    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida..."
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course"
+  },
+  {
+    "id": 7,
+    "icon": "/svg/mic.svg",
+    "type": "Podcast",
+    "image": "/assets/podcast.jpg",
+    "labels": [
+      { "id": 1, "text": "Marketing", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "September 4, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
+    ],
+    "title": "What is traffic arbitrage and does it really make money?",
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["marketing", "HR"]
+  },
+  {
+    "id": 8,
+    "icon": "/svg/mic.svg",
+    "type": "Podcast",
+    "image": "/assets/podcast.jpg",
+    "labels": [
+      { "id": 1, "text": "Marketing", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "September 4, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
+    ],
+    "title": "What is traffic arbitrage and does it really make money?",
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["marketing", "HR"]
+  },
+  {
+    "id": 9,
+    "icon": "/svg/mic.svg",
+    "type": "Podcast",
+    "image": "/assets/podcast.jpg",
+    "labels": [
+      { "id": 1, "text": "Marketing", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "September 4, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
+    ],
+    "title": "What is traffic arbitrage and does it really make money?",
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["learning", "HR", "self-development"]
+  },
+  {
+    "id": 10,
+    "icon": "/svg/mic.svg",
+    "type": "Podcast",
+    "image": "/assets/podcast.jpg",
+    "labels": [
+      { "id": 1, "text": "Marketing", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "September 4, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
+    ],
+    "title": "What is traffic arbitrage and does it really make money?",
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["learning", "HR", "self-development"]
+  },
+  {
+    "id": 11,
+    "icon": "/svg/mic.svg",
+    "type": "Podcast",
+    "image": "/assets/podcast.jpg",
+    "labels": [
+      { "id": 1, "text": "Marketing", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "September 4, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
+    ],
+    "title": "What is traffic arbitrage and does it really make money?",
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["learning", "HR", "self-development"]
+  },
+  {
+    "id": 12,
+    "icon": "/svg/mic.svg",
+    "type": "Podcast",
+    "image": "/assets/podcast.jpg",
+    "labels": [
+      { "id": 1, "text": "Marketing", "src": "", "date": "" },
+      { "id": 2, "text": "", "src": "/svg/calendar.svg", "date": "September 4, 2020" },
+      { "id": 3, "text": "", "icon": "/svg/clock.svg", "time": "36 min" }
+    ],
+    "title": "What is traffic arbitrage and does it really make money?",
+    "text": "Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...",
+    "date": "August 25, 2020",
+    "read": "4 minutes",
+    "socialLinks": ["/link", "/link", "/link", "/link"],
+    "author": "Kristin Watson",
+    "position": "Curator of Marketing Course",
+    "tags": ["marketing", "HR"]
   }
 ]

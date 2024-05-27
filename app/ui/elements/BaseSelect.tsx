@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 type BaseSelectProps = {
   text?: string;
@@ -15,6 +15,7 @@ type BaseSelectProps = {
   items?: React.ReactNode[];
   description?: string;
   setQuery: (event: string) => void;
+  defaultValue?: string;
 };
 
 const ITEM_HEIGHT = 48;
@@ -30,8 +31,9 @@ const MenuProps = {
 
 const theme = createTheme({});
 
-export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, items, description, setQuery }) => {
+export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, defaultValue, items, description, setQuery }) => {
   const [value, setValue] = useState('');
+
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value);
     setQuery(event.target.value);
@@ -42,9 +44,9 @@ export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, it
       <Typography className=" normal-case text-base font-latoBlack font-[700] leading-[160%] text-nowrap mb-0">{text}</Typography>
       <FormControl fullWidth>
         <Select
+          value={value}
           displayEmpty
           style={{ width: typeof items![0] === 'number' ? 70 : 160 }}
-          value={value}
           onChange={handleChange}
           input={<OutlinedInput />}
           renderValue={(selected) => {

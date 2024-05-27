@@ -1,3 +1,5 @@
+'use client';
+
 import AddIcon from '@mui/icons-material/Add';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
@@ -36,7 +38,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 type MainAccordionProps = {
-  items: { id: number; title: string; text: string; pannel: string }[];
+  items?: { id: number; title: string; text: string; pannel?: string }[];
 };
 
 export const MainAccordion: React.FC<MainAccordionProps> = ({ items }) => {

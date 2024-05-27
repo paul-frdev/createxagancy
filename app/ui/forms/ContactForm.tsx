@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
-import { Container } from '../elements/Container'
-import { Image } from '../elements/Image'
-import { Form } from './Form'
-import { Input } from '../elements/Input'
-
+import { CheckboxLabels } from '../elements/Checkbox';
+import { Container } from '../elements/Container';
+import { Image } from '../elements/Image';
+import { Input } from '../elements/Input';
+import { PhoneInput } from '../elements/PhoneInput';
+import { Form } from './Form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup'
-import { PhoneInput } from '../elements/PhoneInput'
-import { CheckboxLabels } from '../elements/Checkbox'
 
 const Schema = yup.object().shape({
   firstName: yup.string().required(),
@@ -23,12 +22,10 @@ type FormValues = {
   lastName: string;
   email: string;
   phoneNumber: string;
-  message: string
+  message: string;
 };
 
-
 export const ContactForm = () => {
-
   const [phone, setPhone] = useState('');
 
   const {
@@ -48,12 +45,12 @@ export const ContactForm = () => {
   };
 
   return (
-    <Container className='my-8 py-8 flex justify-between items-center'>
+    <Container className="my-8 py-8 flex justify-between items-center">
       <div>
-        <Image src='/contacts/dropline.svg' alt='contact' className='w-full max-w-[435px] h-[481px]' />
+        <Image src="/contacts/dropline.svg" alt="contact" className="w-full max-w-[435px] h-[481px]" />
       </div>
-      <Form buttonLabel='Send message' buttonClasses='w-[300px]' className='w-full max-w-[705px] flex flex-col gap-x-4  gap-y-6 justify-between' onSubmit={handleSubmit(onSubmit)}>
-        <div className=' w-full flex justify-between items-center'>
+      <Form buttonLabel="Send message" buttonClasses="w-[300px]" className="w-full max-w-[705px] flex flex-col gap-x-4  gap-y-6 justify-between" onSubmit={handleSubmit(onSubmit)}>
+        <div className=" w-full flex justify-between items-center">
           <Input
             className="w-full max-w-[344px] border-white rounded text-gray600"
             name="firstName"
@@ -91,7 +88,7 @@ export const ContactForm = () => {
             type="text"
           />
         </div>
-        <div className=' w-full flex justify-between items-center'>
+        <div className=" w-full flex justify-between items-center">
           <Input
             className="w-full border-white max-w-[344px] rounded text-gray600"
             name="email"
@@ -110,8 +107,7 @@ export const ContactForm = () => {
             label="email"
             type="text"
           />
-          <PhoneInput height="20px" name="phoneNumber" className="w-full max-w-[344px]" control={control}
-            onChange={(phone) => setPhone(phone)} value={phone} />
+          <PhoneInput height="20px" name="phoneNumber" className="w-full max-w-[344px]" control={control} onChange={(phone) => setPhone(phone)} value={phone} />
         </div>
         <Input
           multiline={true}
@@ -137,5 +133,5 @@ export const ContactForm = () => {
         <CheckboxLabels label="I agree to receive communications from Createx Online School" className="mb-4 mr-auto" />
       </Form>
     </Container>
-  )
-}
+  );
+};
