@@ -54,7 +54,6 @@ export const CourseList: React.FC<CourseListProps> = ({ allCourses, quantityCour
   };
 
   useEffect(() => {
-    // TODO count labels
     let counts: { [label: string]: number; id: number } = { id: 0 };
     quantityCourses.forEach((course, index) => {
       counts[course.label] = counts[course.label] ? counts[course.label] + 1 : 1;
@@ -75,8 +74,8 @@ export const CourseList: React.FC<CourseListProps> = ({ allCourses, quantityCour
           <Search
             className="w-full max-w-[950px] lg:max-w-[350px] "
             label="Search course..."
-            handleSearchInputChange={handleSearchInputChange}
             items={allCourses}
+            handleSearchInputChange={handleSearchInputChange}
             searchParams={searchParams.get('query')?.toString()}
           />
         </div>

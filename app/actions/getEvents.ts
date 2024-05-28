@@ -41,10 +41,9 @@ export async function getEventById(param: IEventId) {
   }
 }
 
-export async function filterEvents(limit: string, filter: string, topic: string, query: string) {
+export async function filterEvents(limit: string, filter: string, topic: string, query: string, page: string) {
   const count = parseInt(limit);
-
-  console.log(filter, topic, limit, query, count);
+  const pageNumber = parseInt(page);
 
   if (isNaN(count)) {
     throw new Error('Limit must be a number');
@@ -71,21 +70,14 @@ export async function filterEvents(limit: string, filter: string, topic: string,
           mode: 'insensitive',
         },
       });
-    } else {
-      whereConditions.AND.push({
-        date: {
-          orderBy: {
-            date: filter === 'newest' ? 'desc' : 'asc',
-          },
-        },
-      });
     }
 
     const filterEvents = await prisma.event.findMany({
-      where: whereConditions,
+      where: whereConditions.AND.length >= 2 ? whereConditions : undefined,
       take: count,
+      skip: (pageNumber - 1) * count,
       orderBy: {
-        date: filter === 'newest' ? 'desc' : 'asc',
+        date: filter === 'newest' ? 'asc' : 'desc',
       },
     });
 
@@ -94,4 +86,16 @@ export async function filterEvents(limit: string, filter: string, topic: string,
     console.error('Error fetching filtered events:', error);
     throw new Error(error);
   }
+}
+
+export async function fetchEventsPages() {
+  try {
+    noStore();
+
+    const count = await prisma.event.count();
+
+    const totalPages = Math.ceil(count);
+
+    return totalPages;
+  } catch (error) {}
 }

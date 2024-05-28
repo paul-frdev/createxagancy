@@ -44,7 +44,7 @@ export const Button = forwardRef(
     };
 
     return (
-      <BaseButton {...commonProps}>
+      <BaseButton sx={{ '& MuiTouchRipple-root': { width: 'fit-content' } }} {...commonProps}>
         {Icon && Icon}
         {children}
       </BaseButton>

@@ -1,4 +1,4 @@
-import { filterEvents, getEvents } from '../actions/getEvents';
+import { fetchEventsPages, filterEvents } from '../actions/getEvents';
 import { EventList } from '../ui/events/EventList';
 
 export default async function Home({
@@ -13,19 +13,19 @@ export default async function Home({
   };
 }) {
   const filter = searchParams.filter || 'newest';
-  const topic = searchParams.topic || 'all';
+  const topic = searchParams.topic || '';
   const limit = searchParams.limit || '6';
   const query = searchParams.query || '';
+  const page = searchParams.page || '1';
 
-  // console.log(filter, topic, limit, query);
+  const events = await filterEvents(limit, filter, topic, query, page);
+  const pages = await fetchEventsPages();
 
-  const events = await filterEvents(limit, filter, topic, query);
-
-  console.log(events);
+  const countTotalPages = Math.round(pages / +limit);
 
   return (
     <>
-      <EventList events={events} />
+      <EventList events={events} totalPages={countTotalPages} />
     </>
   );
 }

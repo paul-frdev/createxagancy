@@ -62,6 +62,7 @@ const config: Config = {
         gray400: 'var(--gray-400)',
         gray600: 'var(--gray-600)',
         gray700: 'var(--gray-700)',
+        primary: 'var(--primary)',
         light: 'var(--light)',
       },
       colors: {

@@ -1,65 +1,60 @@
 'use client';
 
 import { cn } from '../lib/utils';
+import { Search } from './Search';
 import { BaseSelect } from './elements/BaseSelect';
 import { Button } from './elements/Button';
 import { showItems, sortBy, themes } from '@/constants';
+import { WorkshopPreview } from '@/types/workshop';
 import ViewAgendaIcon from '@mui/icons-material/ViewAgenda';
 import WindowIcon from '@mui/icons-material/Window';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useDebouncedCallback } from 'use-debounce';
 
 type FiltersProps = {
   setStyled: (str: string) => void;
   styled: string;
+  events: WorkshopPreview[];
+  setParams: (key: string, value: string | number) => void;
+  setTopic?: (term: string) => void;
+  setSort?: (term: string) => void;
+  setCount?: (term: string) => void;
 };
-export const Filters: React.FC<FiltersProps> = ({ setStyled, styled }) => {
-  const [topic, setTopic] = useState('All');
-  const [sort, setSort] = useState('newest');
-  const [count, setCount] = useState('6');
-
-  const searchParams = useSearchParams();
-  const params = new URLSearchParams(searchParams);
-  const pathname = usePathname();
-  const { replace } = useRouter();
-
-  const setParams = (key: string, value: string | number) => {
-    params.set(key, value.toString());
-  };
-
-  useEffect(() => {
-    setParams('limit', count);
-    setParams('topic', topic);
-    setParams('filter', sort);
-    replace(`${pathname}?${params.toString()}`);
-  }, [count, topic, sort]);
-
-  console.log(topic, sort, count);
+export const Filters: React.FC<FiltersProps> = ({ setStyled, styled, events, setParams, setTopic, setSort, setCount }) => {
+  const handleSearchInputChange = useDebouncedCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const term = event.target.value;
+    setParams('query', term);
+  }, 500);
 
   return (
     <div className="flex justify-start items-center gap-x-[2.5rem] mb-8">
       <BaseSelect text="Event category" items={themes} setQuery={setTopic} />
       <BaseSelect text="Sort by" items={sortBy} setQuery={setSort} />
       <BaseSelect text="Show" items={showItems} description="events per page" setQuery={setCount} />
-      {/* <Search items={{} as any} /> */}
-      <div>
+      {/* <Search
+      className='w-[282px]'
+        items={events}
+        handleSearchInputChange={handleSearchInputChange}
+        searchParams={searchParams.get('query')?.toString()}
+      /> */}
+      <div className="flex justify-end items-end flex-nowrap gap-x-2">
         <Button
           onClick={() => setStyled('flex')}
           className={cn(
-            `bg-transparent hover:bg-transparent border-none hover:border-none w-fit p-0`,
+            ` w-fit bg-transparent hover:bg-transparent border-none hover:border-none  p-0 justify-end`,
             styled === 'flex' ? 'text-orange hover:text-gray800' : 'text-gray800 hover:text-orange'
           )}
         >
-          <ViewAgendaIcon />
+          <ViewAgendaIcon className=" w-6 h-6" />
         </Button>
         <Button
           onClick={() => setStyled('grid')}
           className={cn(
-            `bg-transparent hover:bg-transparent text-gray800 border-none hover:border-none w-fit p-0`,
+            ` w-fit justify-end bg-transparent hover:bg-transparent text-gray800 border-none hover:border-none p-0`,
             styled === 'grid' ? 'text-orange hover:text-gray800' : 'text-gray800 hover:text-orange'
           )}
         >
-          <WindowIcon />
+          <WindowIcon className=" w-6 h-6" />
         </Button>
       </div>
     </div>
