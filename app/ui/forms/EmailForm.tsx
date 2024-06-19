@@ -23,7 +23,7 @@ export const EmailForm = () => {
     reset,
     formState: { errors },
   } = useForm<FormValues>({
-    resolver: yupResolver(Schema),
+    resolver: yupResolver(Schema) as any,
     defaultValues: { email: '' },
   });
 

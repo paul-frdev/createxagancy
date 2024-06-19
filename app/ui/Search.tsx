@@ -11,7 +11,7 @@ import TextField from '@mui/material/TextField';
 import * as React from 'react';
 
 type SearchProps = {
-  items: CourseType[];
+  items?: CourseType[];
   handleSearchInputChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
   className?: string;

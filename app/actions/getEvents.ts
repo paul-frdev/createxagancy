@@ -1,3 +1,5 @@
+'use server';
+
 import prisma from '@/app/lib/prismadb';
 import { IEventId } from '@/types/courses';
 import { unstable_noStore as noStore } from 'next/cache';
@@ -5,11 +7,12 @@ import { unstable_noStore as noStore } from 'next/cache';
 export async function getEvents() {
   noStore();
   try {
-    const events = await prisma.event.findMany({});
+    const events = await prisma.event.findMany();
 
     return events;
   } catch (error: any) {
-    throw new Error(error);
+    console.error('Error fetching events:', error);
+    throw new Error(error.message || 'Error fetching events');
   }
 }
 

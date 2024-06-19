@@ -58,6 +58,7 @@ const config: Config = {
       borderColor: {
         orange: '#fc4b26',
         gray: 'var(--gray-300)',
+        gray200: 'var(--gray-200)',
         gray300: 'var(--gray-300)',
         gray400: 'var(--gray-400)',
         gray600: 'var(--gray-600)',

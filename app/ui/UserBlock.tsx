@@ -18,7 +18,7 @@ export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }
   const [openSignUp, setOpenSignUp] = React.useState(false);
   const [openLogin, setOpenLogin] = React.useState(false);
 
-  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts';
+  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog';
 
   const handleClickOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();

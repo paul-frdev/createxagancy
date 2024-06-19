@@ -380,8 +380,37 @@ export const benefitsEvent = [
     text: 'Professional designers who want to feel more confident in UX',
   },
 ];
-// TODO filters
+
+export const categoryTitle = [
+  {
+    id: 1,
+    title: 'All',
+  },
+  {
+    id: 2,
+    title: 'Marketing',
+  },
+  {
+    id: 3,
+    title: 'Management',
+  },
+  {
+    id: 4,
+    title: 'HR & Recruting',
+  },
+  {
+    id: 5,
+    title: 'Design',
+  },
+  {
+    id: 6,
+    title: 'Development',
+  },
+];
+
+/* filters */
 export const themes = ['all', 'Online master-class', 'Online lecture', 'Online workshop'];
 export const sortBy = ['newest', 'oldest'];
 export const showItems = [6, 9, 12];
 export const view = ['flex', 'grid'];
+export const categoryItems = ['All', 'Marketing', 'Management', 'Design', 'Development'];

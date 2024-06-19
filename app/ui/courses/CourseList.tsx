@@ -1,5 +1,6 @@
 'use client';
 
+import { categoryTitle } from '@/constants';
 import { Categories } from '../Categories';
 import { Search } from '../Search';
 import { CoursePreviewCard } from '../courseId/CoursePreviewCard';
@@ -26,7 +27,7 @@ export const CourseList: React.FC<CourseListProps> = ({ allCourses, quantityCour
   const [limit, setLimit] = useState(12);
   const [labelCounts, setLabelCounts] = useState<{ [label: string]: number }>({});
 
-  // TODO set query params
+  /* set query params */
   const setQueryParams = (query: string, str: string) => {
     const params = new URLSearchParams(searchParams);
     if (str) {
@@ -70,7 +71,7 @@ export const CourseList: React.FC<CourseListProps> = ({ allCourses, quantityCour
           Our online courses
         </Heading>
         <div className="flex flex-col gap-y-6 lg:flex-row justify-start lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem] ">
-          <Categories quantityCourses={labelCounts.id} categories={labelCounts} filterItems={filterItems} className="overflow-hidden" />
+          <Categories categoryTitle={categoryTitle} quantityCourses={labelCounts.id} categories={labelCounts} filterItems={filterItems} className="overflow-hidden" />
           <Search
             className="w-full max-w-[950px] lg:max-w-[350px] "
             label="Search course..."

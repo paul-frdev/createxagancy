@@ -35,7 +35,7 @@ export const ContactForm = () => {
     getValues,
     formState: { errors },
   } = useForm<FormValues>({
-    resolver: yupResolver(Schema),
+    resolver: yupResolver(Schema) as any,
     defaultValues: { firstName: '', lastName: '', email: '', phoneNumber: '', message: '' },
   });
 

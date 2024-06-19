@@ -1,10 +1,10 @@
 'use client';
 
 import { Certificate } from '../Certificate';
-import { Posts } from '../Posts';
 import { Reviews } from '../Reviews';
 import { Subscribe } from '../Subscribe';
 import { Video } from '../Video';
+import { Posts } from '../posts/Posts';
 import { Benefits } from './Benefits';
 import { Courses } from './Courses';
 import { Statistics } from './Statistics';
@@ -12,7 +12,7 @@ import { Team } from './Team';
 import { WhyCreatex } from './WhyCreatex';
 import { Workshops } from './Workshops';
 import { useMyContext } from '@/context/useContextMenu';
-import { PostsType, ReviewsType } from '@/types';
+import { PostType, ReviewsType } from '@/types';
 import { CourseType } from '@/types/courses';
 import { Team as TeamType } from '@/types/team';
 import { WorkshopPreview } from '@/types/workshop';
@@ -22,7 +22,7 @@ type LandingProps = {
   events: WorkshopPreview[];
   team: TeamType[];
   reviews: ReviewsType[];
-  posts: PostsType[];
+  posts: PostType[];
   courses: CourseType[];
 };
 export const Landing = ({ events, team, reviews, posts, courses }: LandingProps) => {

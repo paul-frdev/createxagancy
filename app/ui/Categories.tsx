@@ -5,40 +5,15 @@ import { cn } from '@/app/lib/utils';
 import React from 'react';
 
 type CategoriesProps = {
-  categories: { [label: string]: number };
-  quantityCourses: number;
+  categories?: { [label: string]: number };
+  categoryTitle?: { id: number; title: string; icon?: React.ElementType; }[];
+  quantityCourses?: number;
   filterItems: (event: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
 };
 
-const categoryTitle = [
-  {
-    id: 1,
-    title: 'All',
-  },
-  {
-    id: 2,
-    title: 'Marketing',
-  },
-  {
-    id: 3,
-    title: 'Management',
-  },
-  {
-    id: 4,
-    title: 'HR & Recruting',
-  },
-  {
-    id: 5,
-    title: 'Design',
-  },
-  {
-    id: 6,
-    title: 'Development',
-  },
-];
 
-export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCourses, filterItems, className }) => {
+export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCourses, categoryTitle, filterItems, className }) => {
   const handleOnclick = (event: React.MouseEvent<HTMLButtonElement>) => {
     filterItems(event);
   };
@@ -46,9 +21,11 @@ export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCour
   return (
     <div className={cn(`flex w-full max-w-[815px] justify-between items-center`, className)}>
       {categoryTitle.map((item, index) => {
-        const quantity = Object.entries(categories).map(([key, value]) => item.title === key && value);
+        const quantity = categories ? Object.entries(categories).map(([key, value]) => item.title === key && value) : null;
+
         return (
           <Category
+            Icon={item.icon}
             className={cn('focus:text-orange focus:border focus:border-solid focus:border-orange text-nowrap')}
             onClick={handleOnclick}
             key={item.id}

@@ -7,15 +7,14 @@ import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 type BaseSelectProps = {
   text?: string;
   className?: string;
-  items?: React.ReactNode[];
+  items: React.ReactNode[];
   description?: string;
   setQuery: (event: string) => void;
-  defaultValue?: string;
 };
 
 const ITEM_HEIGHT = 48;
@@ -31,7 +30,7 @@ const MenuProps = {
 
 const theme = createTheme({});
 
-export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, defaultValue, items, description, setQuery }) => {
+export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, items, description, setQuery }) => {
   const [value, setValue] = useState('');
 
   const handleChange = (event: SelectChangeEvent) => {

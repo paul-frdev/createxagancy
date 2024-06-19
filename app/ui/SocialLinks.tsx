@@ -9,14 +9,18 @@ export type ILink = { id: number; url: string };
 type SocialLinksProps = {
   socialLinks: ILink[];
   className?: string;
+  isShare?: boolean;
+  width?: string
 };
-export const SocialLinks: React.FC<SocialLinksProps> = ({ socialLinks, className }) => {
+export const SocialLinks: React.FC<SocialLinksProps> = ({ socialLinks, className, isShare = false, width = '190px' }) => {
   return (
-    <div className={cn(`w-full max-w-[150px] gap-x-4 flex justify-start items-center h-auto`, className)}>
+    <div className={cn(`flex justify-start items-start h-auto`, className)} style={{ width: width }}>
+      <span className=' text-base font-lato font-bold text-gray900 text-nowrap'>{isShare ? 'Share :' : null}</span>
       {socialLinks.map((link, index) => (
-        <Link key={link.id} href={link.url} className="w-full h-auto flex justify-center items-center">
+        <Link key={index} href={link.url} className="w-full h-auto flex justify-start items-start">
           {index === 0 && <FacebookIcon className="w-6 h-6 text-gray700 hover:text-primary" />}
           {index === 1 && <TwitterIcon className="w-6 h-6 text-gray700 hover:text-primary" />}
+          {index === 2 && <LinkedInIcon className="w-6 h-6 text-gray700 hover:text-primary" />}
           {index === 3 && <LinkedInIcon className="w-6 h-6 text-gray700 hover:text-primary" />}
           {index === 4 && <LinkedInIcon className="w-6 h-6 text-gray700 hover:text-primary" />}
         </Link>

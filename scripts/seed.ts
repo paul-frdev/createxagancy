@@ -9,9 +9,7 @@ async function main() {
   const courses = await prisma.$transaction(
     coursesData.map((course) =>
       prisma.course.upsert({
-        where: {
-          id: course.id,
-        },
+        where: { id: course.id },
         update: {},
         create: {
           src: course.src,
@@ -55,9 +53,7 @@ async function main() {
   const events = await prisma.$transaction(
     eventData.map((event) =>
       prisma.event.upsert({
-        where: {
-          id: event.id,
-        },
+        where: { id: event.id },
         update: {},
         create: {
           time: event.time,
@@ -89,9 +85,7 @@ async function main() {
   const team = await prisma.$transaction(
     teamData.map((team) =>
       prisma.team.upsert({
-        where: {
-          id: team.id,
-        },
+        where: { id: team.id },
         update: {},
         create: {
           src: team.src,
@@ -106,9 +100,7 @@ async function main() {
   const posts = await prisma.$transaction(
     postData.map((post) =>
       prisma.post.upsert({
-        where: {
-          id: post.id,
-        },
+        where: { id: post.id },
         update: {},
         create: {
           icon: post.icon,
@@ -145,9 +137,7 @@ async function main() {
   const reviews = await prisma.$transaction(
     reviewData.map((review) =>
       prisma.reviews.upsert({
-        where: {
-          id: review.id,
-        },
+        where: { id: review.id },
         update: {},
         create: {
           text: review.text,

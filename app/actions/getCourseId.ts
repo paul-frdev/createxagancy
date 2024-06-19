@@ -1,3 +1,5 @@
+'use server';
+
 import prisma from '@/app/lib/prismadb';
 import { ICourseId } from '@/types/courses';
 

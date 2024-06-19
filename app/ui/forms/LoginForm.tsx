@@ -30,7 +30,7 @@ export const LoginForm = () => {
     getValues,
     formState: { errors },
   } = useForm<FormValues>({
-    resolver: yupResolver(Schema),
+    resolver: yupResolver(Schema) as any,
     defaultValues: { email: '', password: '' },
   });
 

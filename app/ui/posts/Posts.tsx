@@ -1,15 +1,17 @@
-import { PostItem } from './PostItem';
-import { Button } from './elements/Button';
-import { Container } from './elements/Container';
-import { Heading } from './elements/Heading';
-import { Typography } from './elements/Typography';
-import { PostsType } from '@/types';
+
+import { PostType } from '@/types';
 import React from 'react';
+import { Container } from '../elements/Container';
+import { Typography } from '../elements/Typography';
+import { Heading } from '../elements/Heading';
+import { Button } from '../elements/Button';
+import { PostItem } from './PostItem';
 
 type PostsProps = {
-  items: PostsType[];
+  items: PostType[];
 };
 export const Posts: React.FC<PostsProps> = ({ items }) => {
+
   return (
     <section className=" w-full bg-white mb-16">
       <Container>

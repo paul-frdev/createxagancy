@@ -1,3 +1,5 @@
+import { ILink } from '@/app/ui/SocialLinks';
+
 export type ReviewsType = {
   id?: number;
   createdAt: Date;
@@ -10,22 +12,26 @@ export type ReviewsType = {
 
 export type LabelPost = {
   id: number;
-  icon?: string;
+  text?: string;
   src?: string;
   date?: string;
+  icon?: string;
   time?: string;
-  text?: string;
+  postId: number;
 };
-export type PostsType = {
+export type PostType = {
   id: number;
-  createdAt: Date;
-  updatedAt: Date;
   icon: string;
   type: string;
   image: string;
-  labels?: LabelPost[];
   title: string;
   text: string;
+  date: string;
+  read: string;
+  author: string;
+  socialLinks?: ILink[];
+  labels?: LabelPost[];
+  tags?: string[];
 };
 
 export type DetailItem = { id: number; value: string };

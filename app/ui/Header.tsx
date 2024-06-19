@@ -14,7 +14,7 @@ import React from 'react';
 export const Header = () => {
   const pathname = usePathname();
 
-  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts';
+  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' ||  pathname === '/blog';
 
   return (
     <header className={cn(`w-full bg-orange02 pt-[1.25rem]`, !bgWhite ? 'bg-orange02' : 'bg-white')}>

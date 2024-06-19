@@ -1,3 +1,5 @@
+'use server';
+
 import prisma from '@/app/lib/prismadb';
 import { unstable_noStore as noStore } from 'next/cache';
 
