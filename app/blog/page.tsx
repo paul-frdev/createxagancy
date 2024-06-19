@@ -1,7 +1,7 @@
-import React from 'react'
-import { BlogList } from '../ui/blog/BlogList'
+import React, { Suspense } from 'react'
 import { getPosts } from '../actions/getPosts'
 import { SubscribeItem } from '../ui/SubscribeItem'
+import BlogList from '../ui/blog/BlogList'
 
 const BlogPage = async () => {
 
@@ -9,7 +9,9 @@ const BlogPage = async () => {
 
   return (
     <>
-      <BlogList posts={posts} />
+      <Suspense>
+        <BlogList posts={posts} />
+      </Suspense>
       <SubscribeItem src='/blog/articles.svg' bg='' color='bg-gray200' />
     </>
   )

@@ -44,7 +44,7 @@ const articleType = ['all', 'articles', 'videos', 'podcasts'];
 type BlogListProps = {
   posts: PostType[]
 }
-export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
+const BlogList: React.FC<BlogListProps> = ({ posts }) => {
 
 
   const [type, setType] = useState(articleType[0])
@@ -96,3 +96,5 @@ export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
     </section>
   )
 }
+
+export default BlogList;
