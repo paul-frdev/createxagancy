@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "postinstall": "prisma generate",
+    "build": "prisma generate && next build"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
