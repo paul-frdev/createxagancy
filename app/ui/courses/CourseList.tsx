@@ -11,7 +11,7 @@ import { Typography } from '../elements/Typography';
 import { CourseType } from '@/types/courses';
 import SyncIcon from '@mui/icons-material/Sync';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
 type CourseListProps = {

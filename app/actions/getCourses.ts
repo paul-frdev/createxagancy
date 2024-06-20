@@ -38,23 +38,32 @@ export async function getCourses(query: string) {
 export async function getAllCourses(limit: string, filter: string, query: string) {
   let count: any = parseInt(limit as any);
 
+  console.log('query', query);
+
   try {
     noStore();
+
     const findCourses = await prisma.course.findMany({
       include: {
         price: true,
       },
       where: {
-        OR: [
+        AND: [
           {
             label: {
-              contains: filter || query,
+              contains: filter === 'All' ? undefined : filter,
+              mode: 'insensitive',
+            },
+          },
+          {
+            label: {
+              contains: query,
               mode: 'insensitive',
             },
           },
         ],
       },
-      take: filter !== 'All' ? count : true,
+      take: filter !== 'All' ? count : undefined,
     });
 
     return findCourses;
