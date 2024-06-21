@@ -23,7 +23,7 @@ export async function getPosts({ number }: Posts) {
   }
 }
 
-export async function getPostById(param: { articleId: string }, query: { query: string }) {
+export async function getPostById(param: { articleId: string }) {
   const { articleId } = param;
 
   try {
