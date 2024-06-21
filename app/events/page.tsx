@@ -19,7 +19,7 @@ export default async function Home({
   const page = searchParams.page || '1';
 
   const events = await filterEvents(limit, filter, topic, query, page);
-  const pages = await fetchEventsPages();
+  const pages = await fetchEventsPages(topic, query, filter);
 
   const countTotalPages = Math.round(pages / +limit);
 

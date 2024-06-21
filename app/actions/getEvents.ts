@@ -91,13 +91,38 @@ export async function filterEvents(limit: string, filter: string, topic: string,
   }
 }
 
-export async function fetchEventsPages() {
+export async function fetchEventsPages(topic: string, query: string, filter: string) {
   try {
     noStore();
 
-    const count = await prisma.event.count();
+    const whereConditions: any = {
+      AND: [
+        {
+          type: {
+            contains: query,
+            mode: 'insensitive',
+          },
+        },
+      ],
+    };
 
-    const totalPages = Math.ceil(count);
+    if (topic !== 'all') {
+      whereConditions.AND.push({
+        type: {
+          contains: topic,
+          mode: 'insensitive',
+        },
+      });
+    }
+
+    const countEvents = await prisma.event.count({
+      where: whereConditions.AND.length >= 2 ? whereConditions : undefined,
+      orderBy: {
+        date: filter === 'newest' ? 'asc' : 'desc',
+      },
+    });
+
+    const totalPages = Math.ceil(countEvents);
 
     return totalPages;
   } catch (error) {}

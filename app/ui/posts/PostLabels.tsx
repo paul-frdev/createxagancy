@@ -1,7 +1,10 @@
+'use client'
+
 import { LabelPost } from '@/types'
 import React from 'react'
 import { Image } from '../elements/Image'
 import { cn } from '@/app/lib/utils';
+import { useParams, usePathname } from 'next/navigation';
 
 type PostLabels = {
   labels: LabelPost[];
@@ -9,13 +12,17 @@ type PostLabels = {
 }
 export const PostLabels: React.FC<PostLabels> = ({ labels, className }) => {
 
+  const pathname = usePathname();
+  const params = useParams();
+  const isArticleId = pathname === `/blog/${params.articleId}`
+
   return (
     <div className={cn(`flex justify-start items-start text-sm mb-2 px-2 md:py-3`, className)}>
       {labels?.map((label) => (
         <React.Fragment key={label.id}>
-          {label.text ? <span className="pr-[12px] font-lato font-normal text-gray700">{label.text}</span> : null}
+          {label.text && !isArticleId ? <span className={cn(`font-lato font-normal text-gray700`, isArticleId ? 'pr-0' : 'pr-[12px]')}>{label.text}</span> : null}
           {label.src && label.date ? (
-            <div className="flex justify-between items-center gap-x-[2.5px] px-[12px] border-x border-gray700 ">
+            <div className={cn(`flex justify-between items-center gap-x-[2.5px] px-[12px] border-x border-gray700`, isArticleId ? 'px-0' : 'px-[12px]')}>
               <Image src={label.src as string} alt="icon" className="w-4 h-4 text-gray700" />
               <span className=" font-lato font-normal text-gray700">{label.date}</span>
             </div>

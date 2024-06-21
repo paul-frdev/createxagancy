@@ -6,7 +6,7 @@ import { SignUpDialog } from './dialogs/SignUpDialog';
 import { Button } from './elements/Button';
 import { Image } from './elements/Image';
 import person from '@/public/svg/person.svg';
-import { usePathname } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import React from 'react';
 
 type UserBlockProps = {
@@ -15,10 +15,12 @@ type UserBlockProps = {
 };
 export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }) => {
   const pathname = usePathname();
+  const params = useParams()
+
   const [openSignUp, setOpenSignUp] = React.useState(false);
   const [openLogin, setOpenLogin] = React.useState(false);
 
-  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog';
+  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog' || pathname === `/blog/${params.articleId}`;
 
   const handleClickOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();

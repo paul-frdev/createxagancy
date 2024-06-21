@@ -38,8 +38,6 @@ export async function getCourses(query: string) {
 export async function getAllCourses(limit: string, filter: string, query: string) {
   let count: any = parseInt(limit as any);
 
-  console.log('query', query);
-
   try {
     noStore();
 
@@ -78,6 +76,7 @@ export async function countCourses() {
         label: true,
       },
     });
+    
     return countCourses;
   } catch (error) {}
 }

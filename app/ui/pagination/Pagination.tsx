@@ -15,7 +15,7 @@ export const Pagination: React.FC<PaginationProps> = ({ createPageURL, totalPage
 
   return (
     <Container className="flex justify-center gap-x-2 items-center">
-      <PaginationArrow direction="left" href={createPageURL(+currentPage - 1)} isDisabled={+currentPage <= 1} />
+      {totalPages >= 1 ? <PaginationArrow direction="left" href={createPageURL(+currentPage - 1)} isDisabled={+currentPage <= 1} /> : null}
 
       <div className="flex w-fit justify-center items-center gap-x-2">
         {allPages.map((page, index) => {
@@ -30,7 +30,7 @@ export const Pagination: React.FC<PaginationProps> = ({ createPageURL, totalPage
         })}
       </div>
 
-      <PaginationArrow direction="right" href={createPageURL(+currentPage + 1)} isDisabled={+currentPage >= totalPages} />
+      {totalPages >= 1 ? <PaginationArrow direction="right" href={createPageURL(+currentPage + 1)} isDisabled={+currentPage >= totalPages} /> : null}
     </Container>
   );
 };

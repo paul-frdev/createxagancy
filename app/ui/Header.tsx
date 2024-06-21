@@ -8,13 +8,14 @@ import { cn } from '@/app/lib/utils';
 import { navbar } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import React from 'react';
 
 export const Header = () => {
   const pathname = usePathname();
+  const params = useParams()
 
-  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' ||  pathname === '/blog';
+  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog' || pathname === `/blog/${params.articleId}`;
 
   return (
     <header className={cn(`w-full bg-orange02 pt-[1.25rem]`, !bgWhite ? 'bg-orange02' : 'bg-white')}>
