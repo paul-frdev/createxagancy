@@ -2,6 +2,7 @@
 
 import prisma from '@/app/lib/prismadb';
 
+
 export async function getTeam() {
   try {
     const team = await prisma.team.findMany();

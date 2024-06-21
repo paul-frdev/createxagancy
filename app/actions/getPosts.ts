@@ -7,8 +7,8 @@ type Posts = {
   number: number;
 };
 export async function getPosts({ number }: Posts) {
+  noStore();
   try {
-    noStore();
     const posts = await prisma.post.findMany({
       where: {},
       take: number,
@@ -24,10 +24,10 @@ export async function getPosts({ number }: Posts) {
 }
 
 export async function getPostById(param: { articleId: string }) {
+  noStore();
   const { articleId } = param;
 
   try {
-    noStore();
     const post = await prisma.post.findUnique({
       where: {
         id: +articleId,
@@ -52,6 +52,7 @@ export async function getPostById(param: { articleId: string }) {
 }
 
 export async function filterPosts(limit: string, filter: string, query: string, page: string, type: string) {
+  noStore();
   const count = parseInt(limit);
   const pageNumber = parseInt(page);
 
@@ -60,7 +61,6 @@ export async function filterPosts(limit: string, filter: string, query: string, 
   }
 
   try {
-    noStore();
 
     const filterPosts = await prisma.post.findMany({
       where: {
@@ -100,9 +100,8 @@ export async function filterPosts(limit: string, filter: string, query: string, 
 }
 
 export async function fetchPostsPages(filter: string, query: string, type: string) {
+  noStore();
   try {
-    noStore();
-
     const count = await prisma.post.count({
       where: {
         AND: [
