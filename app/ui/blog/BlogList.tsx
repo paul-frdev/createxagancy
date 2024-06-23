@@ -80,11 +80,11 @@ const BlogList: React.FC<BlogListProps> = ({ posts, totalPages }) => {
       <Container className='py-5 xmd:py-10'>
         <Head text='Our blog' title='Createx School Journal' />
         <div className='flex justify-between w-full max-w-[90%] items-center mb-10'>
-          <Categories className='justify-start gap-x-12 w-fit' filterItems={filterItems} categoryTitle={blogCategoryTitle} />
+          <Categories className=' hidden md:flex justify-start xmd:gap-x-12 w-fit' filterItems={filterItems} categoryTitle={blogCategoryTitle} />
           <BaseSelect items={categoryItems} setQuery={setType} />
           {/* <Search /> */}
         </div>
-        <div className=' grid grid-cols-3 gap-x-6 gap-y-4 mb-12'>
+        <div className=' grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 max-w-fit mx-auto gap-x-6 gap-y-4 mb-12'>
           {posts.map(post => (
             <PostItem key={post.id} post={post} />
           ))}

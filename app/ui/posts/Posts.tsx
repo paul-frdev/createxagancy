@@ -26,7 +26,7 @@ export const Posts: React.FC<PostsProps> = ({ items }) => {
         </div>
         <div className="flex flex-col xl:flex-row  gap-x-4 flex-nowrap xl:flex-wrap gap-y-4 justify-between items-center xl:items-start">
           {items.map((item) => (
-            <PostItem key={item.id} post={item} />
+            <PostItem key={item.id} post={item} classContainer="md:flex-row xl:flex-col" className="md:max-w-[1000px] xl:max-w-[390px] md:h-[241px] xl:h-auto" classImage="md:mb-0 xl:mb-4 md:max-w-[314px] xl:max-w-full" />
           ))}
         </div>
       </Container>

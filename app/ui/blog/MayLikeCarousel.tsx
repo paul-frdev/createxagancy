@@ -1,23 +1,22 @@
-'use client';
-
-import { Button } from '../elements/Button';
-import { Container } from '../elements/Container';
-import { Heading } from '../elements/Heading';
-import { Typography } from '../elements/Typography';
-import { EventItem } from '../events/EventItem';
-import { Carousel, CustomNextArrow, CustomPrevArrow } from '../swiper/Carousel';
-import { WorkshopPreview } from '@/types/workshop';
+'use client'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useMediaQuery } from '@mui/material';
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
+import { Container } from '../elements/Container';
+import { Typography } from '../elements/Typography';
+import { Heading } from '../elements/Heading';
+import { Carousel, CustomNextArrow, CustomPrevArrow } from '../swiper/Carousel';
+import { Button } from '../elements/Button';
+import { PostType } from '@/types';
+import { PostItem } from '../posts/PostItem';
 
-type YouMayLikeProps = {
-  events: WorkshopPreview[];
+type MayLikeCarouselProps = {
+  items: PostType[];
 };
 
-export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
+export const MayLikeCarousel: React.FC<MayLikeCarouselProps> = ({ items }) => {
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
   const [swipe, setSwipe] = useState<SwiperCore>();
@@ -33,12 +32,12 @@ export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
         spaceBetween: 15,
       },
       968: {
-        slidesPerView: 2,
-        spaceBetween: 15,
+        slidesPerView: 3,
+        spaceBetween: 30,
       },
       1250: {
         slidesPerView: 3,
-        spaceBetween: 15,
+        spaceBetween: 30,
       },
     },
     grabCursor: true,
@@ -53,14 +52,16 @@ export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
     },
   };
 
-  const carouselItems = events.map((item) => <EventItem style="grid" key={item.id} event={item} />);
+  const carouselItems = items.map((item, index) => (
+    <PostItem key={index} post={item} />
+  ));
 
   return (
-    <section className="w-full bg-[#f4f5f7] py-12 lg:py-24">
+    <section className="w-full bg-white py-12 lg:py-24">
       <Container className='h-auto'>
         <div className="flex justify-between items-end mb-12">
           <div className="w-full">
-            <Typography className="text-center xsm:text-left">Check other online events</Typography>
+            <Typography className="text-center xsm:text-left">Check other articles</Typography>
             <Heading className="text-center mb-0 xsm:text-left text-[2rem] md:text-[2.875rem]" variant="h4">
               You may also like
             </Heading>
@@ -80,11 +81,11 @@ export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
             />
           </div>
         </div>
-        <Carousel height={!isMobile ? 390 : 370} className="mx-auto" onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
+        <Carousel height={!isMobile ? 660 : 370} className="mx-auto" onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
         <div className="flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 justify-center items-center gap-x-[2.5rem]">
-          <Typography className="text-center sm:text-left mb-0 text-[1rem] xsm:text-[1.2rem] text-gray900">Do you want more?</Typography>
-          <Button className=" text-nowrap w-[202px]" href="/events">
-            Explore all events
+          <Typography className="text-center sm:text-left mb-0 text-[1rem] xsm:text-[1.2rem] text-gray900">Do you want more articles, podcasts and videos?</Typography>
+          <Button className=" text-nowrap w-[202px]" href="/blog">
+            Go to blog
           </Button>
         </div>
       </Container>

@@ -28,7 +28,7 @@ export const EventList: React.FC<EventListProps> = ({ events, totalPages }) => {
   const { replace } = useRouter();
 
   const flexStyles = `flex justify-between items-center flex-col`;
-  const gridStyles = `grid grid-cols-3 w-full gap-4`;
+  const gridStyles = `grid max-w-fit mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4`;
 
   const setParams = (key: string, value: string | number) => {
     params.set(key, value.toString());
@@ -53,11 +53,11 @@ export const EventList: React.FC<EventListProps> = ({ events, totalPages }) => {
         <Container className="pb-5 xsm:pb-12">
           <div className="w-full my-10">
             <Typography className="text-center mb-0">Our events</Typography>
-            <Heading variant="h3" className="text-center">
+            <Heading variant="h3" className="text-center text-[2rem] xmd:text-[2.875rem]">
               Lectures, workshops & master-classes
             </Heading>
           </div>
-          <Filters setCount={setCount} setTopic={setTopic} setSort={setSort} setParams={setParams} events={events} styled={styled} setStyled={setStyled} />
+          <Filters setCount={setCount} setTopic={setTopic} setSort={setSort} styled={styled} setStyled={setStyled} />
           <div className={cn(``, styled === 'flex' ? flexStyles : gridStyles)}>
             {events.map((event) => (
               <EventItem key={event.id} event={event} style={styled} />

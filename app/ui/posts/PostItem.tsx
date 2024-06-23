@@ -7,17 +7,21 @@ import { Heading } from '../elements/Heading';
 import { Typography } from '../elements/Typography';
 import { Button } from '../elements/Button';
 import { PostLabels } from './PostLabels';
+import { cn } from '@/app/lib/utils';
 
 type PostItemProps = {
   post: PostType;
+  className?: string;
+  classContainer?: string;
+  classImage?: string
 };
-export const PostItem: React.FC<PostItemProps> = ({ post }) => {
+export const PostItem: React.FC<PostItemProps> = ({ post, className, classContainer, classImage }) => {
   const labels = post.labels;
   const checkedType = post.type === 'Podcast' ? 'Listen' : post.type === 'Video' ? 'Watch' : post.type === 'Article' ? 'Read' : 'Read';
   return (
-    <Card classname="p-0 w-full max-w-[390px] md:max-w-[1000px] xl:max-w-[390px] md:h-[241px] xl:h-auto">
-      <div className="w-full flex flex-col md:flex-row xl:flex-col justify-between">
-        <div className="w-full relative mb-4 md:mb-0 xl:mb-4 md:max-w-[314px] xl:max-w-full">
+    <Card classname={cn(`p-0 w-full max-w-[390px]`, className)}>
+      <div className={cn(`w-full flex flex-col justify-between`, classContainer)}>
+        <div className={cn(`w-full relative mb-4`, classImage)}>
           <span className=" bg-white  absolute top-[9px] px-2 left-[7px] h-[26px] rounded flex justify-center items-center gapx-[4px]">
             <Image src={post.icon} alt="icon" className="w-4 h-4" />
             <span className="text-sm leading-[150%] font-lato font-normal text-gray800"> {post.type}</span>

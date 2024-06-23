@@ -129,7 +129,7 @@ export const Footer = () => {
         </div>
       </Container>
       <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center w-full h-auto py-3 sm:py-0 sm:h-[58px] bg-bgFooter">
-        <div className="flex  justify-center sm:justify-start items-center">
+        <div className="flex flex-col xsm:flex-row gap-y-2 xsm:gap-y-0  justify-center sm:justify-start items-center">
           <Typography className=" text-nowrap text-[0.75rem] font-lato font-normal normal-case text-white sm:ml-20 mb-0 mr-2">© All rights reserved.</Typography>
           <Typography className=" text-nowrap text-[0.75rem] font-lato font-normal normal-case text-white mb-0 mr-1">Made with</Typography>
           <Image src={heardIcon} alt="icon" className="w-4 h-4" />

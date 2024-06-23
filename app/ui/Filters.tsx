@@ -14,34 +14,24 @@ import { useDebouncedCallback } from 'use-debounce';
 type FiltersProps = {
   setStyled: (str: string) => void;
   styled: string;
-  events: WorkshopPreview[];
-  setParams: (key: string, value: string | number) => void;
   setTopic?: (term: string) => void;
   setSort?: (term: string) => void;
   setCount?: (term: string) => void;
 };
-export const Filters: React.FC<FiltersProps> = ({ setStyled, styled, events, setParams, setTopic, setSort, setCount }) => {
-  const handleSearchInputChange = useDebouncedCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const term = event.target.value;
-    setParams('query', term);
-  }, 500);
+export const Filters: React.FC<FiltersProps> = ({ setStyled, styled, setTopic, setSort, setCount }) => {
 
   return (
-    <div className="flex justify-start items-center gap-x-[2.5rem] mb-8">
-      <BaseSelect text="Event category" items={themes} setQuery={setTopic} />
-      <BaseSelect text="Sort by" items={sortBy} setQuery={setSort} />
-      <BaseSelect text="Show" items={showItems} description="events per page" setQuery={setCount} />
-      {/* <Search
-      className='w-[282px]'
-        items={events}
-        handleSearchInputChange={handleSearchInputChange}
-        searchParams={searchParams.get('query')?.toString()}
-      /> */}
-      <div className="flex justify-end items-end flex-nowrap gap-x-2">
+    <div className="flex justify-start items-start sm:items-center gap-x-4 sm:gap-x-8 mb-8">
+      <div className='flex flex-col sm:flex-row gap-y-3 justify-start items-start sm:items-center gap-x-4 sm:gap-x-8'>
+        <BaseSelect text="Event category" items={themes} setQuery={setTopic} />
+        <BaseSelect text="Sort by" items={sortBy} setQuery={setSort} />
+        <BaseSelect text="Show" items={showItems} description="events per page" setQuery={setCount} />
+      </div>
+      <div className="flex justify-start sm:justify-end items-start  sm:items-end flex-nowrap gap-x-2 w-[100px] xsm:w-[136px]">
         <Button
           onClick={() => setStyled('flex')}
           className={cn(
-            ` w-fit bg-transparent hover:bg-transparent border-none hover:border-none  p-0 justify-end`,
+            ` w-fit bg-transparent hover:bg-transparent border-none hover:border-none  p-0 justify-start sm:justify-end`,
             styled === 'flex' ? 'text-orange hover:text-gray800' : 'text-gray800 hover:text-orange'
           )}
         >
@@ -50,7 +40,7 @@ export const Filters: React.FC<FiltersProps> = ({ setStyled, styled, events, set
         <Button
           onClick={() => setStyled('grid')}
           className={cn(
-            ` w-fit justify-end bg-transparent hover:bg-transparent text-gray800 border-none hover:border-none p-0`,
+            ` w-fit justify-start sm:justify-end bg-transparent hover:bg-transparent text-gray800 border-none hover:border-none p-0`,
             styled === 'grid' ? 'text-orange hover:text-gray800' : 'text-gray800 hover:text-orange'
           )}
         >

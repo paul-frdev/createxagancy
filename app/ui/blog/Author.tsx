@@ -10,7 +10,7 @@ type AuthorProps = {
 export const Author = ({ links }: AuthorProps) => {
   return (
     <div className='my-16'>
-      <Heading variant='h3' className='mb-6 font-bold text-[1rem]'>Author</Heading>
+      <Heading variant='h3' className='mb-6 font-bold text-[1rem] uppercase'>Author</Heading>
       <div className=' flex justify-between items-center w-full max-w-[342px] gap-x-4'>
 
         <Image src='/event/speaker.png' alt='author' className='w-[100px] h-[100px] rounded' />

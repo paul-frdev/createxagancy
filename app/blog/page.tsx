@@ -27,13 +27,18 @@ const BlogPage = async ({
   const pages = await fetchPostsPages(filter, query, type)
 
   const countTotalPages = Math.round(pages / +limit);
-  
+
   return (
     <>
       <Suspense>
         <BlogList posts={posts} totalPages={countTotalPages} />
       </Suspense>
-      <SubscribeItem src='/blog/articles.svg' bg='' color='bg-gray200' />
+      <SubscribeItem
+        src='/blog/articles.svg'
+        bg=''
+        color='bg-gray200'
+        className=' flex-col lg:flex-row gap-y-6 lg:gap-y-0'
+      />
     </>
   )
 }
