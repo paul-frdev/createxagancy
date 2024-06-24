@@ -25,8 +25,8 @@ export const EventItem: React.FC<EventItemProps> = ({ event, style, className })
   return (
     <div
       className={cn(
-        `w-full h-auto bg-white rounded mb-6 py-4 gap-x-[1.5rem] border hover:shadow-eventShadow border-solid border-gray300 transition duration-300`,
-        style === 'flex' ? 'flex flex-col justify-between items-center sm:flex-row py-4  px-6 last:mb-10' : `flex justify-between items-center sm:items-start flex-col max-w-[390px] mb-0`,
+        `w-full h-auto bg-white rounded mb-6 gap-x-[1.5rem] border hover:shadow-eventShadow border-solid border-gray300 transition duration-300`,
+        style === 'flex' ? 'flex flex-col justify-between items-center sm:flex-row py-4  px-6 last:mb-10' : `flex justify-between items-center sm:items-start flex-col max-w-[390px] pt-4 pb-6 mb-0`,
       )}
     >
       <div className={cn(`flex gap-x-[1.25rem]`, className, style === 'flex' ? 'flex-row items-center' : 'flex-row sm:flex-col items-start px-4')}>
@@ -38,10 +38,10 @@ export const EventItem: React.FC<EventItemProps> = ({ event, style, className })
       </div>
       <div className="flex flex-col justify-start items-start max-w-[390px] my-4 px-4">
         <Heading variant='h4' className={cn(`leading-[150%] text-[1.125rem] mb-4 text-center sm:text-left`)}>{isEventId && event.title.length >= 80 ? event.title.slice(0, 60) + '...' : event.title}</Heading>
-        <p className={cn(`w-full text-base font-lato font-normal leading-[160%] text-center sm:text-left`)}>{event.type}</p>
+        <p className={cn(`text-base font-lato font-normal leading-[160%] text-center sm:text-left`)}>{event.type}</p>
       </div>
-      <div className='w-full flex justify-center items-center'>
-        <Button href={`/events/${event.id}`} variantCss="outline" sizeCss="lg" className={cn(`text-nowrap text-sm w-full max-w-[360px]`, style === 'grid' ? 'w-full mt-auto' : '')}>
+      <div className='flex justify-center items-center w-full'>
+        <Button href={`/events/${event.id}`} variantCss="outline" sizeCss="lg" className={cn(`text-nowrap text-sm w-full max-w-[260px]`, style === 'grid' ? 'w-full mt-auto' : '')}>
           View more
         </Button>
       </div>

@@ -80,7 +80,7 @@ export const MayLikeCarousel: React.FC<MayLikeCarouselProps> = ({ courses }) => 
             />
           </div>
         </div>
-        <Carousel height={!isMobile ? 460 : 270} className="mx-auto" onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
+        <Carousel height={!isMobile ? 270 : 460} className="mx-auto" onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
         <div className="flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 justify-center items-center gap-x-[2.5rem]">
           <Typography className="text-center sm:text-left mb-0 text-[1rem] xsm:text-[1.2rem] text-gray900">Do you want more courses?</Typography>
           <Button className=" text-nowrap w-[202px]" href="/courses">

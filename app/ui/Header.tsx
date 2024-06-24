@@ -13,12 +13,13 @@ import React from 'react';
 
 export const Header = () => {
   const pathname = usePathname();
-  const params = useParams()
+  const params = useParams();
+
 
   const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog' || pathname === `/blog/${params.articleId}`;
 
   return (
-    <header className={cn(`w-full bg-orange02 pt-[1.25rem]`, !bgWhite ? 'bg-orange02' : 'bg-white')}>
+    <header className={cn(`w-full pt-[1.25rem]`, !bgWhite ? 'bg-orange02' : 'bg-white')}>
       <Container className="pb-2 lg:pb-0">
         <div className="flex justify-between items-center">
           <div className="flex justify-start items-center gap-x-[2.75em] lg:gap-x-[3.75em]">

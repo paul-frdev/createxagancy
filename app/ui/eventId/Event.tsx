@@ -20,7 +20,7 @@ export const Event = ({ event, events }: EventProps) => {
       <PreviewEvent event={event} />
       <Author links={event.socialLinks} />
       <Benefits />
-      <SubscribeItem className=' justify-evenly' maxWidth='max-w-[308px]' src='/event/subscribe.svg' title='Don’t want to miss the best events? Subscribe to our newsletter!' from='[rgba(255,63,58,.2)_0%]' to='[rgba(247,94,5,1)_100%]' />
+      <SubscribeItem className=' md:px-4 justify-evenly' maxWidth='max-w-[308px]' src='/event/subscribe.svg' title='Don’t want to miss the best events? Subscribe to our newsletter!' />
       <Request />
       <YouMayLike events={events} />
     </>

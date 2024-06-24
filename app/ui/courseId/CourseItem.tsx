@@ -26,7 +26,7 @@ export const CourseItem: React.FC<CourseItemProps> = ({ courseById, reviews, cou
       <DiscountForm />
       <BenefitsItem title="Who will benefit from the course:" subtitle="For whom?" list={benefitsCourseItem} />
       <YouWillLearn />
-      <Reviews items={reviews} className=" pt-24" />
+      <Reviews items={reviews} className=" px-0 pt-24" />
       <RegisterCourse />
       <MayLikeCarousel courses={courses} />
     </>

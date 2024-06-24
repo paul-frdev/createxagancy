@@ -58,7 +58,7 @@ export const RegisterForm = ({
 
   return (
     <div className={cn(`w-full max-w-[495px]`, className)}>
-      <Typography className="text-center lg:text-left">{text}</Typography>
+      <Typography className="text-center font-bold lg:text-left">{text}</Typography>
       <Heading className="text-center lg:text-left text-[2rem] md:text-[2.875rem] mb-10" variant="h3">
         {title}
       </Heading>

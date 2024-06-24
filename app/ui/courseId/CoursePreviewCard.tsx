@@ -17,7 +17,7 @@ export const CoursePreviewCard = ({ id, src, alt, label, colorLabel, text, price
               {label}
             </span>
             <p className="text-[1.25rem] text-center xsm:text-left font-latoBold font-[700] leading-[150%] text-green-900 text-nowrap">
-              {text.length > 30 ? text.slice(0, 30) + '...' : text}
+              {text.length > 30 ? text.slice(0, 27) + '...' : text}
             </p>
             <div className="flex justify-start items-start gap-x-[4px]">
               <span className="text-[1.125rem] font-latoBold font-[700] leading-[150%] text-danger">{price[0].value.slice(0, 4)}</span>

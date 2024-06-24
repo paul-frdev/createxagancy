@@ -80,7 +80,7 @@ export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
             />
           </div>
         </div>
-        <Carousel height={!isMobile ? 390 : 370} className="mx-auto" onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
+        <Carousel classNameSlide='max-w-fit' height={!isMobile ? 390 : 370} className="mx-auto max-w-fit" onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
         <div className="flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 justify-center items-center gap-x-[2.5rem]">
           <Typography className="text-center sm:text-left mb-0 text-[1rem] xsm:text-[1.2rem] text-gray900">Do you want more?</Typography>
           <Button className=" text-nowrap w-[202px]" href="/events">
