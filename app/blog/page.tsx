@@ -35,7 +35,6 @@ const BlogPage = async ({
       </Suspense>
       <SubscribeItem
         src='/blog/articles.svg'
-        bg=''
         color='bg-gray200'
         className=' flex-col lg:flex-row gap-y-6 lg:gap-y-0'
       />
