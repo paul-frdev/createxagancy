@@ -1,9 +1,14 @@
+import { Metadata } from 'next';
 import { countCourses, getAllCourses } from '../actions/getCourses';
 import { getReviews } from '../actions/getReviews';
 import { Certificate } from '../ui/Certificate';
 import { Reviews } from '../ui/Reviews';
 import { Subscribe } from '../ui/Subscribe';
 import { CourseList } from '../ui/courses/CourseList';
+
+export const metadata: Metadata = {
+  title: 'Courses',
+};
 
 const CoursesPage = async ({
   searchParams,

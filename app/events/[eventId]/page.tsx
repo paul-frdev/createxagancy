@@ -1,7 +1,13 @@
 import { getEventById, getEvents } from '@/app/actions/getEvents';
 import { Event } from '@/app/ui/eventId/Event';
 import { IEventId } from '@/types/courses';
+import { Metadata } from 'next';
 import React from 'react';
+
+
+export const metadata: Metadata = {
+  title: 'Event',
+};
 
 const EventPage = async ({ params }: { params: IEventId }) => {
   const { eventId } = params;

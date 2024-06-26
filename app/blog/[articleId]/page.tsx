@@ -3,8 +3,13 @@ import { SubscribeItem } from '@/app/ui/SubscribeItem';
 import { AboutArticle } from '@/app/ui/blog/AboutArticle';
 import React from 'react';
 import { parse } from 'date-fns';
-import { MayLikeCarousel } from '@/app/ui/blog/MayLikeCarousel';
+import { Metadata } from 'next';
 
+
+
+export const metadata: Metadata = {
+  title: 'Article',
+};
 
 const CoursePage = async ({ params }: { params: { articleId: string } }) => {
   const { articleId } = params;

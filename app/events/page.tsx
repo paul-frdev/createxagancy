@@ -1,5 +1,12 @@
+import { Metadata } from 'next';
 import { fetchEventsPages, filterEvents } from '../actions/getEvents';
 import { EventList } from '../ui/events/EventList';
+
+
+
+export const metadata: Metadata = {
+  title: 'Events',
+};
 
 export default async function Home({
   searchParams,

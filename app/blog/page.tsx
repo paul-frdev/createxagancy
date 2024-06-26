@@ -2,6 +2,11 @@ import React, { Suspense } from 'react'
 import { fetchPostsPages, filterPosts, getPosts } from '../actions/getPosts'
 import { SubscribeItem } from '../ui/SubscribeItem'
 import BlogList from '../ui/blog/BlogList'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+};
 
 const BlogPage = async ({
   searchParams,

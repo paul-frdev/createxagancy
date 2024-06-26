@@ -1,3 +1,5 @@
+'use client'
+
 import { CheckboxLabels } from '../elements/Checkbox';
 import { Container } from '../elements/Container';
 import { Image } from '../elements/Image';
