@@ -15,12 +15,8 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import { GoogleMap } from '@react-google-maps/api';
 import Link from 'next/link';
 import React from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-export const defaultMapContainerStyle = {
-  width: '702px',
-  height: '412px',
-  borderRadius: '4px',
-};
 
 const defaultMapCenter = {
   lat: 35.8799866,
@@ -35,10 +31,19 @@ const defaultMapOptions = {
 };
 
 const MapAddress = () => {
+  const isTablet = useMediaQuery('(max-width: 720px)');
+  const isMobile = useMediaQuery('(max-width: 530px)');
+  
+  const defaultMapContainerStyle = {
+    width: isTablet ? '300px'  : '702px',
+    height: isTablet ? '370px' : '412px',
+    borderRadius: '4px',
+  };
+
   return (
     <section className=" w-full my-10">
-      <Container className=" flex justify-between items-center py-10">
-        <div className=" flex flex-col justify-start items-start">
+      <Container className=" flex flex-col gap-y-6 lg:gap-y-0 lg:flex-row justify-start lg:justify-between items-start  lg:items-center py-10">
+        <div className="flex flex-col justify-start items-start">
           <Typography className=" font-bold">Contact info</Typography>
           <Heading variant="h2" className=" text-[2.875rem] mb-10">
             Get in touch
@@ -56,8 +61,8 @@ const MapAddress = () => {
               </li>
             ))}
           </ul>
-          <Typography className=" font-bold">Follow us:</Typography>
-          <div className=" flex justify-between items-center w-full max-w-[304px]">
+          <Typography className="font-bold">Follow us:</Typography>
+          <div className=" flex justify-between items-center w-full max-w-[270px]">
             <FacebookIcon className=" cursor-pointer hover:text-orange transition-all duration-300" />
             <TwitterIcon className=" cursor-pointer hover:text-orange transition-all duration-300" />
             <YouTubeIcon className=" cursor-pointer hover:text-orange transition-all duration-300" />

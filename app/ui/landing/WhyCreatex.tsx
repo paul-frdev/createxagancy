@@ -32,7 +32,7 @@ export const WhyCreatex = () => {
               ))}
             </ul>
             <div className="w-full flex justify-center items-center lg:justify-start">
-              <Button href="/" sizeCss="lg">
+              <Button href="/about" sizeCss="lg">
                 More about us
               </Button>
             </div>

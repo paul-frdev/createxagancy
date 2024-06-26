@@ -21,7 +21,7 @@ export const Courses: React.FC<CoursesProps> = ({ courses }) => {
               Featured Courses
             </Heading>
           </div>
-          <Button variantCss="outline" sizeCss="lg">
+          <Button href='/coursers' variantCss="outline" sizeCss="lg">
             View all courses
           </Button>
         </div>

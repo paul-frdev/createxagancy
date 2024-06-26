@@ -24,7 +24,7 @@ export const Workshops: React.FC<WorkshopsProps> = ({ workshops }) => {
         ))}
         <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0 justify-center items-center gap-x-[2.5rem] mt-[4rem]">
           <Heading className="text-[1.75rem] mb-0">Do you want more?</Heading>
-          <Button sizeCss="lg" className="px-[2rem] text-base hover:bg-orange02 border-transparent hover:border-orange flex justify-center items-center py-0 h-[52px]">
+          <Button href='/events' sizeCss="lg" className="px-[2rem] text-base hover:bg-orange02 border-transparent hover:border-orange flex justify-center items-center py-0 h-[52px]">
             Explore all events
           </Button>
         </div>

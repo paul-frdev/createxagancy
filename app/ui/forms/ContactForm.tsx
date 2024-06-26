@@ -45,12 +45,12 @@ export const ContactForm = () => {
   };
 
   return (
-    <Container className="my-8 py-8 flex justify-between items-center">
+    <Container className="my-8 py-8 flex flex-col lg:flex-row justify-between items-center">
       <div>
-        <Image src="/contacts/dropline.svg" alt="contact" className="w-full max-w-[435px] h-[481px]" />
+        <Image src="/contacts/dropline.svg" alt="contact" className="w-full hidden lg:block max-w-[435px] h-[481px]" />
       </div>
       <Form buttonLabel="Send message" buttonClasses="w-[300px]" className="w-full max-w-[705px] flex flex-col gap-x-4  gap-y-6 justify-between" onSubmit={handleSubmit(onSubmit)}>
-        <div className=" w-full flex justify-between items-center">
+        <div className=" w-full flex flex-col md:flex-row gap-y-4 md:gap-y-0 justify-between items-center">
           <Input
             className="w-full max-w-[344px] border-white rounded text-gray600"
             name="firstName"
@@ -88,7 +88,7 @@ export const ContactForm = () => {
             type="text"
           />
         </div>
-        <div className=" w-full flex justify-between items-center">
+        <div className=" w-full flex flex-col md:flex-row gap-y-4 md:gap-y-0 justify-between items-center">
           <Input
             className="w-full border-white max-w-[344px] rounded text-gray600"
             name="email"

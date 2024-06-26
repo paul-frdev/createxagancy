@@ -22,7 +22,7 @@ export const Posts: React.FC<PostsProps> = ({ items }) => {
               Latest posts
             </Heading>
           </div>
-          <Button sizeCss="lg">Go to blog</Button>
+          <Button href='/blog' sizeCss="lg">Go to blog</Button>
         </div>
         <div className="flex flex-col xl:flex-row  gap-x-4 flex-nowrap xl:flex-wrap gap-y-4 justify-between items-center xl:items-start">
           {items.map((item) => (
