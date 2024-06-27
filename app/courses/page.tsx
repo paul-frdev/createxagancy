@@ -5,6 +5,12 @@ import { Certificate } from '../ui/Certificate';
 import { Reviews } from '../ui/Reviews';
 import { Subscribe } from '../ui/Subscribe';
 import { CourseList } from '../ui/courses/CourseList';
+import { Typography } from '../ui/elements/Typography';
+import { Heading } from '../ui/elements/Heading';
+import { Container } from '../ui/elements/Container';
+import { Suspense } from 'react';
+import { CategorySkeleton } from '../ui/skeletons/CategorySkeleton';
+import CategoryClientPage from '../ui/CategoryClientPage';
 
 export const metadata: Metadata = {
   title: 'Courses',
@@ -26,11 +32,31 @@ const CoursesPage = async ({
 
   const allCourses = await getAllCourses(limit.toString(), filter, query);
   const reviews = await getReviews();
-  const quantity = await countCourses();
+  const quantity = await countCourses()
+
+
+  let counts: { [label: string]: number; id: number } = { id: 0 };
+  quantity.forEach((course, index) => {
+    counts[course.label] = counts[course.label] ? counts[course.label] + 1 : 1;
+    counts.id = index + 1;
+  });
 
   return (
     <>
-      <CourseList quantityCourses={quantity!} allCourses={allCourses} />
+      <section className="w-full my-[5rem]">
+        <Typography className="text-center text-gray900">Enjoy your studying!</Typography>
+        <Heading variant="h3" className="text-center text-[2.875rem] font-lato font-black leading-[130%] text-gray900">
+          Our online courses
+        </Heading>
+        <Container>
+          <div className="flex flex-col gap-y-6 lg:flex-row justify-start gap-x-3 lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem]">
+            <Suspense key={searchParams.filter} fallback={<CategorySkeleton counts={counts} />} >
+              <CategoryClientPage />
+            </Suspense>
+          </div>
+          <CourseList allCourses={allCourses} />
+        </Container>
+      </section>
       <Reviews items={reviews} className="px-0 sm:px-4 pt-[5rem]" />
       <Certificate />
       <Subscribe />

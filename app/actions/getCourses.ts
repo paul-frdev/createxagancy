@@ -37,8 +37,8 @@ export async function getCourses(query: string) {
 
 export async function getAllCourses(limit: string, filter: string, query: string) {
   let count: any = parseInt(limit as any);
-  console.log('Fetching revenue data...');
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  // console.log('Fetching revenue data...');
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
 
   try {
     noStore();
@@ -71,7 +71,11 @@ export async function getAllCourses(limit: string, filter: string, query: string
 }
 
 export async function countCourses() {
+  // console.log('Fetching revenue data...');
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
+
   try {
+    noStore();
     const countCourses = await prisma.course.findMany({
       select: {
         id: true,

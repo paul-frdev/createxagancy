@@ -2,26 +2,33 @@
 
 import { Category } from './Category';
 import { cn } from '@/app/lib/utils';
+import { useQueryParams } from '@/hooks/useQueryParams';
 import { useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 type CategoriesProps = {
   categories?: { [label: string]: number };
   categoryTitle?: { id: number; title: string; icon?: React.ElementType; }[];
+  allCourses: { id: number; label: string }[];
   quantityCourses?: number;
   filterItems?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
 };
 
 
-export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCourses, categoryTitle, filterItems, className }) => {
+export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCourses, categoryTitle, allCourses, filterItems, className }) => {
   const [activeCategory, setActiveCategory] = useState<string>('');
+  const [labelCounts, setLabelCounts] = useState<{ [label: string]: number }>({});
+  const { setQueryParams } = useQueryParams();
 
   const params = useSearchParams();
+
   const title = params.get('filter')
 
   const handleOnclick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    filterItems(event);
+    const element = event.target as HTMLButtonElement;
+    const newCategory = element.value;
+    setQueryParams('filter', newCategory);
   };
 
   useEffect(() => {
@@ -30,12 +37,21 @@ export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCour
     } else {
       setActiveCategory('All')
     }
-  }, [title])
+  }, [title]);
+
+  useEffect(() => {
+    let counts: { [label: string]: number; id: number } = { id: 0 };
+    allCourses.forEach((course, index) => {
+      counts[course.label] = counts[course.label] ? counts[course.label] + 1 : 1;
+      counts.id = index + 1;
+    });
+    setLabelCounts(counts);
+  }, []);
 
   return (
     <div className={cn(`flex w-full max-w-[815px] justify-between items-center`, className)}>
       {categoryTitle.map((item, index) => {
-        const quantity = categories ? Object.entries(categories).map(([key, value]) => item.title === key && value) : null;
+        const quantity = labelCounts ? Object.entries(labelCounts).map(([key, value]) => item.title === key && value) : null;
         const active = item.title === activeCategory;
         return (
           <Category
@@ -46,7 +62,7 @@ export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCour
             key={item.id}
             title={item.title}
             quantity={quantity as any}
-            allItemsQuantity={quantityCourses}
+            allItemsQuantity={allCourses.length}
           />
         );
       })}
