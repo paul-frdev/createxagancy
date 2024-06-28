@@ -1,5 +1,6 @@
 'use client';
 
+import { useQueryParams } from '@/hooks/useQueryParams';
 import { Button } from './elements/Button';
 import { CourseType } from '@/types/courses';
 import ClearIcon from '@mui/icons-material/Clear';
@@ -12,10 +13,8 @@ import * as React from 'react';
 
 type SearchProps = {
   items?: CourseType[];
-  handleSearchInputChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
   className?: string;
-  searchParams?: string;
 };
 
 const style = {
@@ -30,16 +29,25 @@ const style = {
   },
 };
 
-export const Search: React.FC<SearchProps> = ({ items, searchParams, handleSearchInputChange, className, label = 'Search...' }) => {
-  const [value, setValue] = React.useState('');
+export const Search: React.FC<SearchProps> = ({ items, className, label = 'Search...' }) => {
+  const { handleSearchInputChange, searchParams } = useQueryParams()
+  const [inputValue, setInputValue] = React.useState(searchParams.get('query')?.toString() || '');
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = event.target.value;
+    setInputValue(newValue);
+    handleSearchInputChange(event);
+  };
 
   return (
     <Stack spacing={2} className={className}>
       <Autocomplete
         freeSolo
-        options={items}
+        options={items || []}
+        inputValue={inputValue}
         id="free-solo-2-demo"
         disableClearable={true}
+        onInputChange={(_, newInputValue) => setInputValue(newInputValue)}
         renderOption={(props, option) => (
           <li {...props} key={option.id}>
             {option.label}
@@ -52,8 +60,7 @@ export const Search: React.FC<SearchProps> = ({ items, searchParams, handleSearc
             <TextField
               {...params}
               sx={style}
-              defaultValue={searchParams}
-              onChange={handleSearchInputChange}
+              onChange={handleInputChange}
               label={label}
               InputProps={{
                 ...params.InputProps,

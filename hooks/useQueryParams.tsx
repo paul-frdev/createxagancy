@@ -1,5 +1,6 @@
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useMemo } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
 
 export function useQueryParams<T>() {
   const router = useRouter();
@@ -14,6 +15,11 @@ export function useQueryParams<T>() {
     return params as T;
   }, [searchParams]);
 
+  const handleSearchInputChange = useDebouncedCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const term = event.target.value;
+    setQueryParams('query', term);
+  }, 500);
+
   const setQueryParams = (key: string, value: string) => {
     const params = new URLSearchParams(searchParams);
 
@@ -26,5 +32,5 @@ export function useQueryParams<T>() {
     router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
-  return { queryParams, setQueryParams };
+  return { queryParams, setQueryParams, handleSearchInputChange, searchParams };
 }

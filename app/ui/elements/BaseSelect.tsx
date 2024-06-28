@@ -2,19 +2,19 @@
 
 import { Typography } from './Typography';
 import { cn } from '@/app/lib/utils';
+import { useQueryParams } from '@/hooks/useQueryParams';
 import { createTheme } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 type BaseSelectProps = {
   text?: string;
   className?: string;
   items: React.ReactNode[];
   description?: string;
-  setQuery: (event: string) => void;
 };
 
 const ITEM_HEIGHT = 48;
@@ -30,13 +30,18 @@ const MenuProps = {
 
 const theme = createTheme({});
 
-export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, items, description, setQuery }) => {
+export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, items, description }) => {
   const [value, setValue] = useState('');
+  const { setQueryParams } = useQueryParams()
 
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value);
-    setQuery(event.target.value);
+    setQueryParams('type', event.target.value)
   };
+
+  useEffect(() => {
+    setQueryParams('type', 'All')
+  }, [])
 
   return (
     <div className={cn(`flex justify-center items-center gap-x-2`, className)}>

@@ -10,7 +10,10 @@ import { Heading } from '../ui/elements/Heading';
 import { Container } from '../ui/elements/Container';
 import { Suspense } from 'react';
 import { CategorySkeleton } from '../ui/skeletons/CategorySkeleton';
-import CategoryClientPage from '../ui/CategoryClientPage';
+import CategoryClientPage from '../ui/courses/CategoryClientPage';
+import { Search } from '../ui/Search';
+import CourseListClient from '../ui/courses/CourseListClient';
+import { CardSkeleton } from '../ui/skeletons/CardSkeleton';
 
 export const metadata: Metadata = {
   title: 'Courses',
@@ -41,6 +44,8 @@ const CoursesPage = async ({
     counts.id = index + 1;
   });
 
+  const isKeyCourseList = searchParams.filter || searchParams.query || searchParams.limit
+
   return (
     <>
       <section className="w-full my-[5rem]">
@@ -49,12 +54,19 @@ const CoursesPage = async ({
           Our online courses
         </Heading>
         <Container>
-          <div className="flex flex-col gap-y-6 lg:flex-row justify-start gap-x-3 lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem]">
+          <div className="flex h-[47.60px] flex-col gap-y-6 lg:flex-row justify-start gap-x-3 lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem]">
             <Suspense key={searchParams.filter} fallback={<CategorySkeleton counts={counts} />} >
               <CategoryClientPage />
             </Suspense>
+            <Search
+              className="w-full max-w-[450px] lg:max-w-[350px] "
+              label="Search course..."
+              items={allCourses}
+            />
           </div>
-          <CourseList allCourses={allCourses} />
+          <Suspense key={isKeyCourseList} fallback={<CardSkeleton allCourses={allCourses} />}>
+            <CourseListClient limit={limit!.toString()} filter={filter} query={query} />
+          </Suspense>
         </Container>
       </section>
       <Reviews items={reviews} className="px-0 sm:px-4 pt-[5rem]" />

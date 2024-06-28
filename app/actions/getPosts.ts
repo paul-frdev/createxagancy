@@ -61,7 +61,6 @@ export async function filterPosts(limit: string, filter: string, query: string, 
   }
 
   try {
-
     const filterPosts = await prisma.post.findMany({
       where: {
         AND: [
@@ -133,5 +132,20 @@ export async function fetchPostsPages(filter: string, query: string, type: strin
     const totalPages = Math.ceil(count);
 
     return totalPages;
+  } catch (error) {}
+}
+
+export async function countPosts() {
+
+  try {
+    noStore();
+    const countPosts = await prisma.post.findMany({
+      select: {
+        id: true,
+        type: true,
+      },
+    });
+
+    return countPosts;
   } catch (error) {}
 }

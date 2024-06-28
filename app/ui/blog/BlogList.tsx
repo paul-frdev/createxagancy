@@ -1,21 +1,15 @@
 'use client'
 
-import React, { useCallback, useEffect, useState } from 'react'
-import { Container } from '../elements/Container'
-import { Head } from '../Head'
+import React, { useEffect } from 'react'
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
-import { Categories } from '../Categories';
 import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
 import MicNoneOutlinedIcon from '@mui/icons-material/MicNoneOutlined';
-import { BaseSelect } from '../elements/BaseSelect';
-import { Search } from '../Search';
-import { categoryItems } from '@/constants';
 import { PostType } from '@/types';
 import { PostItem } from '../posts/PostItem';
 import { Pagination } from '../pagination/Pagination';
 
-const blogCategoryTitle = [
+export const blogCategoryTitle = [
   {
     id: 1,
     title: 'All',
@@ -43,9 +37,6 @@ type BlogListProps = {
 }
 const BlogList: React.FC<BlogListProps> = ({ posts, totalPages }) => {
 
-  const [type, setType] = useState('All')
-  const [filter, setFilter] = useState('All')
-
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const params = new URLSearchParams(searchParams);
@@ -58,17 +49,9 @@ const BlogList: React.FC<BlogListProps> = ({ posts, totalPages }) => {
   };
 
   useEffect(() => {
-    setParams('type', type);
-    setParams('filter', filter);
     setParams('page', '1');
     replace(`${pathname}?${params.toString()}`);
-  }, [filter, type]);
-
-  const filterItems = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    const element = event.target as HTMLButtonElement;
-    setFilter(element.value as any);
-  }
+  }, []);
 
   const createPageURL = (pageNumber: number | string) => {
     params.set('page', pageNumber.toString());
@@ -76,22 +59,14 @@ const BlogList: React.FC<BlogListProps> = ({ posts, totalPages }) => {
   }
 
   return (
-    <section className='w-full my-5 xmd:my-10 '>
-      <Container className='py-5 xmd:py-10'>
-        <Head text='Our blog' title='Createx School Journal' />
-        <div className='flex justify-between w-full max-w-[90%] items-center mb-10'>
-          <Categories className=' hidden md:flex justify-start xmd:gap-x-12 w-fit' filterItems={filterItems} categoryTitle={blogCategoryTitle} />
-          <BaseSelect items={categoryItems} setQuery={setType} />
-          {/* <Search /> */}
-        </div>
-        <div className=' grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 max-w-fit mx-auto gap-x-6 gap-y-4 mb-12'>
-          {posts.map(post => (
-            <PostItem key={post.id} post={post} />
-          ))}
-        </div>
-        <Pagination currentPage={searchParams.get('page')} createPageURL={createPageURL} totalPages={totalPages} />
-      </Container>
-    </section>
+    < >
+      <div className=' grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 max-w-fit mx-auto gap-x-6 gap-y-4 my-10'>
+        {posts.map(post => (
+          <PostItem key={post.id} post={post} />
+        ))}
+      </div>
+      <Pagination currentPage={searchParams.get('page')} createPageURL={createPageURL} totalPages={totalPages} />
+    </>
   )
 }
 

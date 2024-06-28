@@ -1,8 +1,14 @@
 import React, { Suspense } from 'react'
-import { fetchPostsPages, filterPosts, getPosts } from '../actions/getPosts'
+import { countPosts, fetchPostsPages, filterPosts, getPosts } from '../actions/getPosts'
 import { SubscribeItem } from '../ui/SubscribeItem'
 import BlogList from '../ui/blog/BlogList'
 import { Metadata } from 'next';
+import { Container } from '../ui/elements/Container';
+import { Head } from '../ui/Head';
+import { CategorySkeleton } from '../ui/skeletons/CategorySkeleton';
+import ClientCategoriesBlog from '../ui/blog/ClientCategoriesBlog';
+import { BaseSelect } from '../ui/elements/BaseSelect';
+import { categoryItems } from '@/constants';
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -30,14 +36,30 @@ const BlogPage = async ({
 
   const posts = await filterPosts(limit, filter, query, page, type)
   const pages = await fetchPostsPages(filter, query, type)
+  const getPosts = await countPosts()
 
   const countTotalPages = Math.round(pages / +limit);
 
+  let counts: { [label: string]: number; id: number } = { id: 0 };
+  getPosts.forEach((post, index) => {
+    counts[post.type] = counts[post.type] ? counts[post.type] + 1 : 1;
+    counts.id = index + 1;
+  });
+
   return (
     <>
-      <Suspense>
-        <BlogList posts={posts} totalPages={countTotalPages} />
-      </Suspense>
+      <section className='w-full my-5 xmd:my-10'>
+        <Container className='py-5 xmd:py-10'>
+          <Head text='Our blog' title='Createx School Journal' />
+          <div className='flex justify-between w-full max-w-[90%] h-[56px] items-center'>
+            <Suspense key={searchParams.filter} fallback={<CategorySkeleton maxWidth='480px' counts={counts} />}>
+              <ClientCategoriesBlog filter={filter} type={type} query={query} />
+            </Suspense>
+            <BaseSelect items={categoryItems} />
+          </div>
+          <BlogList posts={posts} totalPages={countTotalPages} />
+        </Container>
+      </section>
       <SubscribeItem
         src='/blog/articles.svg'
         color='bg-gray200'

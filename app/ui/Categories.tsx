@@ -9,17 +9,18 @@ import React, { useEffect, useState } from 'react';
 type CategoriesProps = {
   categories?: { [label: string]: number };
   categoryTitle?: { id: number; title: string; icon?: React.ElementType; }[];
-  allCourses: { id: number; label: string }[];
+  allItems?: { id: number; label: string }[];
   quantityCourses?: number;
   filterItems?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
 };
 
 
-export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCourses, categoryTitle, allCourses, filterItems, className }) => {
+export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCourses, categoryTitle, allItems, filterItems, className }) => {
   const [activeCategory, setActiveCategory] = useState<string>('');
   const [labelCounts, setLabelCounts] = useState<{ [label: string]: number }>({});
   const { setQueryParams } = useQueryParams();
+
 
   const params = useSearchParams();
 
@@ -39,9 +40,10 @@ export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCour
     }
   }, [title]);
 
+
   useEffect(() => {
     let counts: { [label: string]: number; id: number } = { id: 0 };
-    allCourses.forEach((course, index) => {
+    allItems?.forEach((course, index) => {
       counts[course.label] = counts[course.label] ? counts[course.label] + 1 : 1;
       counts.id = index + 1;
     });
@@ -62,7 +64,7 @@ export const Categories: React.FC<CategoriesProps> = ({ categories, quantityCour
             key={item.id}
             title={item.title}
             quantity={quantity as any}
-            allItemsQuantity={allCourses.length}
+            allItemsQuantity={allItems?.length}
           />
         );
       })}
