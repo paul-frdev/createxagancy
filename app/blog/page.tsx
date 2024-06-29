@@ -55,7 +55,7 @@ const BlogPage = async ({
             <Suspense key={searchParams.filter} fallback={<CategorySkeleton maxWidth='480px' counts={counts} />}>
               <ClientCategoriesBlog filter={filter} type={type} query={query} />
             </Suspense>
-            <BaseSelect items={categoryItems} />
+            <BaseSelect query='type' items={categoryItems} />
           </div>
           <BlogList posts={posts} totalPages={countTotalPages} />
         </Container>

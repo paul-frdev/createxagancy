@@ -15,6 +15,7 @@ type BaseSelectProps = {
   className?: string;
   items: React.ReactNode[];
   description?: string;
+  query: string;
 };
 
 const ITEM_HEIGHT = 48;
@@ -30,17 +31,21 @@ const MenuProps = {
 
 const theme = createTheme({});
 
-export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, items, description }) => {
+export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, items, description, query }) => {
   const [value, setValue] = useState('');
   const { setQueryParams } = useQueryParams()
 
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value);
-    setQueryParams('type', event.target.value)
+    setQueryParams(query, event.target.value)
   };
 
   useEffect(() => {
-    setQueryParams('type', 'All')
+    if (query === 'count') {
+      setQueryParams(query, '6')
+    } else {
+      setQueryParams(query, 'All')
+    }
   }, [])
 
   return (

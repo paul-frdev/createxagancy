@@ -18,9 +18,6 @@ type EventListProps = {
 };
 export const EventList: React.FC<EventListProps> = ({ events, totalPages }) => {
   const [styled, setStyled] = useState('flex');
-  const [topic, setTopic] = useState('all');
-  const [sort, setSort] = useState('newest');
-  const [count, setCount] = useState('6');
 
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -35,12 +32,9 @@ export const EventList: React.FC<EventListProps> = ({ events, totalPages }) => {
   };
 
   useEffect(() => {
-    setParams('limit', count);
-    setParams('topic', topic);
-    setParams('filter', sort);
     setParams('page', '1');
     replace(`${pathname}?${params.toString()}`);
-  }, [count, topic, sort]);
+  }, []);
 
   const createPageURL = (pageNumber: number | string) => {
     params.set('page', pageNumber.toString());
@@ -57,7 +51,7 @@ export const EventList: React.FC<EventListProps> = ({ events, totalPages }) => {
               Lectures, workshops & master-classes
             </Heading>
           </div>
-          <Filters setCount={setCount} setTopic={setTopic} setSort={setSort} styled={styled} setStyled={setStyled} />
+          <Filters styled={styled} setStyled={setStyled} />
           <div className={cn(``, styled === 'flex' ? flexStyles : gridStyles)}>
             {events.map((event) => (
               <EventItem key={event.id} event={event} style={styled} />
