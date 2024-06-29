@@ -30,10 +30,6 @@ export default async function Home({
 
   const countTotalPages = Math.round(pages / +limit);
 
-  console.log('filter', filter);
-  
-  // console.log(events);
-  
   return (
     <>
       <EventList events={events} totalPages={countTotalPages} />

@@ -3,13 +3,13 @@ import { Skeleton } from '@mui/material';
 import React from 'react'
 
 type SkeletonProps = {
-  allCourses: CourseType[];
+  items: any[];
 };
-export const CardSkeleton = ({ allCourses }: SkeletonProps) => {
+export const CardSkeleton = ({ items }: SkeletonProps) => {
   return (
-    <div className='grid grid-cols-1 h-auto items-start  sm:grid-cols-2 lg:grid-cols-3 max-w-fit lg:max-w-full mx-auto  gap-[1.875rem]' >
-      {allCourses.map((item, index) => (
-        <Skeleton animation='wave' height={444} key={item.id} className=' rounded w-full max-w-[390px]'  variant="rectangular"/>
+    <div className='grid grid-cols-1 h-auto items-start  sm:grid-cols-2 lg:grid-cols-3 max-w-fit lg:max-w-full mx-auto  gap-[1.875rem] my-10' >
+      {items.map((_, index) => (
+        <Skeleton animation='wave' height={444} key={index} className=' rounded w-full max-w-[390px]' variant="rectangular" />
       ))}
     </div>
   )

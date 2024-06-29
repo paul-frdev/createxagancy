@@ -54,7 +54,7 @@ const CoursesPage = async ({
           Our online courses
         </Heading>
         <Container>
-          <div className="flex h-[47.60px] flex-col gap-y-6 lg:flex-row justify-start gap-x-3 lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem]">
+          <div className="flex h-[47.60px] flex-col gap-y-6 lg:flex-row justify-start gap-x-3 lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem] px-1">
             <Suspense key={searchParams.filter} fallback={<CategorySkeleton counts={counts} />} >
               <CategoryClientPage />
             </Suspense>
@@ -64,7 +64,7 @@ const CoursesPage = async ({
               items={allCourses}
             />
           </div>
-          <Suspense key={isKeyCourseList} fallback={<CardSkeleton allCourses={allCourses} />}>
+          <Suspense key={isKeyCourseList} fallback={<CardSkeleton items={allCourses} />}>
             <CourseListClient limit={limit!.toString()} filter={filter} query={query} />
           </Suspense>
         </Container>
