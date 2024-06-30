@@ -11,7 +11,7 @@ import React from 'react';
 
 export const Statistics = () => {
   return (
-    <section className="w-full bg-lightOrange bg-opacity-[0.2] pt-[0.5rem] h-screen">
+    <section className="w-full bg-gradient-to-r from-[rgba(255,63,58,.2)_0%] to-[rgba(247,94,5,.2)_100%] pt-[0.5rem] h-screen">
       <Container>
         <div className=" flex justify-between pt-[2rem] md:pt-[6em]">
           <div>
@@ -24,10 +24,10 @@ export const Statistics = () => {
                 Enjoy studying with Createx Online Courses
               </Heading>
               <div className="flex flex-col sm:flex-row gap-y-3 sm:gap-y-0 justify-center md:justify-start items-center gap-x-[1.5em]">
-                <Button href='/about' variantCss="outline" className="bg-[#ffe0d3]">
+                <Button href='/about' variantCss="outline" className="bg-[#ffe0d9]">
                   About us
                 </Button>
-                <Button href='/courses' sizeCss="lg" className="hover:bg-[#ffe0d3] border-transparent text-nowrap hover:border-orange">
+                <Button href='/courses' sizeCss="lg" className="hover:bg-[#ffe0d8] border-transparent text-nowrap hover:border-orange">
                   Explore courses
                 </Button>
               </div>

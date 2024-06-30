@@ -6,7 +6,7 @@ import React from 'react';
 
 export const Subscribe = () => {
   return (
-    <section className="w-full bg-orange02 relative pt-[3.5rem] sm:pt-24 pb-[16rem]">
+    <section className="w-full bg-gradient-to-r from-[rgba(255,63,58,.2)_0%] to-[rgba(247,94,5,.2)_100%] relative pt-[3.5rem] sm:pt-24 pb-[16rem]">
       <span className=" bg-illustration1 absolute bottom-0 xsm:left-[115px] sm:left-0 w-[320px] xsm:w-[354px] h-[230px] xsm:h-[246px] bg-no-repeat bg-cover" />
       <span className=" hidden  sm:block bg-illustration1 absolute bottom-0 right-0 w-[354px] h-[246px] bg-no-repeat bg-cover" />
       <Container>

@@ -46,7 +46,7 @@ export const DiscountForm = () => {
 
   return (
     <section className="w-full mb-32">
-      <Container className="bg-orange02 rounded py-12 px-[1rem] xsm:px-[2.5rem] lg:px-[3.75rem]">
+      <Container className="bg-gradient-to-r from-[rgba(255,63,58,.2)_0%] to-[rgba(247,94,5,.2)_100%] rounded py-12 px-[1rem] xsm:px-[2.5rem] lg:px-[3.75rem]">
         <Stack className="flex flex-col md:flex-row w-full flex-row justify-between items-center mb-8">
           <Heading variant="h4" className="text-[1.6rem] sm:text-[2rem] text-center md:text-left">
             20% discount for early birds!
@@ -57,7 +57,7 @@ export const DiscountForm = () => {
           className="flex-col md:flex-row gap-y-8 md:gap-y-0 items-center"
           buttonLabel="Join the course"
           onSubmit={handleSubmit(onSubmit)}
-          buttonClasses="text-nowrap py-[0.55rem] w-[292px] md:w-full md:max-w-[192.5px]"
+          buttonClasses="text-nowrap py-[0.55rem] w-[292px] md:w-full md:max-w-[192.5px] hover:bg-transparent"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-x-2 gap-y-4 md:gap-y-0 w-full">
             <Input

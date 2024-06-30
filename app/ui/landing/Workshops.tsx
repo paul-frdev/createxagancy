@@ -11,7 +11,7 @@ type WorkshopsProps = {
 };
 export const Workshops: React.FC<WorkshopsProps> = ({ workshops }) => {
   return (
-    <section className="my-8 w-full relative bg-orange02 pt-10 mb-8">
+    <section className="my-8 w-full relative bg-gradient-to-r from-[rgba(255,63,58,.2)_0%] to-[rgba(247,94,5,.2)_100%] pt-10 mb-8">
       <Container className="mb-16">
         <div className="flex flex-col justify-center items-center">
           <Typography>Our Events</Typography>

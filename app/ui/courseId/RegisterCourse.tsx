@@ -11,7 +11,7 @@ export const RegisterCourse = () => {
         <div className="w-full  max-w-[550px] order-2">
           <Image className="w-full max-w-[550px]" src={register} alt="learn" />
         </div>
-        <RegisterForm className="order-1" />
+        <RegisterForm className="order-1" classesBtn='hover:bg-transparent' />
       </Container>
     </section>
   );

@@ -18,6 +18,7 @@ type PostItemProps = {
 export const PostItem: React.FC<PostItemProps> = ({ post, className, classContainer, classImage }) => {
   const labels = post.labels;
   const checkedType = post.type === 'Podcast' ? 'Listen' : post.type === 'Video' ? 'Watch' : post.type === 'Article' ? 'Read' : 'Read';
+
   return (
     <Card classname={cn(`p-0 w-full max-w-[390px]`, className)}>
       <div className={cn(`w-full flex flex-col justify-between`, classContainer)}>

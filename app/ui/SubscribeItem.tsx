@@ -29,7 +29,7 @@ export const SubscribeItem: React.FC<SubscribeItemProps> = ({ className, color =
           <Heading className=" text-[1.6rem] xsm:text-[2rem] text-center lg:text-left" variant="h3">
             {title}
           </Heading>
-          <SubscribeForm isCheckBox={true} className="mx-0" buttonClasses="w-full" inputStyles={{ width: '100%' }} classInput="max-w-full" />
+          <SubscribeForm isCheckBox={true} className="mx-0" buttonClasses="w-full hover:bg-transparent" inputStyles={{ width: '100%' }} classInput="max-w-full" />
         </div>
       </Container>
     </section>

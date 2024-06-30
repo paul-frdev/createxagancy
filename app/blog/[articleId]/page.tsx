@@ -4,6 +4,7 @@ import { AboutArticle } from '@/app/ui/blog/AboutArticle';
 import React from 'react';
 import { parse } from 'date-fns';
 import { Metadata } from 'next';
+import { MayLikeCarousel } from '@/app/ui/blog/MayLikeCarousel';
 
 
 
@@ -32,7 +33,7 @@ const CoursePage = async ({ params }: { params: { articleId: string } }) => {
     <>
       <AboutArticle post={formattedPost} trendingPosts={trendingPosts} />
       <SubscribeItem src='/blog/articles.svg' color='bg-gray200' className=' flex-col lg:flex-row gap-y-6 lg:gap-y-0' />
-      {/* <MayLikeCarousel items={postsCarousel} /> */}
+      <MayLikeCarousel items={postsCarousel} />
     </>
   );
 };

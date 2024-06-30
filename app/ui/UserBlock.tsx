@@ -20,7 +20,7 @@ export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }
   const [openSignUp, setOpenSignUp] = React.useState(false);
   const [openLogin, setOpenLogin] = React.useState(false);
 
-  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog' || pathname === `/blog/${params.articleId}`;
+  const bgWhite = pathname === '/contacts' || pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog' || pathname === `/blog/${params.articleId}`;
 
   const handleClickOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -42,10 +42,10 @@ export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }
     <div className={cn(`hidden justify-end items-end lg:items-center gap-y-2`, className)}>
       <Button
         sizeCss="lg"
+        variantCss='bg'
         className={cn(
-          `text-nowrap border-transparent hover:border-orange transform-none py-0 h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`,
-          buttonClasses,
-          bgWhite ? 'hover:bg-transparent' : 'hover:bg-orange02'
+          `py-0 h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`,
+          bgWhite && 'hover:bg-transparent'
         )}
       >
         Get consultation

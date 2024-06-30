@@ -87,6 +87,9 @@ export async function filterPosts(limit: string, filter: string, query: string, 
           },
         ],
       },
+      include: {
+        labels: true,
+      },
       take: count,
       skip: (pageNumber - 1) * count,
     });
@@ -136,7 +139,6 @@ export async function fetchPostsPages(filter: string, query: string, type: strin
 }
 
 export async function countPosts() {
-
   try {
     noStore();
     const countPosts = await prisma.post.findMany({

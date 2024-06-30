@@ -9,6 +9,7 @@ const variantCss = {
   secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
   ghost: 'bg-gray text-black hover:bg-white hover:border hover:border-solid hover:border-gray',
   link: 'text-primary underline-offset-4 hover:underline',
+  bg: 'transition-all duration-300 bg-[#fc4b24] hover:bg-[#ffded6] text-nowrap border border-solid border-transparent hover:border-orange hover:text-orange'
 };
 
 const sizeCss = {
