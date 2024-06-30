@@ -4,7 +4,6 @@ import { getReviews } from '../actions/getReviews';
 import { Certificate } from '../ui/Certificate';
 import { Reviews } from '../ui/Reviews';
 import { Subscribe } from '../ui/Subscribe';
-import { CourseList } from '../ui/courses/CourseList';
 import { Typography } from '../ui/elements/Typography';
 import { Heading } from '../ui/elements/Heading';
 import { Container } from '../ui/elements/Container';
@@ -44,7 +43,7 @@ const CoursesPage = async ({
     counts.id = index + 1;
   });
 
-  const isKeyCourseList = searchParams.filter || searchParams.query || searchParams.limit
+  const isKey = `${filter}-${query}-${limit}`
 
   return (
     <>
@@ -64,7 +63,7 @@ const CoursesPage = async ({
               items={allCourses}
             />
           </div>
-          <Suspense key={isKeyCourseList} fallback={<CardSkeleton items={allCourses} />}>
+          <Suspense key={isKey} fallback={<CardSkeleton items={allCourses} />}>
             <CourseListClient limit={limit!.toString()} filter={filter} query={query} />
           </Suspense>
         </Container>

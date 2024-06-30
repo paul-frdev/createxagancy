@@ -9,10 +9,10 @@ import React from 'react';
 
 type EventItemProps = {
   event: WorkshopPreview;
-  style: string;
   className?: string;
+  listStyle?: string
 };
-export const EventItem: React.FC<EventItemProps> = ({ event, style, className }) => {
+export const EventItem: React.FC<EventItemProps> = ({ event, className, listStyle }) => {
   const pathname = usePathname();
   const params = useParams()
 
@@ -26,22 +26,22 @@ export const EventItem: React.FC<EventItemProps> = ({ event, style, className })
     <div
       className={cn(
         `w-full h-auto bg-white rounded mb-6 gap-x-[1.5rem] border hover:shadow-eventShadow border-solid border-gray300 transition duration-300`,
-        style === 'flex' ? 'flex flex-col justify-between items-center sm:flex-row py-4  px-6 last:mb-10' : `flex justify-between items-center sm:items-start flex-col max-w-[390px] pt-4 pb-6 mb-0`,
+        listStyle === 'flex' ? 'flex flex-col justify-between items-center sm:flex-row py-4  px-6 last:mb-10' : `flex justify-between items-center sm:items-start flex-col max-w-[390px] pt-4 pb-6 mb-0`,
       )}
     >
-      <div className={cn(`flex gap-x-[1.25rem]`, className, style === 'flex' ? 'flex-row items-center' : 'flex-row sm:flex-col items-start px-4')}>
+      <div className={cn(`flex gap-x-[1.25rem]`, className, listStyle === 'flex' ? 'flex-row items-center' : 'flex-row sm:flex-col items-start px-4')}>
         <span className="text-[3rem] text-primary font-lato font-black">{day}</span>
-        <div className={cn(`flex`, style === 'flex' ? 'flex-row sm:flex-col gap-x-1 sm:gap-x-0 sm:gap-y-[5px] justify-start items-end sm:items-start' : 'flex-col gap-y-[5px] justify-start items-start')}>
+        <div className={cn(`flex`, listStyle === 'flex' ? 'flex-row sm:flex-col gap-x-1 sm:gap-x-0 sm:gap-y-[5px] justify-start items-end sm:items-start' : 'flex-col gap-y-[5px] justify-start items-start')}>
           <span className=" text-[1.25rem] text-gray900 font-lato font-bold leading-[150%]">{month}</span>
           <span className="text-base font-latoRegular font-[400] leading-[160%] text-nowrap">{time}</span>
         </div>
       </div>
-      <div className="flex flex-col justify-start items-start max-w-[390px] my-4 px-4">
+      <div className="flex flex-col justify-start items-start w-full max-w-[390px] my-4 px-4">
         <Heading variant='h4' className={cn(`leading-[150%] text-[1.125rem] mb-4 text-center sm:text-left`)}>{isEventId && event.title.length >= 80 ? event.title.slice(0, 60) + '...' : event.title}</Heading>
         <p className={cn(`text-base font-lato font-normal leading-[160%] text-center sm:text-left`)}>{event.type}</p>
       </div>
       <div className='flex justify-center items-center w-full'>
-        <Button href={`/events/${event.id}`} variantCss="outline" sizeCss="lg" className={cn(`text-nowrap text-sm w-full max-w-[260px]`, style === 'grid' ? 'w-full mt-auto' : '')}>
+        <Button href={`/events/${event.id}`} variantCss="outline" sizeCss="lg" className={cn(`text-nowrap text-sm w-full max-w-[260px]`, listStyle === 'grid' ? 'w-full mt-auto' : '')}>
           View more
         </Button>
       </div>

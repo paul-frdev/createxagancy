@@ -36,8 +36,7 @@ const BlogPage = async ({
   const type = searchParams.type || 'All'
 
   const getPosts = await countPosts();
-  const isKey = searchParams.filter || searchParams.limit || searchParams.query || searchParams.page || searchParams.type
-
+  const isKey = `${filter}-${limit}-${query}-${page}-${type}`
 
   let counts: { [label: string]: number; id: number } = { id: 0 };
   getPosts.forEach((post, index) => {

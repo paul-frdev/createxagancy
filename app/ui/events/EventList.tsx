@@ -1,23 +1,18 @@
 'use client';
 
-import { Filters } from '../Filters';
-import { Subscribe } from '../Subscribe';
-import { Container } from '../elements/Container';
-import { Heading } from '../elements/Heading';
-import { Typography } from '../elements/Typography';
 import { Pagination } from '../pagination/Pagination';
 import { EventItem } from './EventItem';
 import { cn } from '@/app/lib/utils';
 import { WorkshopPreview } from '@/types/workshop';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 type EventListProps = {
   events: WorkshopPreview[];
   totalPages: number;
+  listStyle?: string
 };
-export const EventList: React.FC<EventListProps> = ({ events, totalPages }) => {
-  const [styled, setStyled] = useState('flex');
+export const EventList: React.FC<EventListProps> = ({ events, totalPages, listStyle }) => {
 
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -43,24 +38,12 @@ export const EventList: React.FC<EventListProps> = ({ events, totalPages }) => {
 
   return (
     <>
-      <section className="w-full">
-        <Container className="pb-5 xsm:pb-12">
-          <div className="w-full my-10">
-            <Typography className="text-center mb-0">Our events</Typography>
-            <Heading variant="h3" className="text-center text-[2rem] xmd:text-[2.875rem]">
-              Lectures, workshops & master-classes
-            </Heading>
-          </div>
-          <Filters styled={styled} setStyled={setStyled} />
-          <div className={cn(``, styled === 'flex' ? flexStyles : gridStyles)}>
-            {events.map((event) => (
-              <EventItem key={event.id} event={event} style={styled} />
-            ))}
-          </div>
-          <Pagination currentPage={searchParams.get('page')} createPageURL={createPageURL} totalPages={totalPages} />
-        </Container>
-      </section>
-      <Subscribe />
+      <div className={cn(``, listStyle === 'flex' ? flexStyles : gridStyles)}>
+        {events.map((event) => (
+          <EventItem key={event.id} event={event} listStyle={listStyle} />
+        ))}
+      </div>
+      <Pagination currentPage={searchParams.get('page')} createPageURL={createPageURL} totalPages={totalPages} />
     </>
   );
 };

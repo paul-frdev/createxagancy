@@ -80,7 +80,7 @@ export async function filterEvents(limit: string, filter: string, topic: string,
       take: count,
       skip: (pageNumber - 1) * count,
       orderBy: {
-        date: filter === 'newest' ? 'asc' : 'desc',
+        date: filter === '' || filter === 'newest' ? 'asc' : 'desc',
       },
     });
 
