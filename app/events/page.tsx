@@ -42,20 +42,22 @@ export default async function Home({
 
 
   return (
-    <section className="w-full">
-      <Container className="pb-5 xsm:pb-12">
-        <div className="w-full my-10">
-          <Typography className="text-center mb-0">Our events</Typography>
-          <Heading variant="h3" className="text-center text-[2rem] xmd:text-[2.875rem]">
-            Lectures, workshops & master-classes
-          </Heading>
-        </div>
-        <Filters currentStyle={style} />
-        <Suspense key={isKey} fallback={style === 'flex' ? <EventFlexSkeleton items={events} /> : <CardSkeleton items={events} />}>
-          <EventListClient searchParams={{ filter, topic, limit, query, page, style }} />
-        </Suspense>
-      </Container>
+    <>
+      <section className="w-full">
+        <Container className="pb-5 xsm:pb-12">
+          <div className="w-full my-10">
+            <Typography className="text-center mb-0">Our events</Typography>
+            <Heading variant="h3" className="text-center text-[2rem] xmd:text-[2.875rem]">
+              Lectures, workshops & master-classes
+            </Heading>
+          </div>
+          <Filters currentStyle={style} />
+          <Suspense key={isKey} fallback={style === 'flex' ? <EventFlexSkeleton items={events} /> : <CardSkeleton items={events} />}>
+            <EventListClient searchParams={{ filter, topic, limit, query, page, style }} />
+          </Suspense>
+        </Container>
+      </section>
       <Subscribe />
-    </section>
+    </>
   );
 }

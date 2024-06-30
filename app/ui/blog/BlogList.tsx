@@ -37,27 +37,6 @@ type BlogListProps = {
 }
 const BlogList: React.FC<BlogListProps> = ({ posts, totalPages }) => {
 
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const params = new URLSearchParams(searchParams);
-  const { replace } = useRouter();
-
-  /* set query params */
-  const setParams = (key: string, value: string | number) => {
-    params.set(key, value.toString());
-    replace(`${pathname}?${params.toString()}`);
-  };
-
-  useEffect(() => {
-    setParams('page', '1');
-    replace(`${pathname}?${params.toString()}`);
-  }, []);
-
-  const createPageURL = (pageNumber: number | string) => {
-    params.set('page', pageNumber.toString());
-    return `${pathname}?${params.toString()}`
-  }
-
   return (
     < >
       <div className=' grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 max-w-fit mx-auto gap-x-6 gap-y-4 my-10'>
@@ -65,7 +44,7 @@ const BlogList: React.FC<BlogListProps> = ({ posts, totalPages }) => {
           <PostItem key={post.id} post={post} />
         ))}
       </div>
-      <Pagination currentPage={searchParams.get('page')} createPageURL={createPageURL} totalPages={totalPages} />
+      <Pagination  totalPages={totalPages} />
     </>
   )
 }

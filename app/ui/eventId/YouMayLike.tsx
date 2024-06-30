@@ -53,7 +53,7 @@ export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
     },
   };
 
-  const carouselItems = events.map((item) => <EventItem style="grid" key={item.id} event={item} />);
+  const carouselItems = events.map((item) => <EventItem listStyle="grid" key={item.id} event={item} />);
 
   return (
     <section className="w-full bg-[#f4f5f7] py-12 lg:py-24">
