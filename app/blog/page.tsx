@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { countPosts } from '../actions/getPosts'
+import { countPosts, filterPosts } from '../actions/getPosts'
 import { SubscribeItem } from '../ui/SubscribeItem'
 import { Metadata } from 'next';
 import { Container } from '../ui/elements/Container';
@@ -35,6 +35,7 @@ const BlogPage = async ({
   const page = searchParams.page || '1';
   const type = searchParams.type || 'All'
 
+  const posts = await filterPosts(limit, filter, query, page, type);
   const getPosts = await countPosts();
   const isKey = `${filter}-${limit}-${query}-${page}-${type}`
 
@@ -49,14 +50,16 @@ const BlogPage = async ({
       <section className='w-full my-5 xmd:my-10'>
         <Container className='py-5 xmd:py-10'>
           <Head text='Our blog' title='Createx School Journal' />
-          <div className='flex justify-between w-full h-[56px] items-center pr-3'>
-            <Suspense key={searchParams.filter} fallback={<CategorySkeleton maxWidth='480px' counts={counts} />}>
-              <ClientCategoriesBlog filter={filter} type={type} query={query} />
-            </Suspense>
-            <BaseSelect query='type' items={categoryItems} />
-            <Search className='w-[300px]' />
+          <div className='flex flex-col lg:flex-row justify-between w-full lg:h-[56px] items-start lg:items-center gap-y-4 lg:gap-y-0'>
+            <div className=' flex justify-start gap-x-4 items-center w-full'>
+              <Suspense key={searchParams.filter} fallback={<CategorySkeleton maxWidth='480px' counts={counts} />}>
+                <ClientCategoriesBlog filter={filter} type={type} query={query} />
+              </Suspense>
+              <BaseSelect query='type' items={categoryItems} />
+            </div>
+            <Search className='w-[380px]' />
           </div>
-          <Suspense key={isKey} fallback={<CardSkeleton items={getPosts} />}>
+          <Suspense key={isKey} fallback={<CardSkeleton items={posts} />}>
             <BlogListClient searchParams={{ query, filter, limit, page, type, }} />
           </Suspense>
         </Container>

@@ -13,16 +13,16 @@ export const CoursePreviewCard = ({ id, src, alt, label, colorLabel, text, price
             <Image src={src} alt={alt} className="max-w-[214px] h-[240px] rounded-tl rounded-bl" />
           </div>
           <div className="flex flex-col p-6 justify-start items-start p-2  gap-y-[1.25rem] w-full">
-            <span className=" text-sm font-latoRegular font-[400] text-white leading-[150%] py-[3px] px-2 rounded" style={{ backgroundColor: colorLabel }}>
+            <span className=" text-sm font-lato font-normal text-white leading-[150%] py-[3px] px-2 rounded" style={{ backgroundColor: colorLabel }}>
               {label}
             </span>
-            <p className="text-[1.25rem] text-center xsm:text-left font-latoBold font-[700] leading-[150%] text-green-900 text-nowrap">
+            <p className="text-[1.25rem] text-center xsm:text-left font-lato font-bold leading-[150%] text-green-900 text-nowrap">
               {text.length > 30 ? text.slice(0, 27) + '...' : text}
             </p>
             <div className="flex justify-start items-start gap-x-[4px]">
-              <span className="text-[1.125rem] font-latoBold font-[700] leading-[150%] text-danger">{price[0].value.slice(0, 4)}</span>
+              <span className="text-[1.125rem] font-lato font-bold leading-[150%] text-danger">{price[0].value.slice(0, 4)}</span>
               <span className="text-gray">|</span>
-              <span className="text-[1.125rem] font-latoRegular font-[400] leading-[150%] text-gray">{author}</span>
+              <span className="text-[1.125rem] font-lato font-normal leading-[150%] text-gray">{author}</span>
             </div>
           </div>
         </div>

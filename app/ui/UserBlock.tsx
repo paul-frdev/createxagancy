@@ -44,7 +44,7 @@ export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }
         sizeCss="lg"
         variantCss='bg'
         className={cn(
-          `py-0 h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`,
+          ` px-[1.5rem] xl:px-[2.5rem] py-[0.5rem] h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`,
           bgWhite && 'hover:bg-transparent'
         )}
       >

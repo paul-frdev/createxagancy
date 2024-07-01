@@ -25,7 +25,6 @@ interface TextInputProps {
   inputStyles?: React.CSSProperties;
   labelStyles?: React.CSSProperties;
   helperStyles?: React.CSSProperties;
-  isShrink?: boolean;
 }
 
 export const Input: React.FC<TextInputProps> = ({
@@ -37,7 +36,6 @@ export const Input: React.FC<TextInputProps> = ({
   ariaLabel,
   fullWidth = false,
   multiline = false,
-  isShrink = false,
   maxRows,
   inputStyles,
   labelStyles,
@@ -57,7 +55,7 @@ export const Input: React.FC<TextInputProps> = ({
             {...rest}
             aria-label={ariaLabel}
             inputProps={{ style: inputStyles }}
-            InputLabelProps={{ style: labelStyles, shrink: isShrink }}
+            InputLabelProps={{ style: labelStyles }}
             type={isPassword ? 'text' : type}
             className={className}
             helperText={error ? error.message : rest.helperText}

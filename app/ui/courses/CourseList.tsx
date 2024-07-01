@@ -24,7 +24,7 @@ export const CourseList: React.FC<CourseListProps> = ({ allCourses }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 max-w-fit lg:max-w-full mx-auto  gap-[1.875rem]">
+      <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 lg:max-w-full mx-auto  gap-[1.875rem]">
         {allCourses ? allCourses.map((course: CourseType) => <CoursePreviewCard key={course.id} {...course} />) : null}
       </div>
       <div className="flex justify-center mt-12">

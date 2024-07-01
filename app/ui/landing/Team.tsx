@@ -43,7 +43,7 @@ const CarouselItem: React.FC<CarouselItemProps> = ({ src, author, position, link
   return (
     <div className="w-full max-w-[285px] h-[416px] group mx-auto">
       <div className="w-full flex justify-center items-center mb-4 relative">
-        <Image src={src} alt="person" className="w-full h-[320px] bg-cover bg-center" />
+        <Image src={src} alt="person" className="w-full h-[320px] bg-cover bg-center object-center object-cover" />
         <div className="opacity-0 group-hover:opacity-[1] flex justify-end items-end gap-x-4 bg-hoverCard absolute bottom-0 left-0 right-0 w-full h-[200px] transition-opacity delay-[35] duration-300">
           {social.map((link) => (
             <Link key={link.id} href={link.src} className=" transition-opacity duration-300 last:mr-4 mb-1 text-white opacity-[0.6] hover:opacity-[1]">

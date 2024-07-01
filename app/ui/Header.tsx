@@ -16,7 +16,7 @@ export const Header = () => {
   const params = useParams();
 
 
-  const bgWhite = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog' || pathname === `/blog/${params.articleId}`;
+  const bgWhite = ['/courses', '/events', '/about', '/contacts', '/blog', `/blog/${params.articleId}`].includes(pathname);
 
   return (
     <header className={cn(`w-full pt-[1.25rem]`, !bgWhite ? 'bg-gradient-to-r from-[rgba(255,63,58,.2)_0%] to-[rgba(247,94,5,.2)_100%]' : 'bg-white')}>
@@ -38,7 +38,7 @@ export const Header = () => {
               </ul>
             </nav>
           </div>
-          <UserBlock className="md:flex flex-col lg:flex-row lg:gap-x-[2.25rem]" />
+          <UserBlock className="md:flex flex-col lg:flex-row lg:gap-x-[1rem]" />
           <MobileMenu />
         </div>
       </Container>

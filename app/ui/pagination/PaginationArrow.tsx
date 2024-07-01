@@ -9,8 +9,8 @@ export const PaginationArrow = ({ href, direction, isDisabled }: { href: string;
     `flex h-12 w-12 text-orange transition duration-300 items-center justify-center rounded border`,
     direction === 'left' && 'mr-2 md:mr-4',
     direction === 'right' && 'ml-2 md:ml-4',
-    !isDisabled && 'hover:text-white hover:bg-primary',
-    isDisabled && 'pointer-events-none text-gray opacity-2'
+    !isDisabled && 'hover:text-gray900',
+    isDisabled && 'pointer-events-none text-gray opacity-[.3]'
   );
   const icon = direction === 'left' ? <ArrowBackIosNewIcon className="w-6" /> : <ArrowForwardIosIcon className="w-6" />;
 

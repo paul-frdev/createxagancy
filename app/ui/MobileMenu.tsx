@@ -1,67 +1,114 @@
-'use client';
-
+'use client'
+import React, { useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { UserBlock } from './UserBlock';
 import { navbar } from '@/constants';
 import { useMyContext } from '@/context/useContextMenu';
-import { AnimatePresence, motion } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
-import React from 'react';
-import { useEffect, useRef } from 'react';
 import { useClickAway } from 'react-use';
+import { cn } from '../lib/utils';
 
 export const MobileMenu = () => {
   const { toggleOpen, isOpen } = useMyContext();
   const pathname = usePathname();
-  const params = useParams()
+  const params = useParams();
+  const ref = useRef(null);
 
-  const ref = useRef<HTMLDivElement>(null);
-
-  useClickAway(ref, () => toggleOpen());
+  useClickAway(ref, () =>  toggleOpen());
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'visible';
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : 'visible';
     return () => {
       document.body.style.overflow = 'visible';
     };
   }, [isOpen]);
 
-  const closeMenu = () => {
-    toggleOpen();
+  const isWhiteBg = ['/courses', '/events', '/about', '/contacts', '/blog', `/blog/${params.articleId}`].includes(pathname);
+
+  const menuVariants = {
+    closed: {
+      x: "100%",
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 40
+      }
+    },
+    open: {
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 40
+      }
+    }
   };
 
-  const isWhiteBg = pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog' || pathname === `/blog/${params.articleId}`;
+  const itemVariants = {
+    closed: { x: 50, opacity: 0 },
+    open: (i: any) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.1
+      }
+    })
+  };
 
   return (
     <div className="block md:hidden">
-      <Hamburger toggled={isOpen} toggle={closeMenu} size={40} color={isWhiteBg ? '#fc4b26' : '#fff'} />
+      <div className={cn(`w-[48px] h-[48px] z-20 absolute top-[7px] right-[14px]`,)}>
+        <Hamburger
+          toggled={isOpen}
+          toggle={toggleOpen}
+          size={40}
+          color={isWhiteBg ? '#fc4b26' : '#fff'}
+
+        />
+      </div>
       <AnimatePresence>
-        {isOpen ? (
+        {isOpen && (
           <motion.div
             ref={ref}
-            className="fixed pt-16 flex flex-col justify-start items-start shadow-xl left-0 right-0 top-[4.6rem] bg-orange02 z-10 h-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, backgroundColor: '#feddd1' }}
-            exit={{ opacity: 0, transition: { duration: 0.4 } }}
-            transition={{ duration: 0.3 }}
+            className={cn(`fixed inset-0 z-50 pt-20 px-4 z-10  bg-orange02`)}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
           >
-            <ul className="w-full flex flex-col justify-center items-center">
-              {navbar.map((item) => (
-                <li key={item.id} onClick={closeMenu} className=" mb-4 last:mb-8 text-[1.5rem] text-nowrap transition-colors duration-300 font-lato font-black">
-                  <Link href={item.src} className="text-black hover:text-orange">
+            <motion.ul className="flex flex-col items-center space-y-6">
+              {navbar.map((item, i) => (
+                <motion.li
+                  key={item.id}
+                  custom={i}
+                  variants={itemVariants}
+                  className="text-2xl font-bold"
+                >
+                  <Link
+                    href={item.src}
+                    className="text-black hover:text-orange transition-colors duration-300"
+                    onClick={toggleOpen}
+                  >
                     {item.title}
                   </Link>
-                </li>
+                </motion.li>
               ))}
-            </ul>
-            <UserBlock className="flex md:hidden flex-col w-full justify-center items-center gap-y-6" buttonClasses="px-16" />
+            </motion.ul>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="mt-10"
+            >
+              <UserBlock
+                className="flex flex-col items-center space-y-4"
+                buttonClasses="px-16 py-2"
+              />
+            </motion.div>
           </motion.div>
-        ) : null}
+        )}
       </AnimatePresence>
     </div>
   );

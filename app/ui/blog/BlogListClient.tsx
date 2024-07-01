@@ -1,6 +1,7 @@
 import { fetchPostsPages, filterPosts } from '@/app/actions/getPosts';
 import React from 'react'
 import BlogList from './BlogList';
+import { EmptyState } from '../EmptyState';
 
 const BlogListClient = async ({
   searchParams,
@@ -19,7 +20,9 @@ const BlogListClient = async ({
   const countTotalPages = Math.round(pages / +searchParams.limit);
 
   return (
-    <BlogList posts={posts} totalPages={countTotalPages} />
+    <>
+      {posts.length ? <BlogList posts={posts} totalPages={countTotalPages} /> : <EmptyState title='There are no posts' message='try to use another filters' />}
+    </>
   )
 }
 

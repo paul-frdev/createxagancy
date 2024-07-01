@@ -6,7 +6,7 @@ import { categoryTitle } from '@/constants';
 export default async function CategoryClientPage() {
   const quantity = await countCourses();
   return (
-    <Categories categoryTitle={categoryTitle} allItems={quantity} />
+    <Categories className=' flex-wrap md:flex-nowrap gap-x-2 gap-y-4 md:gap-y-0 justify-start md:justify-between' categoryTitle={categoryTitle} allItems={quantity} />
   )
 }
 

@@ -28,7 +28,6 @@ export const EmailForm = () => {
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
     reset();
   };
 

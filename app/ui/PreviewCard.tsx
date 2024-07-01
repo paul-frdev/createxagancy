@@ -16,7 +16,7 @@ export const PreviewCard = ({ course, className }: PreviewCardProps) => {
 
   return (
     <div className={cn(`flex flex-col xsm:flex-row justify-start xsm:gap-x-[2rem] gap-y-8 items-center h-auto xsm:h-[214px]`, className)}>
-      <div className="bg-secondary xsm:bg-white flex justify-center items-center h-[214px] w-full xsm:max-w-[214px]">
+      <div className="bg-secondary flex justify-center items-center h-[214px] w-full xsm:max-w-[214px] rounded-tl rounded-bl">
         <Image src={course.src} alt={course.alt} className="max-w-[214px] h-[216px] rounded-tl rounded-bl" />
       </div>
       <div className="flex flex-col justify-center xsm:justify-start items-center p-2 xsm:p-0 xsm:items-start gap-y-[1.25rem]">

@@ -41,7 +41,6 @@ export const ContactForm = () => {
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
     reset();
   };
 
@@ -128,7 +127,6 @@ export const ContactForm = () => {
           }}
           labelStyles={{ fontSize: '0.75rem', color: errors.email?.message ? '#d32f2f' : '#9a9ca5' }}
           helperStyles={{ position: 'absolute', bottom: '-24px', left: '0' }}
-          isShrink={true}
           label="Enter a message"
           type="textarea"
         />

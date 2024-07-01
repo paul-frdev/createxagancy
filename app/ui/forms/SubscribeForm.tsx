@@ -43,7 +43,6 @@ export const SubscribeForm = ({
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
     reset();
   };
 

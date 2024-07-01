@@ -41,7 +41,7 @@ export const EventItem: React.FC<EventItemProps> = ({ event, className, listStyl
         <p className={cn(`text-base font-lato font-normal leading-[160%] text-center sm:text-left`)}>{event.type}</p>
       </div>
       <div className='flex justify-center items-center w-full'>
-        <Button href={`/events/${event.id}`} variantCss="outline" sizeCss="lg" className={cn(`text-nowrap text-sm w-full max-w-[260px]`, listStyle === 'grid' ? 'w-full mt-auto' : '')}>
+        <Button href={`/events/${event.id}`} variantCss="outline" sizeCss="lg" className={cn(`text-nowrap text-sm w-full max-w-[260px]`, listStyle === 'grid' ? 'w-full mt-auto max-w-[90%]' : '')}>
           View more
         </Button>
       </div>

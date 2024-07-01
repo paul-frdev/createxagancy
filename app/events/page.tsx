@@ -52,7 +52,7 @@ export default async function Home({
             </Heading>
           </div>
           <Filters currentStyle={style} />
-          <Suspense key={isKey} fallback={style === 'flex' ? <EventFlexSkeleton items={events} /> : <CardSkeleton items={events} />}>
+          <Suspense key={isKey} fallback={style === 'flex' ? <EventFlexSkeleton items={events} /> : <CardSkeleton items={events} height={330} />}>
             <EventListClient searchParams={{ filter, topic, limit, query, page, style }} />
           </Suspense>
         </Container>

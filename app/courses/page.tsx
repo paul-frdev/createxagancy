@@ -45,6 +45,7 @@ const CoursesPage = async ({
 
   const isKey = `${filter}-${query}-${limit}`
 
+  
   return (
     <>
       <section className="w-full my-[5rem]">
@@ -53,12 +54,12 @@ const CoursesPage = async ({
           Our online courses
         </Heading>
         <Container>
-          <div className="flex h-[47.60px] flex-col gap-y-6 lg:flex-row justify-start gap-x-3 lg:justify-between items-start lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem] px-1">
-            <Suspense key={searchParams.filter} fallback={<CategorySkeleton counts={counts} />} >
+          <div className="flex lg:h-[47.60px] flex-col gap-y-6 lg:flex-row justify-start gap-x-3 lg:justify-between lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem] px-1">
+            <Suspense key={searchParams.filter} fallback={<CategorySkeleton className='flex-wrap md:flex-nowrap gap-y-4 md:gap-y-0 justify-start md:justify-between gap-x-2 md:gap-x-0' counts={counts} />} >
               <CategoryClientPage />
             </Suspense>
             <Search
-              className="w-full max-w-[450px] lg:max-w-[350px] "
+              className="w-full mx-auto  max-w-[450px] lg:max-w-[350px] "
               label="Search course..."
               items={allCourses}
             />

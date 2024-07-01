@@ -46,8 +46,8 @@ export const Statistics = () => {
           <div className="flex flex-col md:flex-row justify-between gap-y-2 md:gap-y-0 md:gap-x-[2rem] items-center ">
             {statisticsList.map((item) => (
               <React.Fragment key={item.id}>
-                <div className="flex flex-col lg:flex-row justify-start items-center gap-x-[0.75em] gap-x-[0.75em]">
-                  <span className=" text-[2rem] md:text-[2.875rem] leading-[130%] font-lato font-bold text-nowrap">{item.number}</span>
+                <div className="flex flex-col lg:flex-row justify-start items-center gap-x-[0.5em]">
+                  <span className=" text-[1.6rem] md:text-[2.875rem] leading-[130%] font-lato font-bold text-nowrap">{item.number}</span>
                   <span className="text-base font-lato font-normal text-nowrap">{item.text}</span>
                 </div>
                 {item.id < 4 ? (
