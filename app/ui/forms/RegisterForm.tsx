@@ -44,7 +44,6 @@ export const RegisterForm = ({
     control,
     handleSubmit,
     reset,
-    getValues,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: yupResolver(Schema) as any,

@@ -34,7 +34,6 @@ export const ContactForm = () => {
     control,
     handleSubmit,
     reset,
-    getValues,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: yupResolver(Schema) as any,
@@ -129,6 +128,7 @@ export const ContactForm = () => {
           }}
           labelStyles={{ fontSize: '0.75rem', color: errors.email?.message ? '#d32f2f' : '#9a9ca5' }}
           helperStyles={{ position: 'absolute', bottom: '-24px', left: '0' }}
+          isShrink={true}
           label="Enter a message"
           type="textarea"
         />

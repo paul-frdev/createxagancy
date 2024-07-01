@@ -32,7 +32,6 @@ export const DiscountForm = () => {
     control,
     handleSubmit,
     reset,
-    getValues,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: yupResolver(Schema) as any,

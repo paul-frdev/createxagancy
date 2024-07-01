@@ -1,14 +1,11 @@
 import { AuthSocialMedia } from '../AuthSocialMedia';
 import { Button } from '../elements/Button';
 import { CheckboxLabels } from '../elements/Checkbox';
-import { Heading } from '../elements/Heading';
 import { Input } from '../elements/Input';
-import { PhoneInput } from '../elements/PhoneInput';
 import { Typography } from '../elements/Typography';
 import { Form } from './Form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { Stack } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
@@ -27,7 +24,6 @@ export const LoginForm = () => {
     control,
     handleSubmit,
     reset,
-    getValues,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: yupResolver(Schema) as any,
@@ -75,6 +71,7 @@ export const LoginForm = () => {
             inputStyles={{
               height: 36,
               paddingTop: 4,
+              paddingRight: 0,
               fontSize: '0.85rem',
               paddingBottom: '2px',
               color: '#9a9ca5',

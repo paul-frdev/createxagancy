@@ -25,6 +25,7 @@ interface TextInputProps {
   inputStyles?: React.CSSProperties;
   labelStyles?: React.CSSProperties;
   helperStyles?: React.CSSProperties;
+  isShrink?: boolean;
 }
 
 export const Input: React.FC<TextInputProps> = ({
@@ -36,6 +37,7 @@ export const Input: React.FC<TextInputProps> = ({
   ariaLabel,
   fullWidth = false,
   multiline = false,
+  isShrink = false,
   maxRows,
   inputStyles,
   labelStyles,
@@ -55,7 +57,7 @@ export const Input: React.FC<TextInputProps> = ({
             {...rest}
             aria-label={ariaLabel}
             inputProps={{ style: inputStyles }}
-            InputLabelProps={{ style: labelStyles }}
+            InputLabelProps={{ style: labelStyles, shrink: isShrink }}
             type={isPassword ? 'text' : type}
             className={className}
             helperText={error ? error.message : rest.helperText}
@@ -69,7 +71,13 @@ export const Input: React.FC<TextInputProps> = ({
                 borderRadius: '4px',
                 border: `1px solid bg-gray`,
                 position: 'relative',
-                paddingRight: '0',
+                paddingRight: '0px',
+              },
+              '& .MuiInputBase-root': {
+                padding: '0px',
+              },
+              '& .mui-10n2iyd-MuiInputBase-root-MuiFilledInput-root': {
+                padding: '0px',
               },
             }}
             onChange={onChange}

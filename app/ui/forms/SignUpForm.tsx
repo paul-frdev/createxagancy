@@ -5,7 +5,7 @@ import { Input } from '../elements/Input';
 import { Typography } from '../elements/Typography';
 import { Form } from './Form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import React, { useState } from 'react';
+import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
@@ -33,7 +33,6 @@ export const SignUpForm = () => {
     control,
     handleSubmit,
     reset,
-    getValues,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: yupResolver(Schema) as any,

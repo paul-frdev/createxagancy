@@ -1,7 +1,7 @@
 import { Button } from '../elements/Button';
 import { cn } from '@/app/lib/utils';
 import React from 'react';
-import { SubmitHandler, UseFormHandleSubmit, useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 export interface IFormProps {
   defaultValues?: Record<string, any>;
