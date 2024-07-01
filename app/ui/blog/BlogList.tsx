@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-import React, { useEffect } from 'react'
-import { usePathname, useSearchParams, useRouter } from 'next/navigation';
-import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
-import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
-import MicNoneOutlinedIcon from '@mui/icons-material/MicNoneOutlined';
-import { PostType } from '@/types';
-import { PostItem } from '../posts/PostItem';
 import { Pagination } from '../pagination/Pagination';
+import { PostItem } from '../posts/PostItem';
+import { PostType } from '@/types';
+import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
+import MicNoneOutlinedIcon from '@mui/icons-material/MicNoneOutlined';
+import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import React, { useEffect } from 'react';
 
 export const blogCategoryTitle = [
   {
@@ -34,19 +34,18 @@ export const blogCategoryTitle = [
 type BlogListProps = {
   posts: PostType[];
   totalPages: number;
-}
+};
 const BlogList: React.FC<BlogListProps> = ({ posts, totalPages }) => {
-
   return (
-    < >
-      <div className=' grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 max-w-fit mx-auto gap-x-6 gap-y-4 my-10'>
-        {posts.map(post => (
+    <>
+      <div className=" grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 max-w-fit mx-auto gap-x-6 gap-y-4 my-10">
+        {posts.map((post) => (
           <PostItem key={post.id} post={post} />
         ))}
       </div>
-      <Pagination  totalPages={totalPages} />
+      <Pagination totalPages={totalPages} />
     </>
-  )
-}
+  );
+};
 
 export default BlogList;

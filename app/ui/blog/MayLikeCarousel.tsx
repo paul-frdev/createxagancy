@@ -1,16 +1,17 @@
-'use client'
+'use client';
+
+import { Button } from '../elements/Button';
+import { Container } from '../elements/Container';
+import { Heading } from '../elements/Heading';
+import { Typography } from '../elements/Typography';
+import { PostItem } from '../posts/PostItem';
+import { Carousel, CustomNextArrow, CustomPrevArrow } from '../swiper/Carousel';
+import { PostType } from '@/types';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useMediaQuery } from '@mui/material';
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import { Container } from '../elements/Container';
-import { Typography } from '../elements/Typography';
-import { Heading } from '../elements/Heading';
-import { Carousel, CustomNextArrow, CustomPrevArrow } from '../swiper/Carousel';
-import { Button } from '../elements/Button';
-import { PostType } from '@/types';
-import { PostItem } from '../posts/PostItem';
 
 type MayLikeCarouselProps = {
   items: PostType[];
@@ -23,7 +24,7 @@ export const MayLikeCarousel: React.FC<MayLikeCarouselProps> = ({ items }) => {
 
   const isMobile = useMediaQuery('(max-width: 498px)');
 
-  useEffect(() => { }, [navNextButton, navPrevButton, swipe]);
+  useEffect(() => {}, [navNextButton, navPrevButton, swipe]);
 
   const carouselOptions = {
     breakpoints: {
@@ -52,13 +53,11 @@ export const MayLikeCarousel: React.FC<MayLikeCarouselProps> = ({ items }) => {
     },
   };
 
-  const carouselItems = items.map((item, index) => (
-    <PostItem key={index} post={item} />
-  ));
+  const carouselItems = items.map((item, index) => <PostItem key={index} post={item} />);
 
   return (
     <section className="w-full bg-white py-12 lg:py-24">
-      <Container className='h-auto'>
+      <Container className="h-auto">
         <div className="flex justify-between items-end mb-12">
           <div className="w-full">
             <Typography className="text-center xsm:text-left">Check other articles</Typography>

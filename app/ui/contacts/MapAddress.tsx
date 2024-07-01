@@ -1,10 +1,8 @@
 'use client';
 
-
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { GoogleMap } from '@react-google-maps/api';
 import React from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
-
 
 const defaultMapCenter = {
   lat: 35.8799866,

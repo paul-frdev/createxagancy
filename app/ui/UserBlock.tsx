@@ -15,12 +15,19 @@ type UserBlockProps = {
 };
 export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }) => {
   const pathname = usePathname();
-  const params = useParams()
+  const params = useParams();
 
   const [openSignUp, setOpenSignUp] = React.useState(false);
   const [openLogin, setOpenLogin] = React.useState(false);
 
-  const bgWhite = pathname === '/contacts' || pathname === '/courses' || pathname === '/events' || pathname === '/about' || pathname === '/contacts' || pathname === '/blog' || pathname === `/blog/${params.articleId}`;
+  const bgWhite =
+    pathname === '/contacts' ||
+    pathname === '/courses' ||
+    pathname === '/events' ||
+    pathname === '/about' ||
+    pathname === '/contacts' ||
+    pathname === '/blog' ||
+    pathname === `/blog/${params.articleId}`;
 
   const handleClickOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -42,11 +49,8 @@ export const UserBlock: React.FC<UserBlockProps> = ({ className, buttonClasses }
     <div className={cn(`hidden justify-end items-end lg:items-center gap-y-2`, className)}>
       <Button
         sizeCss="lg"
-        variantCss='bg'
-        className={cn(
-          ` px-[1.5rem] xl:px-[2.5rem] py-[0.5rem] h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`,
-          bgWhite && 'hover:bg-transparent'
-        )}
+        variantCss="bg"
+        className={cn(` px-[1.5rem] xl:px-[2.5rem] py-[0.5rem] h-[52px] text-base leading-[52px] tracking-[0.5px] order-2 lg:order-1`, bgWhite && 'hover:bg-transparent')}
       >
         Get consultation
       </Button>

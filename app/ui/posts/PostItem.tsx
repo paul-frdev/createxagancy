@@ -1,19 +1,19 @@
+import { Button } from '../elements/Button';
+import { Card } from '../elements/Card';
+import { Heading } from '../elements/Heading';
+import { Image } from '../elements/Image';
+import { Typography } from '../elements/Typography';
+import { PostLabels } from './PostLabels';
+import { cn } from '@/app/lib/utils';
 import { PostType } from '@/types';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import React from 'react';
-import { Card } from '../elements/Card';
-import { Image } from '../elements/Image';
-import { Heading } from '../elements/Heading';
-import { Typography } from '../elements/Typography';
-import { Button } from '../elements/Button';
-import { PostLabels } from './PostLabels';
-import { cn } from '@/app/lib/utils';
 
 type PostItemProps = {
   post: PostType;
   className?: string;
   classContainer?: string;
-  classImage?: string
+  classImage?: string;
 };
 export const PostItem: React.FC<PostItemProps> = ({ post, className, classContainer, classImage }) => {
   const labels = post.labels;

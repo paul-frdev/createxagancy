@@ -1,11 +1,12 @@
-'use client'
-import React, { useEffect, useState } from 'react';
+'use client';
+
 import { Typography } from './Typography';
 import { cn } from '@/app/lib/utils';
 import { useQueryParams } from '@/hooks/useQueryParams';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import React, { useEffect, useState } from 'react';
 
 type BaseSelectProps = {
   text?: string;
@@ -30,14 +31,14 @@ const selectStyles = {
     borderWidth: '2px',
   },
   '&..mui-6hp17o-MuiList-root-MuiMenu-list': {
-    width: '200px'
+    width: '200px',
   },
   '& .MuiSelect-select': {
     padding: '10px 14px',
     fontSize: '1rem',
     fontFamily: 'Lato, sans-serif',
     fontWeight: 400,
-    width: '150px'
+    width: '150px',
   },
 };
 
@@ -76,11 +77,7 @@ export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, it
 
   return (
     <div className={cn(`flex justify-center items-center gap-x-2`, className)}>
-      {text && (
-        <Typography className="hidden lg:block normal-case text-base font-latoBlack font-[700] leading-[160%] text-nowrap mb-0">
-          {text}
-        </Typography>
-      )}
+      {text && <Typography className="hidden lg:block normal-case text-base font-latoBlack font-[700] leading-[160%] text-nowrap mb-0">{text}</Typography>}
       <FormControl fullWidth>
         <Select
           value={value}
@@ -111,11 +108,7 @@ export const BaseSelect: React.FC<BaseSelectProps> = ({ text = '', className, it
           ))}
         </Select>
       </FormControl>
-      {description && (
-        <Typography className="hidden lg:block normal-case text-[0.875rem] font-latoRegular font-[400] leading-[160%] text-nowrap mb-0">
-          {description}
-        </Typography>
-      )}
+      {description && <Typography className="hidden lg:block normal-case text-[0.875rem] font-latoRegular font-[400] leading-[160%] text-nowrap mb-0">{description}</Typography>}
     </div>
   );
 };

@@ -1,20 +1,19 @@
-'use client'
+'use client';
 
-import { LabelPost } from '@/types'
-import React from 'react'
-import { Image } from '../elements/Image'
+import { Image } from '../elements/Image';
 import { cn } from '@/app/lib/utils';
+import { LabelPost } from '@/types';
 import { useParams, usePathname } from 'next/navigation';
+import React from 'react';
 
 type PostLabels = {
   labels: LabelPost[];
   className?: string;
-}
+};
 export const PostLabels: React.FC<PostLabels> = ({ labels, className }) => {
-
   const pathname = usePathname();
   const params = useParams();
-  const isArticleId = pathname === `/blog/${params.articleId}`
+  const isArticleId = pathname === `/blog/${params.articleId}`;
 
   return (
     <div className={cn(`flex justify-start items-start text-sm mb-2 px-2 md:py-3`, className)}>
@@ -36,5 +35,5 @@ export const PostLabels: React.FC<PostLabels> = ({ labels, className }) => {
         </React.Fragment>
       ))}
     </div>
-  )
-}
+  );
+};

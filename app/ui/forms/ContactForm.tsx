@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { CheckboxLabels } from '../elements/Checkbox';
 import { Container } from '../elements/Container';
@@ -49,7 +49,12 @@ export const ContactForm = () => {
       <div>
         <Image src="/contacts/dropline.svg" alt="contact" className="w-full hidden lg:block max-w-[435px] h-[481px]" />
       </div>
-      <Form buttonLabel="Send message" buttonClasses="w-[300px] hover:bg-transparent" className="w-full max-w-[705px] flex flex-col gap-x-4  gap-y-6 justify-between" onSubmit={handleSubmit(onSubmit)}>
+      <Form
+        buttonLabel="Send message"
+        buttonClasses="w-[300px] hover:bg-transparent"
+        className="w-full max-w-[705px] flex flex-col gap-x-4  gap-y-6 justify-between"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className=" w-full flex flex-col md:flex-row gap-y-4 md:gap-y-0 justify-between items-center">
           <Input
             className="w-full max-w-[344px] border-white rounded text-gray600"

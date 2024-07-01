@@ -15,7 +15,6 @@ export const Header = () => {
   const pathname = usePathname();
   const params = useParams();
 
-
   const bgWhite = ['/courses', '/events', '/about', '/contacts', '/blog', `/blog/${params.articleId}`].includes(pathname);
 
   return (

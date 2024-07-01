@@ -9,10 +9,9 @@ import React from 'react';
 type EventListProps = {
   events: WorkshopPreview[];
   totalPages: number;
-  listStyle?: string
+  listStyle?: string;
 };
 export const EventList: React.FC<EventListProps> = ({ events, totalPages, listStyle }) => {
-
   const flexStyles = `flex justify-between items-center flex-col`;
   const gridStyles = `grid max-w-fit mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4 mb-8`;
 

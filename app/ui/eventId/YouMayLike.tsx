@@ -24,7 +24,7 @@ export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
 
   const isMobile = useMediaQuery('(max-width: 498px)');
 
-  useEffect(() => { }, [navNextButton, navPrevButton, swipe]);
+  useEffect(() => {}, [navNextButton, navPrevButton, swipe]);
 
   const carouselOptions = {
     breakpoints: {
@@ -57,7 +57,7 @@ export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
 
   return (
     <section className="w-full bg-[#f4f5f7] py-12 lg:py-24">
-      <Container className='h-auto'>
+      <Container className="h-auto">
         <div className="flex justify-between items-end mb-12">
           <div className="w-full">
             <Typography className="text-center xsm:text-left">Check other online events</Typography>
@@ -80,7 +80,7 @@ export const YouMayLike: React.FC<YouMayLikeProps> = ({ events }) => {
             />
           </div>
         </div>
-        <Carousel classNameSlide='max-w-fit' height={!isMobile ? 390 : 370} className="mx-auto max-w-fit" onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
+        <Carousel classNameSlide="max-w-fit" height={!isMobile ? 390 : 370} className="mx-auto max-w-fit" onBeforeInit={setSwipe} items={carouselItems} options={carouselOptions} />
         <div className="flex flex-col sm:flex-row gap-y-8 sm:gap-y-0 justify-center items-center gap-x-[2.5rem]">
           <Typography className="text-center sm:text-left mb-0 text-[1rem] xsm:text-[1.2rem] text-gray900">Do you want more?</Typography>
           <Button className=" text-nowrap w-[202px]" href="/events">

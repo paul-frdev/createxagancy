@@ -1,10 +1,9 @@
+import { Contacts } from '../ui/contacts/Contacts';
 import { MapAddress } from '../ui/contacts/MapAddress';
-import { MapProvider } from '@/providers/MapProvider';
 import { Container } from '../ui/elements/Container';
 import { ContactForm } from '../ui/forms/ContactForm';
-import { Contacts } from '../ui/contacts/Contacts';
+import { MapProvider } from '@/providers/MapProvider';
 import { Metadata } from 'next';
-
 
 export const metadata: Metadata = {
   title: 'Contacts',

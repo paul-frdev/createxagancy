@@ -10,8 +10,10 @@ export const Benefits = () => {
     <section className="my-5 xmd:my-10 w-full">
       <Container className="py-5 xmd:py-10 flex flex-col xmd:flex-row justify-between items-start">
         <div className=" w-full xmd:max-w-[495px]">
-          <Typography className=' text-center xmd:text-left text-base text-gray900 uppercase font-bold'>For whom?</Typography>
-          <Heading variant="h4" className='text-[2.2rem] xmd:text-[2.875rem] mb-8 xmd:mb-0 text-center xmd:text-left'>Who will benefit from the event:</Heading>
+          <Typography className=" text-center xmd:text-left text-base text-gray900 uppercase font-bold">For whom?</Typography>
+          <Heading variant="h4" className="text-[2.2rem] xmd:text-[2.875rem] mb-8 xmd:mb-0 text-center xmd:text-left">
+            Who will benefit from the event:
+          </Heading>
         </div>
         <div className=" w-full mx-auto xmd:mx-0 max-w-[600px]">
           {benefitsEvent.map((item) => (

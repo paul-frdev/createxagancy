@@ -9,17 +9,15 @@ import ViewAgendaIcon from '@mui/icons-material/ViewAgenda';
 import WindowIcon from '@mui/icons-material/Window';
 import React from 'react';
 
-
 export const Filters = ({ currentStyle }: { currentStyle: string }) => {
-
-  const { setQueryParams } = useQueryParams()
+  const { setQueryParams } = useQueryParams();
 
   return (
     <div className="flex justify-start items-start sm:items-center gap-x-4 sm:gap-x-8 mb-8">
-      <div className='flex flex-col sm:flex-row gap-y-3 justify-start items-start sm:items-center gap-x-4 sm:gap-x-8'>
-        <BaseSelect query='topic' text="Event category" items={themes} />
-        <BaseSelect query='filter' text="Sort by" items={sortBy} />
-        <BaseSelect query='count' text="Show" items={showItems} description="events per page" />
+      <div className="flex flex-col sm:flex-row gap-y-3 justify-start items-start sm:items-center gap-x-4 sm:gap-x-8">
+        <BaseSelect query="topic" text="Event category" items={themes} />
+        <BaseSelect query="filter" text="Sort by" items={sortBy} />
+        <BaseSelect query="count" text="Show" items={showItems} description="events per page" />
       </div>
       <div className="flex justify-start sm:justify-end items-start  sm:items-end flex-nowrap gap-x-2 w-[100px] xsm:w-[136px]">
         <Button

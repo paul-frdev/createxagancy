@@ -29,7 +29,7 @@ export const Author: React.FC<AuthorProps> = ({ links }) => {
             <Image src="/clients/client2.png" alt="client2" className="w-full max-w-[105px]" />
             <Image src="/clients/client2.png" alt="client3" className="w-full max-w-[105px]" />
           </div>
-          <SocialLinks className='mx-auto xmd:mx-0' socialLinks={links} />
+          <SocialLinks className="mx-auto xmd:mx-0" socialLinks={links} />
         </div>
       </Container>
     </section>

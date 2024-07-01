@@ -1,15 +1,15 @@
-import React from 'react'
 import { Heading } from '../elements/Heading';
 import { Image } from '../elements/Image';
 import { Typography } from '../elements/Typography';
+import { contactList } from '@/constants';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import Link from 'next/link'
-import { contactList } from '@/constants';
+import Link from 'next/link';
+import React from 'react';
 
 export const Contacts = () => {
   return (
@@ -41,5 +41,5 @@ export const Contacts = () => {
         <LinkedInIcon className=" cursor-pointer hover:text-orange transition-all duration-300" />
       </div>
     </div>
-  )
-}
+  );
+};

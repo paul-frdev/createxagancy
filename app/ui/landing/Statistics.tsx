@@ -24,10 +24,10 @@ export const Statistics = () => {
                 Enjoy studying with Createx Online Courses
               </Heading>
               <div className="flex flex-col sm:flex-row gap-y-3 sm:gap-y-0 justify-center md:justify-start items-center gap-x-[1.5em]">
-                <Button href='/about' variantCss="outline" className="bg-[#ffe0d9]">
+                <Button href="/about" variantCss="outline" className="bg-[#ffe0d9]">
                   About us
                 </Button>
-                <Button href='/courses' sizeCss="lg" className="hover:bg-[#ffe0d8] border-transparent text-nowrap hover:border-orange">
+                <Button href="/courses" sizeCss="lg" className="hover:bg-[#ffe0d8] border-transparent text-nowrap hover:border-orange">
                   Explore courses
                 </Button>
               </div>

@@ -1,18 +1,18 @@
-import { Metadata } from 'next';
 import { countCourses, getAllCourses } from '../actions/getCourses';
 import { getReviews } from '../actions/getReviews';
 import { Certificate } from '../ui/Certificate';
 import { Reviews } from '../ui/Reviews';
-import { Subscribe } from '../ui/Subscribe';
-import { Typography } from '../ui/elements/Typography';
-import { Heading } from '../ui/elements/Heading';
-import { Container } from '../ui/elements/Container';
-import { Suspense } from 'react';
-import { CategorySkeleton } from '../ui/skeletons/CategorySkeleton';
-import CategoryClientPage from '../ui/courses/CategoryClientPage';
 import { Search } from '../ui/Search';
+import { Subscribe } from '../ui/Subscribe';
+import CategoryClientPage from '../ui/courses/CategoryClientPage';
 import CourseListClient from '../ui/courses/CourseListClient';
+import { Container } from '../ui/elements/Container';
+import { Heading } from '../ui/elements/Heading';
+import { Typography } from '../ui/elements/Typography';
 import { CardSkeleton } from '../ui/skeletons/CardSkeleton';
+import { CategorySkeleton } from '../ui/skeletons/CategorySkeleton';
+import { Metadata } from 'next';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: 'Courses',
@@ -34,8 +34,7 @@ const CoursesPage = async ({
 
   const allCourses = await getAllCourses(limit.toString(), filter, query);
   const reviews = await getReviews();
-  const quantity = await countCourses()
-
+  const quantity = await countCourses();
 
   let counts: { [label: string]: number; id: number } = { id: 0 };
   quantity.forEach((course, index) => {
@@ -43,9 +42,8 @@ const CoursesPage = async ({
     counts.id = index + 1;
   });
 
-  const isKey = `${filter}-${query}-${limit}`
+  const isKey = `${filter}-${query}-${limit}`;
 
-  
   return (
     <>
       <section className="w-full my-[5rem]">
@@ -55,14 +53,13 @@ const CoursesPage = async ({
         </Heading>
         <Container>
           <div className="flex lg:h-[47.60px] flex-col gap-y-6 lg:flex-row justify-start gap-x-3 lg:justify-between lg:items-center mt-[2rem] lg:mt-[4.375rem] mb-[3.75rem] px-1">
-            <Suspense key={searchParams.filter} fallback={<CategorySkeleton className='flex-wrap md:flex-nowrap gap-y-4 md:gap-y-0 justify-start md:justify-between gap-x-2 md:gap-x-0' counts={counts} />} >
+            <Suspense
+              key={searchParams.filter}
+              fallback={<CategorySkeleton className="flex-wrap md:flex-nowrap gap-y-4 md:gap-y-0 justify-start md:justify-between gap-x-2 md:gap-x-0" counts={counts} />}
+            >
               <CategoryClientPage />
             </Suspense>
-            <Search
-              className="w-full mx-auto  max-w-[450px] lg:max-w-[350px] "
-              label="Search course..."
-              items={allCourses}
-            />
+            <Search className="w-full mx-auto  max-w-[450px] lg:max-w-[350px] " label="Search course..." items={allCourses} />
           </div>
           <Suspense key={isKey} fallback={<CardSkeleton items={allCourses} />}>
             <CourseListClient limit={limit!.toString()} filter={filter} query={query} />

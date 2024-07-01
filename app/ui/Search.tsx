@@ -1,7 +1,7 @@
 'use client';
 
-import { useQueryParams } from '@/hooks/useQueryParams';
 import { Button } from './elements/Button';
+import { useQueryParams } from '@/hooks/useQueryParams';
 import { CourseType } from '@/types/courses';
 import ClearIcon from '@mui/icons-material/Clear';
 import SearchIcon from '@mui/icons-material/Search';
@@ -30,7 +30,7 @@ const style = {
 };
 
 export const Search: React.FC<SearchProps> = ({ items, className, label = 'Search...' }) => {
-  const { handleSearchInputChange, searchParams } = useQueryParams()
+  const { handleSearchInputChange, searchParams } = useQueryParams();
   const [inputValue, setInputValue] = React.useState(searchParams.get('query')?.toString() || '');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {

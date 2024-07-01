@@ -1,9 +1,9 @@
 'use client';
 
-import { useQueryParams } from '@/hooks/useQueryParams';
 import { Search } from '../Search';
 import { CoursePreviewCard } from '../courseId/CoursePreviewCard';
 import { Button } from '../elements/Button';
+import { useQueryParams } from '@/hooks/useQueryParams';
 import { CourseType } from '@/types/courses';
 import SyncIcon from '@mui/icons-material/Sync';
 import React, { useState } from 'react';
@@ -15,7 +15,7 @@ type CourseListProps = {
 export const CourseList: React.FC<CourseListProps> = ({ allCourses }) => {
   const [limit, setLimit] = useState(12);
 
-  const { setQueryParams } = useQueryParams()
+  const { setQueryParams } = useQueryParams();
 
   const loadMore = () => {
     setLimit((prev) => (prev += 3));

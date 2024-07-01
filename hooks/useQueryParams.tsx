@@ -1,4 +1,4 @@
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useMemo } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 

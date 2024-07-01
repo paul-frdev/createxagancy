@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import { getPosts } from '../actions/getPosts';
 import { getReviews } from '../actions/getReviews';
 import { getTeam } from '../actions/getTeam';
@@ -11,6 +10,7 @@ import { Study } from '../ui/about/Study';
 import { Teach } from '../ui/about/Teach';
 import { Team } from '../ui/about/Team';
 import { Posts } from '../ui/posts/Posts';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About',

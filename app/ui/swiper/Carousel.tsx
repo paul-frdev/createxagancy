@@ -34,7 +34,7 @@ type SwipperProps = {
   className?: string;
   maxWidth?: string;
   onBeforeInit?: (swiper: any) => void;
-  classNameSlide?: string
+  classNameSlide?: string;
 };
 
 export const CustomPrevArrow = React.forwardRef<HTMLButtonElement, CustomArrowPrev>(({ onClick, icon: Icon, className, variant, size }, ref) => (
