@@ -41,8 +41,8 @@ export const EventItem: React.FC<EventItemProps> = ({ event, className, listStyl
               : 'flex-col gap-y-[5px] justify-start items-start'
           )}
         >
-          <span className=" text-[1.25rem] text-gray900 font-lato font-bold leading-[150%]">{month}</span>
-          <span className="text-base font-latoRegular font-[400] leading-[160%] text-nowrap">{time}</span>
+          <span className="text-[1.25rem] text-gray900 font-lato font-bold leading-[150%]">{month}</span>
+          <span className=" whitespace-nowrap text-base font-latoRegular font-[400] leading-[160%] text-nowrap">{time}</span>
         </div>
       </div>
       <div className="flex flex-col justify-start items-start w-full max-w-[390px] my-4 px-4">

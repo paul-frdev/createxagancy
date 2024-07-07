@@ -15,9 +15,9 @@ export const Filters = ({ currentStyle }: { currentStyle: string }) => {
   return (
     <div className="flex justify-start items-start sm:items-center gap-x-4 sm:gap-x-8 mb-8">
       <div className="flex flex-col sm:flex-row gap-y-3 justify-start items-start sm:items-center gap-x-4 sm:gap-x-8">
-        <BaseSelect query="topic" text="Event category" items={themes} />
-        <BaseSelect query="filter" text="Sort by" items={sortBy} />
-        <BaseSelect query="count" text="Show" items={showItems} description="events per page" />
+        <BaseSelect className='whitespace-nowrap' query="topic" text="Event category" items={themes} />
+        <BaseSelect className='whitespace-nowrap' query="filter" text="Sort by" items={sortBy} />
+        <BaseSelect className='whitespace-nowrap' query="count" text="Show" items={showItems} description="events per page" />
       </div>
       <div className="flex justify-start sm:justify-end items-start  sm:items-end flex-nowrap gap-x-2 w-[100px] xsm:w-[136px]">
         <Button

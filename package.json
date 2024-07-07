@@ -40,6 +40,7 @@
     "react-international-phone": "^4.2.5",
     "react-player": "^2.14.1",
     "react-scroll": "^1.9.0",
+    "react-spinners": "^0.14.1",
     "react-timer-hook": "^3.0.7",
     "react-use": "^17.5.0",
     "react-youtube": "^10.1.0",
